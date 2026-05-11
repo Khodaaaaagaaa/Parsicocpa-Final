@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parsi &amp; Company, CPA | Century City CPA Firm – Tax, Accounting &amp; Advisory</title>
+<meta name="description" content="Century City CPA firm providing tax preparation, bookkeeping, IRS dispute help, and advisory with personal, long-term guidance. Schedule a free consultation.">
+<meta property="og:title" content="Parsi &amp; Company, CPA | Century City CPA Firm">
+<meta property="og:description" content="Century City CPA firm providing tax preparation, bookkeeping, IRS dispute help, and advisory with personal, long-term guidance. Schedule a free consultation.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://parsicocpa.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=IBM+Plex+Mono:wght@500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #0D1F44;
+    --gold: #B88D3C;
+    --warm: #F5F7FA;
+    --silver: #D6D6D6;
+    --charcoal: #2D2D2D;
+    --white: #FFFFFF;
+    --max-w: 1240px;
+    --side: 58px;
+    --side-sm: 20px;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: var(--charcoal);
+    background: var(--white);
+    font-size: 16px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── TYPOGRAPHY ─────────────────────────────── */
+  h1, h2 { font-family: 'Cormorant Garamond', serif; line-height: 1.2; color: var(--navy); }
+  h1 { font-weight: 700; font-size: clamp(38px, 5vw, 56px); }
+  h2 { font-weight: 700; font-size: clamp(28px, 3.5vw, 40px); }
+  h3 { font-family: 'Inter', sans-serif; font-weight: 700; font-size: clamp(16px, 1.8vw, 20px); color: var(--navy); line-height: 1.3; }
+  h4 { font-family: 'Inter', sans-serif; font-weight: 600; font-size: 15px; color: var(--navy); }
+  p { color: var(--charcoal); line-height: 1.6; }
+
+  .mono { font-family: 'IBM Plex Mono', monospace; font-weight: 500; text-transform: uppercase; font-size: 11px; letter-spacing: 0.08em; }
+
+  .container { max-width: var(--max-w); margin: 0 auto; padding: 0 var(--side); }
+  @media (max-width: 768px) { .container { padding: 0 var(--side-sm); } }
+
+  .gold-rule { display: block; width: 100%; height: 1px; background: var(--gold); border: none; margin: 0; }
+
+  /* ── NAVBAR ─────────────────────────────────── */
+  #navbar {
+    position: sticky; top: 0; z-index: 1000;
+    background: var(--white);
+    border-bottom: 1px solid var(--gold);
+    transition: backdrop-filter 0.3s, background 0.3s;
+  }
+  #navbar.scrolled {
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+  .nav-inner {
+    display: flex; align-items: center; justify-content: space-between;
+    height: 72px; gap: 24px;
+  }
+  .nav-logo { flex-shrink: 0; text-decoration: none; }
+  .nav-links {
+    display: flex; align-items: center; gap: 32px; list-style: none;
+  }
+  .nav-links a {
+    font-family: 'Inter', sans-serif; font-weight: 500; font-size: 13px;
+    text-transform: uppercase; letter-spacing: 0.06em; color: var(--navy);
+    text-decoration: none; transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--gold); }
+  .nav-right { display: flex; align-items: center; gap: 16px; flex-shrink: 0; }
+  .btn-nav-cta {
+    background: var(--navy); color: var(--white);
+    font-family: 'Inter', sans-serif; font-weight: 600; font-size: 12px;
+    text-transform: uppercase; letter-spacing: 0.06em;
+    border: none; cursor: pointer;
+    padding: 0 20px; height: 44px;
+    text-decoration: none; display: inline-flex; align-items: center;
+    transition: color 0.2s;
+    white-space: nowrap;
+  }
+  .btn-nav-cta:hover { color: var(--gold); }
+  .nav-portal {
+    display: flex; align-items: center; gap: 6px;
+    font-family: 'IBM Plex Mono', monospace; font-weight: 500; font-size: 11px;
+    text-transform: uppercase; letter-spacing: 0.08em; color: var(--charcoal);
+    text-decoration: none; transition: color 0.2s; white-space: nowrap;
+  }
+  .nav-portal:hover { color: var(--gold); }
+  .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; flex-direction: column; gap: 5px; }
+  .hamburger span { display: block; width: 22px; height: 1.5px; background: var(--navy); transition: 0.3s; }
+  .mobile-menu {
+    display: none; background: var(--white); border-top: 1px solid var(--silver);
+    padding: 20px var(--side-sm);
+  }
+  .mobile-menu.open { display: block; }
+  .mobile-menu ul { list-style: none; display: flex; flex-direction: column; gap: 0; }
+  .mobile-menu ul li a {
+    display: block; padding: 12px 0;
+    font-family: 'Inter', sans-serif; font-weight: 500; font-size: 14px;
+    text-transform: uppercase; letter-spacing: 0.06em; color: var(--navy);
+    text-decoration: none; border-bottom: 1px solid var(--warm);
+  }
+  .mobile-menu .btn-nav-cta { margin-top: 16px; width: 100%; justify-content: center; }
+
+  @media (max-width: 900px) {
+    .nav-links { display: none; }
+    .nav-portal { display: none; }
+    .hamburger { display: flex; }
+    .btn-nav-cta.desktop-only { display: none; }
+  }
+
+  /* ── BUTTONS ─────────────────────────────────── */
+  .btn-primary {
+    background: var(--navy); color: var(--white);
+    font-family: 'Inter', sans-serif; font-weight: 600; font-size: 13px;
+    text-transform: uppercase; letter-spacing: 0.07em;
+    border: none; cursor: pointer; height: 52px; padding: 0 32px;
+    display: inline-flex; align-items: center; gap: 8px;
+    text-decoration: none; transition: color 0.2s;
+  }
+  .btn-primary:hover { color: var(--gold); }
+  .btn-primary.gold-bg { background: var(--gold); color: var(--navy); }
+  .btn-primary.gold-bg:hover { color: var(--navy); opacity: 0.9; }
+  .btn-secondary {
+    background: transparent; color: var(--white);
+    font-family: 'Inter', sans-serif; font-weight: 600; font-size: 13px;
+    text-transform: uppercase; letter-spacing: 0.07em;
+    border: 1px solid var(--white); cursor: pointer; height: 52px; padding: 0 32px;
+    display: inline-flex; align-items: center; gap: 8px;
+    text-decoration: none; transition: background 0.2s, color 0.2s;
+  }
+  .btn-secondary:hover { background: var(--white); color: var(--navy); }
+  .btn-secondary.navy-border {
+    color: var(--navy); border-color: var(--navy);
+  }
+  .btn-secondary.navy-border:hover { background: var(--navy); color: var(--white); }
+
+  /* ── HERO ────────────────────────────────────── */
+  #hero {
+    background: var(--navy); padding: 120px 0;
+  }
+  .hero-inner { display: flex; flex-direction: column; align-items: flex-start; max-width: 780px; }
+  .hero-badge {
+    font-family: 'IBM Plex Mono', monospace; font-weight: 500; font-size: 11px;
+    text-transform: uppercase; letter-spacing: 0.1em; color: var(--gold);
+    margin-bottom: 24px;
+  }
+  .hero-h1 { color: var(--white); margin-bottom: 28px; }
+  .hero-sub {
+    font-size: 18px; line-height: 1.6; color: var(--silver); margin-bottom: 40px;
+    max-width: 640px; font-weight: 400;
+  }
+  .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 36px; }
+  .hero-trust {
+    font-family: 'IBM Plex Mono', monospace; font-weight: 500; font-size: 11px;
+    text-transform: uppercase; letter-spacing: 0.1em; color: var(--silver);
+  }
+  @media (max-width: 600px) { #hero { padding: 80px 0; } }
+
+  /* ── TRUST STRIP ─────────────────────────────── */
+  #trust-strip { background: var(--warm); padding: 56px 0; }
+  .trust-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px;
+    text-align: center;
+  }
+  .trust-item .big-num {
+    font-family: 'Cormorant Garamond', serif; font-weight: 700;
+    font-size: clamp(36px, 4vw, 52px); color: var(--navy);
+    line-height: 1; display: block; margin-bottom: 8px;
+  }
+  .trust-item .trust-desc {
+    font-size: 13px; color: var(--charcoal); font-weight: 400;
+  }
+  @media (max-width: 700px) {
+    .trust-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+  }
+
+  /* ── PROBLEM/SOLUTION ────────────────────────── */
+  #problem { background: var(--white); padding: 100px 0; }
+  .problem-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+  .problem-left h2 { margin-bottom: 24px; }
+  .problem-left p { font-size: 17px; line-height: 1.7; color: var(--charcoal); }
+  .problem-list { list-style: none; display: flex; flex-direction: column; gap: 18px; }
+  .problem-list li {
+    display: flex; align-items: flex-start; gap: 14px;
+    font-size: 16px; font-weight: 500; color: var(--navy);
+  }
+  .problem-list li .gold-bullet { flex-shrink: 0; margin-top: 3px; }
+  @media (max-width: 768px) {
+    .problem-inner { grid-template-columns: 1fr; gap: 40px; }
+  }
+
+  /* ── SERVICES ────────────────────────────────── */
+  #services { background: var(--warm); padding: 100px 0; }
+  .section-label { margin-bottom: 12px; display: block; color: var(--gold); }
+  .section-title { margin-bottom: 16px; }
+  .section-rule { margin-bottom: 56px; width: 48px; height: 1px; background: var(--gold); border: none; }
+  .services-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+  }
+  .service-card {
+    background: var(--white); border: 1px solid var(--silver);
+    padding: 32px; display: flex; flex-direction: column; gap: 14px;
+    transition: border-color 0.2s;
+  }
+  .service-card:hover { border-color: var(--gold); }
+  .service-icon { color: var(--gold); }
+  .service-card h4 { margin: 0; }
+  .service-card p { font-size: 14px; line-height: 1.6; color: var(--charcoal); }
+  @media (max-width: 900px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 580px) { .services-grid { grid-template-columns: 1fr; } }
+
+  /* ── WHY PARSI ────────────────────────────────── */
+  #why { background: var(--white); padding: 100px 0; }
+  .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px; margin-top: 56px; }
+  .why-item { display: flex; flex-direction: column; gap: 16px; }
+  .why-photo {
+    width: 100%; aspect-ratio: 1;
+    background: var(--warm); border: 1px solid var(--silver);
+    overflow: hidden; display: flex; align-items: center; justify-content: center;
+  }
+  .why-photo img { width: 100%; height: 100%; object-fit: cover; }
+  .why-item h3 { margin: 0; }
+  .why-item p { font-size: 14px; line-height: 1.7; }
+  @media (max-width: 768px) { .why-grid { grid-template-columns: 1fr; } }
+
+  /* ── TESTIMONIALS ────────────────────────────── */
+  #testimonials { background: var(--warm); padding: 100px 0; }
+  .testimonials-intro { max-width: 640px; margin-bottom: 56px; }
+  .testimonials-intro p { font-size: 17px; color: var(--charcoal); margin-top: 16px; }
+  .testimonials-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+  .testimonial-card {
+    background: var(--white); border-left: 3px solid var(--gold);
+    padding: 32px; display: flex; flex-direction: column; gap: 16px;
+  }
+  .testimonial-card blockquote {
+    font-style: italic; font-size: 16px; line-height: 1.7; color: var(--charcoal);
+    font-family: 'Inter', sans-serif;
+  }
+  .testimonial-card cite {
+    font-style: normal; font-size: 13px; color: var(--navy); font-weight: 600;
+  }
+  @media (max-width: 700px) { .testimonials-grid { grid-template-columns: 1fr; } }
+
+  /* ── FINAL CTA ───────────────────────────────── */
+  #cta { background: var(--navy); padding: 100px 0; }
+  .cta-inner { text-align: center; max-width: 680px; margin: 0 auto; }
+  .cta-inner h2 { color: var(--white); margin-bottom: 20px; }
+  .cta-inner p { color: var(--silver); font-size: 17px; margin-bottom: 40px; }
+  .cta-buttons { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; margin-bottom: 40px; }
+  .cta-contact { display: flex; gap: 40px; justify-content: center; flex-wrap: wrap; }
+  .cta-contact a {
+    display: flex; align-items: center; gap: 8px;
+    font-family: 'IBM Plex Mono', monospace; font-size: 12px;
+    text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--silver); text-decoration: none; transition: color 0.2s;
+  }
+  .cta-contact a:hover { color: var(--gold); }
+
+  /* ── FOOTER ──────────────────────────────────── */
+  #footer { background: var(--navy); border-top: 1px solid rgba(184,141,60,0.3); padding: 48px 0 36px; }
+  .footer-inner {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    gap: 40px; flex-wrap: wrap;
+  }
+  .footer-left { display: flex; flex-direction: column; gap: 16px; }
+  .footer-address {
+    font-family: 'IBM Plex Mono', monospace; font-size: 11px;
+    text-transform: uppercase; letter-spacing: 0.08em; color: var(--silver);
+    line-height: 1.8;
+  }
+  .footer-copy {
+    font-size: 12px; color: rgba(214,214,214,0.6); margin-top: 8px;
+  }
+  .footer-links { display: flex; gap: 24px; align-items: center; }
+  .footer-links a {
+    font-size: 12px; color: var(--silver); text-decoration: none;
+    font-family: 'IBM Plex Mono', monospace; text-transform: uppercase;
+    letter-spacing: 0.06em; transition: color 0.2s;
+  }
+  .footer-links a:hover { color: var(--gold); }
+
+  /* ── MODAL ───────────────────────────────────── */
+  .modal-overlay {
+    display: none; position: fixed; inset: 0; z-index: 9999;
+    background: rgba(13,31,68,0.85); align-items: center; justify-content: center;
+    padding: 20px;
+  }
+  .modal-overlay.open { display: flex; }
+  .modal-box {
+    background: var(--white); max-width: 560px; width: 100%;
+    max-height: 90vh; overflow-y: auto;
+    padding: 48px; position: relative;
+  }
+  .modal-close {
+    position: absolute; top: 20px; right: 20px;
+    background: none; border: none; cursor: pointer;
+    font-size: 20px; color: var(--charcoal); line-height: 1;
+    font-family: 'Inter', sans-serif;
+  }
+  .modal-close:hover { color: var(--gold); }
+  .modal-box h2 { font-size: 28px; margin-bottom: 8px; }
+  .modal-box .modal-sub { font-size: 14px; color: var(--charcoal); margin-bottom: 32px; }
+  .modal-rule { width: 48px; height: 1px; background: var(--gold); border: none; margin: 0 0 32px; }
+  .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 20px; }
+  .form-group label {
+    font-family: 'IBM Plex Mono', monospace; font-weight: 500;
+    font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--gold);
+  }
+  .form-group input, .form-group select, .form-group textarea {
+    font-family: 'Inter', sans-serif; font-size: 15px; color: var(--charcoal);
+    border: 1px solid var(--charcoal); padding: 12px 16px; background: var(--white);
+    outline: none; transition: border-color 0.2s; width: 100%;
+    border-radius: 0; -webkit-appearance: none; appearance: none;
+  }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    border-color: var(--gold);
+  }
+  .form-group textarea { min-height: 100px; resize: vertical; }
+  .form-group select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%232D2D2D' stroke-width='1.5' fill='none'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px; }
+  .btn-submit {
+    width: 100%; height: 52px; background: var(--navy); color: var(--white);
+    border: none; cursor: pointer; font-family: 'Inter', sans-serif;
+    font-weight: 600; font-size: 13px; text-transform: uppercase; letter-spacing: 0.07em;
+    transition: color 0.2s; margin-top: 8px;
+  }
+  .btn-submit:hover { color: var(--gold); }
+  .thank-you { display: none; text-align: center; padding: 40px 0; }
+  .thank-you h3 { font-size: 24px; color: var(--navy); margin-bottom: 12px; }
+  .thank-you p { color: var(--charcoal); font-size: 15px; }
+  .thank-you .gold-icon { color: var(--gold); font-size: 40px; margin-bottom: 16px; display: block; }
+
+  /* ── SECTION UTILS ────────────────────────────── */
+  .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; }
+  *:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+</style>
+
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "AccountingService"],
+  "name": "Parsi & Company, CPA",
+  "legalName": "Parsi & Company Legacy LLP",
+  "description": "Century City CPA firm providing tax preparation, bookkeeping, IRS dispute resolution, trust and estate planning, and advisory services for businesses and individuals.",
+  "url": "https://parsicocpa.com",
+  "telephone": "+13105563655",
+  "email": "info@parsicocpa.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1801 Century Park East, Suite 1600",
+    "addressLocality": "Los Angeles",
+    "addressRegion": "CA",
+    "postalCode": "90067",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 34.0577,
+    "longitude": -118.4168
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "09:00",
+      "closes": "18:00"
+    }
+  ],
+  "areaServed": "United States",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "CPA Services",
+    "itemListElement": [
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Business Tax Preparation"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Personal Tax Preparation"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Bookkeeping"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Tax Dispute Resolution"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Trust & Estate Planning"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Forensic Accounting"}}
+    ]
+  },
+  "sameAs": [
+    "https://www.linkedin.com/company/parsi-company-cpa"
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- ── NAVBAR ──────────────────────────────────────── -->
+<header id="navbar" role="banner">
+  <div class="container">
+    <nav class="nav-inner" aria-label="Main navigation">
+      <!-- Logo -->
+      <a href="#" class="nav-logo" aria-label="Parsi & Company CPA – Home">
+        <svg width="160" height="52" viewBox="0 0 160 52" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Parsi & Company CPA logo">
+          <text x="80" y="16" font-family="Cormorant Garamond, serif" font-weight="700" font-size="18" fill="#0D1F44" text-anchor="middle" letter-spacing="3">PARSI</text>
+          <line x1="16" y1="21" x2="144" y2="21" stroke="#B88D3C" stroke-width="1"/>
+          <text x="80" y="33" font-family="Cormorant Garamond, serif" font-weight="600" font-size="12" text-anchor="middle" letter-spacing="2">
+            <tspan fill="#B88D3C">&amp;</tspan><tspan fill="#0D1F44"> COMPANY</tspan>
+          </text>
+          <line x1="16" y1="37" x2="144" y2="37" stroke="#B88D3C" stroke-width="1"/>
+          <text x="80" y="46" font-family="Cormorant Garamond, serif" font-weight="600" font-size="10" fill="#0D1F44" text-anchor="middle" letter-spacing="3">CPA</text>
+          <line x1="16" y1="49" x2="144" y2="49" stroke="#B88D3C" stroke-width="1"/>
+        </svg>
+      </a>
+
+      <!-- Desktop Links -->
+      <ul class="nav-links" role="list">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#why">Our Team</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#cta">Contact</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <a href="https://app.taxdome.com" class="nav-portal" target="_blank" rel="noopener" aria-label="Client portal – TaxDome">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <rect x="3" y="11" width="18" height="11" rx="0"/><path d="M7 11V7a5 5 0 0110 0v4"/>
+          </svg>
+          TaxDome
+        </a>
+        <button class="btn-nav-cta desktop-only" onclick="openModal()" aria-label="Schedule a consultation">SCHEDULE A CONSULTATION</button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Mobile navigation">
+    <ul role="list">
+      <li><a href="#services" onclick="closeMobileMenu()">Services</a></li>
+      <li><a href="#why" onclick="closeMobileMenu()">Our Team</a></li>
+      <li><a href="#testimonials" onclick="closeMobileMenu()">Testimonials</a></li>
+      <li><a href="#cta" onclick="closeMobileMenu()">Contact</a></li>
+      <li><a href="https://app.taxdome.com" target="_blank" rel="noopener">Client Portal</a></li>
+    </ul>
+    <button class="btn-nav-cta" onclick="openModal(); closeMobileMenu();">SCHEDULE A CONSULTATION</button>
+  </div>
+</header>
+
+<!-- ── HERO ─────────────────────────────────────────── -->
+<section id="hero" aria-labelledby="hero-heading">
+  <div class="container">
+    <div class="hero-inner">
+      <span class="hero-badge mono" aria-label="Century City CPA Firm">Century City CPA Firm</span>
+      <h1 id="hero-heading" class="hero-h1">Precision You Can Trust.<br>Personal CPA Guidance That Lasts.</h1>
+      <p class="hero-sub">Tax, accounting, bookkeeping and advisory support for businesses, individuals and families — built on expert precision and long-term relationships.</p>
+      <div class="hero-ctas">
+        <button class="btn-primary gold-bg" onclick="openModal()" aria-label="Schedule a free consultation">SCHEDULE A FREE CONSULTATION</button>
+        <a href="#services" class="btn-secondary">EXPLORE SERVICES</a>
+      </div>
+      <p class="hero-trust mono" aria-label="CPA/EA credentials, business and personal tax, bookkeeping and advisory">CPA/EA CREDENTIALS · BUSINESS + PERSONAL TAX · BOOKKEEPING + ADVISORY</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── TRUST STRIP ───────────────────────────────────── -->
+<section id="trust-strip" aria-label="Firm credentials and statistics">
+  <div class="container">
+    <div class="trust-grid">
+      <div class="trust-item">
+        <span class="big-num">25+</span>
+        <span class="trust-desc">Years of trusted relationships</span>
+      </div>
+      <div class="trust-item">
+        <span class="big-num">5.0 ★</span>
+        <span class="trust-desc">Google rating · 32+ Reviews</span>
+      </div>
+      <div class="trust-item">
+        <span class="big-num">50</span>
+        <span class="trust-desc">States served nationwide</span>
+      </div>
+      <div class="trust-item">
+        <span class="big-num">3</span>
+        <span class="trust-desc">Licensed CPAs &amp; EAs in-house</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PROBLEM / SOLUTION ────────────────────────────── -->
+<section id="problem" aria-labelledby="problem-heading">
+  <div class="container">
+    <div class="problem-inner">
+      <div class="problem-left">
+        <h2 id="problem-heading">You deserve a CPA who knows your name, not just your file number.</h2>
+        <p>Most business owners and individuals feel anxious about taxes, fear audits, and waste time they could spend growing their business or enjoying life. At Parsi, we replace uncertainty with clarity and long-term peace of mind.</p>
+      </div>
+      <div class="problem-right">
+        <ul class="problem-list" role="list">
+          <li>
+            <svg class="gold-bullet" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <rect width="20" height="20" fill="#B88D3C"/>
+              <path d="M5 10l4 4 6-6" stroke="white" stroke-width="1.5"/>
+            </svg>
+            Never lose an audit
+          </li>
+          <li>
+            <svg class="gold-bullet" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <rect width="20" height="20" fill="#B88D3C"/>
+              <path d="M5 10l4 4 6-6" stroke="white" stroke-width="1.5"/>
+            </svg>
+            Minimize tax exposure legally
+          </li>
+          <li>
+            <svg class="gold-bullet" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <rect width="20" height="20" fill="#B88D3C"/>
+              <path d="M5 10l4 4 6-6" stroke="white" stroke-width="1.5"/>
+            </svg>
+            Personal guidance for decades, not seasons
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SERVICES ──────────────────────────────────────── -->
+<section id="services" aria-labelledby="services-heading">
+  <div class="container">
+    <span class="mono section-label">What We Do</span>
+    <h2 id="services-heading" class="section-title">Our Core Services</h2>
+    <hr class="section-rule" aria-hidden="true">
+    <div class="services-grid">
+
+      <article class="service-card">
+        <div class="service-icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#B88D3C" stroke-width="1.5">
+            <rect x="3" y="3" width="18" height="18" rx="0"/><path d="M9 9h6M9 12h6M9 15h4"/>
+          </svg>
+        </div>
+        <h4>Business Tax Preparation</h4>
+        <p>Expert preparation for partnerships (1065), S corporations (1120-S), and C corporations (1120) — with year-round planning and audit confidence.</p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#B88D3C" stroke-width="1.5">
+            <path d="M4 6h16M4 10h16M4 14h10"/><rect x="3" y="3" width="18" height="18" rx="0"/>
+          </svg>
+        </div>
+        <h4>Bookkeeping</h4>
+        <p>Monthly accounting support to keep business records organized, reconciled, and ready for smarter decisions and smoother tax seasons.</p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#B88D3C" stroke-width="1.5">
+            <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+          </svg>
+        </div>
+        <h4>Personal Tax Preparation</h4>
+        <p>Individual and family tax preparation (1040, complex) designed to reduce stress, avoid costly mistakes, and file with confidence.</p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#B88D3C" stroke-width="1.5">
+            <path d="M12 2l2 7h7l-5.5 4 2 7L12 16l-5.5 4 2-7L3 9h7z"/>
+          </svg>
+        </div>
+        <h4>Tax Dispute Resolution</h4>
+        <p>Calm, experienced representation for IRS and FTB disputes, notices, and audits — so you respond with clarity and confidence.</p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#B88D3C" stroke-width="1.5">
+            <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><path d="M9 22V12h6v10"/>
+          </svg>
+        </div>
+        <h4>Trust &amp; Estate Planning</h4>
+        <p>Tax-aware planning for individuals and families who want to protect assets, reduce uncertainty, and plan with long-term confidence.</p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#B88D3C" stroke-width="1.5">
+            <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 7v4l3 3"/>
+          </svg>
+        </div>
+        <h4>Forensic Accounting &amp; Business Consulting</h4>
+        <p>Detailed financial review, analysis, and strategic guidance for disputes, investigations, or situations where accuracy and documentation matter.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── WHY PARSI ──────────────────────────────────────── -->
+<section id="why" aria-labelledby="why-heading">
+  <div class="container">
+    <span class="mono section-label">Our Differentiators</span>
+    <h2 id="why-heading" class="section-title">Why Clients Stay for Decades</h2>
+    <hr class="section-rule" aria-hidden="true">
+    <div class="why-grid">
+
+      <div class="why-item">
+        <div class="why-photo">
+          <img src="https://placehold.co/400x400/D6D6D6/0D1F44?text=Team+Photo" alt="Parsi & Company team at Century City office" loading="lazy">
+        </div>
+        <h3>Decades-Long Relationships</h3>
+        <p>Our clients don't leave. Many have trusted us with their tax and accounting needs for 20–25 years. That continuity is our greatest credential — and our greatest responsibility.</p>
+      </div>
+
+      <div class="why-item">
+        <div class="why-photo">
+          <img src="https://placehold.co/400x400/D6D6D6/0D1F44?text=Team+Photo" alt="CPA team reviewing financial documents" loading="lazy">
+        </div>
+        <h3>Expert Precision</h3>
+        <p>With three licensed CPAs and an Enrolled Agent on staff, every engagement is handled with the technical depth your finances deserve. We never cut corners.</p>
+      </div>
+
+      <div class="why-item">
+        <div class="why-photo">
+          <img src="https://placehold.co/400x400/D6D6D6/0D1F44?text=Team+Photo" alt="Parsi team meeting with client" loading="lazy">
+        </div>
+        <h3>Warm Professionalism</h3>
+        <p>Professional doesn't have to mean cold. Our clients describe us as knowledgeable, approachable, and genuinely caring. We handle the complexity so you can focus on what matters.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── TESTIMONIALS ───────────────────────────────────── -->
+<section id="testimonials" aria-labelledby="testimonials-heading">
+  <div class="container">
+    <div class="testimonials-intro">
+      <span class="mono section-label">Client Stories</span>
+      <h2 id="testimonials-heading">Trusted for Over 25 Years</h2>
+      <hr class="section-rule" aria-hidden="true">
+      <p>Our clients stay with us for decades. Here's why:</p>
+    </div>
+    <div class="testimonials-grid">
+
+      <div class="testimonial-card">
+        <blockquote>
+          "I have been a client of Parsi and Co. for twenty-five years… Small business owners are dependent on their accountants, and thank God I have Mr. Parsi and crew."
+        </blockquote>
+        <cite>— A loyal business client, 25-year relationship</cite>
+      </div>
+
+      <div class="testimonial-card">
+        <blockquote>
+          "The team from Parsi &amp; Company have been a critical partner nearly the entire life of our company, from our second tax season until now, 20+ years later."
+        </blockquote>
+        <cite>— Long-term business client, 20+ year relationship</cite>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── FINAL CTA ─────────────────────────────────────── -->
+<section id="cta" aria-labelledby="cta-heading">
+  <div class="container">
+    <div class="cta-inner">
+      <h2 id="cta-heading" style="color:var(--white)">Ready for CPA guidance you can trust year after year?</h2>
+      <p>Precision, personal attention, and long-term peace of mind — starting with a free consultation.</p>
+      <div class="cta-buttons">
+        <button class="btn-primary gold-bg" onclick="openModal()">SCHEDULE A FREE CONSULTATION</button>
+      </div>
+      <div class="cta-contact">
+        <a href="tel:+13105563655" aria-label="Call Parsi & Company at (310) 556-3655">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+          </svg>
+          (310) 556-3655
+        </a>
+        <a href="mailto:info@parsicocpa.com" aria-label="Email Parsi & Company">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+          </svg>
+          info@parsicocpa.com
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ────────────────────────────────────────── -->
+<footer id="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <svg width="140" height="46" viewBox="0 0 140 46" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Parsi & Company CPA" role="img">
+          <text x="70" y="14" font-family="Cormorant Garamond, serif" font-weight="700" font-size="16" fill="white" text-anchor="middle" letter-spacing="3">PARSI</text>
+          <line x1="10" y1="18" x2="130" y2="18" stroke="#B88D3C" stroke-width="0.8"/>
+          <text x="70" y="29" font-family="Cormorant Garamond, serif" font-weight="600" font-size="10.5" text-anchor="middle" letter-spacing="2">
+            <tspan fill="#B88D3C">&amp;</tspan><tspan fill="white"> COMPANY</tspan>
+          </text>
+          <line x1="10" y1="33" x2="130" y2="33" stroke="#B88D3C" stroke-width="0.8"/>
+          <text x="70" y="41" font-family="Cormorant Garamond, serif" font-weight="600" font-size="9" fill="white" text-anchor="middle" letter-spacing="3">CPA</text>
+        </svg>
+        <address class="footer-address" style="font-style:normal;">
+          1801 Century Park East, Suite 1600<br>
+          Los Angeles, CA 90067<br>
+          (310) 556-3655 · info@parsicocpa.com
+        </address>
+        <p class="footer-copy">© 2026 Parsi &amp; Company, CPA. All rights reserved.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="https://app.taxdome.com" target="_blank" rel="noopener">Client Portal</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ── CONSULTATION MODAL ─────────────────────────────── -->
+<div class="modal-overlay" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal()" aria-label="Close consultation form">&times;</button>
+    <h2 id="modal-title">Schedule a Free Consultation</h2>
+    <p class="modal-sub">Tell us a little about your needs and a member of our team will be in touch shortly.</p>
+    <hr class="modal-rule" aria-hidden="true">
+
+    <div id="consultation-form">
+      <div class="form-group">
+        <label for="f-name">Full Name *</label>
+        <input type="text" id="f-name" name="name" placeholder="Your full name" required autocomplete="name" aria-required="true">
+      </div>
+      <div class="form-group">
+        <label for="f-email">Email *</label>
+        <input type="email" id="f-email" name="email" placeholder="name@email.com" required autocomplete="email" aria-required="true">
+      </div>
+      <div class="form-group">
+        <label for="f-phone">Phone</label>
+        <input type="tel" id="f-phone" name="phone" placeholder="(310) 000-0000" autocomplete="tel">
+      </div>
+      <div class="form-group">
+        <label for="f-service">Service Type *</label>
+        <select id="f-service" name="service" required aria-required="true">
+          <option value="" disabled selected>Select a service…</option>
+          <option>Business Tax Preparation</option>
+          <option>Personal Tax Preparation</option>
+          <option>Bookkeeping</option>
+          <option>Tax Dispute Resolution / IRS Notice</option>
+          <option>Trust &amp; Estate Planning</option>
+          <option>Forensic Accounting</option>
+          <option>Business Consulting</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="f-message">Message</label>
+        <textarea id="f-message" name="message" placeholder="Briefly describe what you need…"></textarea>
+      </div>
+      <button type="button" class="btn-submit" onclick="handleSubmit()">SEND REQUEST</button>
+    </div>
+
+    <div class="thank-you" id="thank-you" aria-live="polite">
+      <span class="gold-icon" aria-hidden="true">✓</span>
+      <h3>Request Received</h3>
+      <p>Thank you for reaching out. A member of the Parsi &amp; Company team will contact you within one business day.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  // ── Navbar scroll effect
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 40);
+  }, { passive: true });
+
+  // ── Mobile menu
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobile-menu');
+  hamburger.addEventListener('click', () => {
+    const open = mobileMenu.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', open);
+  });
+  function closeMobileMenu() {
+    mobileMenu.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+  }
+
+  // ── Modal
+  const modal = document.getElementById('modal');
+  function openModal() {
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    const firstInput = modal.querySelector('input, select, button');
+    if (firstInput) setTimeout(() => firstInput.focus(), 50);
+  }
+  function closeModal() {
+    modal.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
+  });
+
+  // ── Form submit
+  function handleSubmit() {
+    const name = document.getElementById('f-name').value.trim();
+    const email = document.getElementById('f-email').value.trim();
+    const service = document.getElementById('f-service').value;
+    if (!name || !email || !service) {
+      alert('Please fill in the required fields: Name, Email, and Service Type.');
+      return;
+    }
+    document.getElementById('consultation-form').style.display = 'none';
+    document.getElementById('thank-you').style.display = 'block';
+  }
+
+  // ── Smooth anchor offset for sticky nav
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        const navH = navbar.getBoundingClientRect().height;
+        const top = target.getBoundingClientRect().top + window.scrollY - navH - 16;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
+    });
+  });
+</script>
+</body>
+</html>
