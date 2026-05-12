@@ -3,15 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- SEO-01: Title ~58 chars -->
 <title>Parsi &amp; Company, CPA | Century City Tax &amp; Accounting</title>
-<!-- SEO-02: Description ≤155 chars -->
 <meta name="description" content="Century City CPA firm providing tax preparation, bookkeeping, IRS dispute help, and advisory with personal, long-term guidance. Schedule a free consultation.">
 <meta property="og:title" content="Parsi &amp; Company, CPA | Century City CPA Firm">
 <meta property="og:description" content="Century City CPA firm providing tax preparation, bookkeeping, IRS dispute help, and advisory with personal, long-term guidance. Schedule a free consultation.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://parsicocpa.com">
-<!-- CON-13/14: Cormorant Garamond (h1/h2 serif) + Inter (body) + IBM Plex Mono (labels) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=IBM+Plex+Mono:wght@500&family=Inter:wght@400;500;600;700&display=swap">
@@ -21,9 +18,7 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{--navy:#0D1F44;--gold:#B88D3C;--warm:#F5F7FA;--silver:#D6D6D6;--charcoal:#2D2D2D;--white:#FFFFFF;--max-w:1240px;--side:58px;--side-sm:20px}
 html{scroll-behavior:smooth}
-/* CON-14: Inter for all body — explicit so DevTools confirms it */
 body{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);background:var(--white);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased}
-/* CON-13: Cormorant Garamond bold for h1 & h2 — explicit declaration */
 h1,h2{font-family:'Cormorant Garamond',serif;line-height:1.2;color:var(--navy)}
 h1{font-weight:700;font-size:clamp(38px,5vw,56px)}
 h2{font-weight:700;font-size:clamp(28px,3.5vw,40px)}
@@ -32,31 +27,34 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
 .mono{font-family:'IBM Plex Mono',monospace;font-weight:500;text-transform:uppercase;font-size:11px;letter-spacing:.08em}
 .container{max-width:var(--max-w);margin:0 auto;padding:0 var(--side)}
 @media(max-width:768px){.container{padding:0 var(--side-sm)}}
-/* ── LOGO — HTML puro, fondo transparente ── */
+
+/* ── LOGO — HTML puro, fondo transparente, misma estructura para light y dark ── */
 .logo{display:inline-flex;flex-direction:column;align-items:center;gap:0;text-decoration:none;flex-shrink:0}
-/* PARSI — centered */
+/* PARSI */
 .logo .lo-parsi{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:28px;letter-spacing:.35em;text-transform:uppercase;line-height:1;padding-right:.35em}
-/* & COMPANY row — shifted left to mirror x=365 vs center 400 → offset ~9% left */
-.logo .lo-ampco{display:flex;align-items:center;width:100%;justify-content:center;margin:5px 0 3px;transform:translateX(-6%)}
-/* Left line: x1=195→265 = 70px wide; right line: x1=465→535 = 70px wide — equal */
+/* & COMPANY row — offset izquierda para replicar x=365 del SVG (centro=400) */
+.logo .lo-ampco{display:flex;align-items:center;width:100%;justify-content:center;margin:5px 0 3px;transform:translateX(-4%)}
+/* Líneas laterales — 28px cada una, simétricas */
 .logo .lo-line{height:1px;background:#b59a44;width:28px;flex-shrink:0}
+/* & dorado siempre */
 .logo .lo-amp{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:15px;color:#b59a44;margin:0 6px;white-space:nowrap}
+/* COMPANY — color según variante */
 .logo .lo-company{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:15px;letter-spacing:.12em;text-transform:uppercase;margin-right:6px;white-space:nowrap}
-/* Separator line — centered, above CPA */
-.logo .lo-sep{display:block;width:55%;height:1px;background:#b59a44;margin:3px auto 5px;transform:translateX(-6%)}
-/* CPA — centered at x=400, no offset */
+/* Línea separadora sobre CPA — mismo offset que la fila & COMPANY */
+.logo .lo-sep{display:block;width:55%;height:1px;background:#b59a44;margin:3px auto 5px;transform:translateX(-4%)}
+/* CPA — centrado, sin offset */
 .logo .lo-cpa{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:18px;letter-spacing:.5em;text-transform:uppercase;line-height:1;padding-right:.5em}
-/* Location */
+/* Ubicación */
 .logo .lo-location{font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:8px;letter-spacing:.14em;text-transform:uppercase;margin-top:5px;white-space:nowrap}
 
-/* LIGHT variant — navbar (fondo blanco) */
+/* LIGHT — navbar (fondo blanco) */
 .logo.logo-light .lo-parsi  { color: #1a2a47; }
 .logo.logo-light .lo-amp    { color: #b59a44; }
 .logo.logo-light .lo-company{ color: #1a2a47; }
 .logo.logo-light .lo-cpa    { color: #1a2a47; }
 .logo.logo-light .lo-location{ color: #c0c0c0; }
 
-/* DARK variant — footer (fondo azul oscuro) */
+/* DARK — footer (fondo azul oscuro) — mismos tamaños y espaciados, solo colores distintos */
 .logo.logo-dark .lo-parsi  { color: #ffffff; }
 .logo.logo-dark .lo-amp    { color: #b59a44; }
 .logo.logo-dark .lo-company{ color: #ffffff; }
@@ -84,6 +82,7 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
 .mobile-menu ul li a{display:block;padding:12px 0;font-family:'Inter',sans-serif;font-weight:500;font-size:14px;text-transform:uppercase;letter-spacing:.06em;color:var(--navy);text-decoration:none;border-bottom:1px solid var(--warm)}
 .mobile-menu .btn-nav-cta{margin-top:16px;width:100%;justify-content:center}
 @media(max-width:1000px){.nav-links{display:none}.nav-portal{display:none}.hamburger{display:flex}.btn-nav-cta.desktop-only{display:none}}
+
 /* ── BUTTONS ── */
 .btn-primary{background:var(--navy);color:var(--white);font-family:'Inter',sans-serif;font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:.07em;border:none;cursor:pointer;height:52px;padding:0 32px;display:inline-flex;align-items:center;text-decoration:none;transition:color .2s}
 .btn-primary:hover{color:var(--gold)}
@@ -91,12 +90,13 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
 .btn-primary.gold-bg:hover{opacity:.9}
 .btn-secondary{background:transparent;color:var(--white);font-family:'Inter',sans-serif;font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:.07em;border:1px solid var(--white);cursor:pointer;height:52px;padding:0 32px;display:inline-flex;align-items:center;text-decoration:none;transition:background .2s,color .2s}
 .btn-secondary:hover{background:var(--white);color:var(--navy)}
+
 /* ── SECTION UTILS ── */
-/* ACC-07 contrast fix: labels navy on light, gold only on dark backgrounds */
 .section-label{margin-bottom:12px;display:block;color:var(--navy);font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:11px;text-transform:uppercase;letter-spacing:.1em}
 .section-title{margin-bottom:16px}
 .section-rule{margin-bottom:56px;width:48px;height:1px;background:var(--gold);border:none;display:block}
 *:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
 /* ── HERO ── */
 #hero{background:var(--navy);padding:120px 0}
 .hero-inner{display:flex;flex-direction:column;align-items:flex-start;max-width:780px}
@@ -106,12 +106,14 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
 .hero-ctas{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:36px}
 .hero-trust{font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--silver)}
 @media(max-width:600px){#hero{padding:80px 0}}
+
 /* ── TRUST STRIP ── */
 #trust-strip{background:var(--warm);padding:56px 0}
 .trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:40px;text-align:center}
 .trust-item .big-num{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:clamp(36px,4vw,52px);color:var(--navy);line-height:1;display:block;margin-bottom:8px}
 .trust-item .trust-desc{font-size:13px;color:var(--charcoal)}
 @media(max-width:700px){.trust-grid{grid-template-columns:repeat(2,1fr);gap:32px}}
+
 /* ── PROBLEM ── */
 #problem{background:var(--white);padding:100px 0}
 .problem-inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
@@ -121,6 +123,7 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
 .problem-list li{display:flex;align-items:flex-start;gap:14px;font-size:16px;font-weight:500;color:var(--navy)}
 .problem-list li .gb{flex-shrink:0;margin-top:3px}
 @media(max-width:768px){.problem-inner{grid-template-columns:1fr;gap:40px}}
+
 /* ── SERVICES ── */
 #services{background:var(--warm);padding:100px 0}
 .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
@@ -130,7 +133,8 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
 .service-card p{font-size:14px;line-height:1.6}
 @media(max-width:900px){.services-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:580px){.services-grid{grid-template-columns:1fr}}
-/* ── PROCESS (CON-25) ── */
+
+/* ── PROCESS ── */
 #process{background:var(--white);padding:100px 0}
 .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
 .process-grid::before{content:'';position:absolute;top:28px;left:12.5%;width:75%;height:1px;background:var(--silver);z-index:0}
@@ -139,7 +143,8 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
 .process-step h3{font-size:14px;font-weight:600;color:var(--navy)}
 .process-step p{font-size:13px;color:var(--charcoal);line-height:1.5}
 @media(max-width:700px){.process-grid{grid-template-columns:repeat(2,1fr);gap:32px}.process-grid::before{display:none}}
-/* ── TEAM (CON-24) ── */
+
+/* ── TEAM ── */
 #team{background:var(--warm);padding:100px 0}
 .team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
 .team-card{background:var(--white);border:1px solid var(--silver);display:flex;flex-direction:column}
@@ -151,6 +156,7 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
 .team-role{font-size:13px;color:var(--charcoal);font-weight:500}
 .team-bio{font-size:13px;color:var(--charcoal);line-height:1.6;margin-top:8px}
 @media(max-width:768px){.team-grid{grid-template-columns:1fr;max-width:400px;margin:0 auto}}
+
 /* ── TESTIMONIALS ── */
 #testimonials{background:var(--white);padding:100px 0}
 .testimonials-intro{max-width:640px;margin-bottom:56px}
@@ -160,7 +166,8 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
 .testimonial-card blockquote{font-style:italic;font-size:16px;line-height:1.7}
 .testimonial-card cite{font-style:normal;font-size:13px;color:var(--navy);font-weight:600}
 @media(max-width:700px){.testimonials-grid{grid-template-columns:1fr}}
-/* ── RESOURCES (NAV-08 / CON-32) ── */
+
+/* ── RESOURCES ── */
 #resources{background:var(--warm);padding:100px 0}
 .resources-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .resource-card{background:var(--white);border:1px solid var(--silver);padding:28px 28px 24px;display:flex;flex-direction:column;gap:12px;transition:border-color .2s;text-decoration:none;cursor:pointer}
@@ -170,6 +177,7 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
 .resource-card p{font-size:13px;line-height:1.6;flex:1}
 .resource-read{font-size:12px;font-weight:600;color:var(--navy);text-transform:uppercase;letter-spacing:.06em;display:flex;align-items:center;gap:6px;margin-top:4px}
 @media(max-width:768px){.resources-grid{grid-template-columns:1fr}}
+
 /* ── CTA ── */
 #cta{background:var(--navy);padding:100px 0}
 .cta-inner{text-align:center;max-width:680px;margin:0 auto}
@@ -179,9 +187,9 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
 .cta-contact{display:flex;gap:40px;justify-content:center;flex-wrap:wrap}
 .cta-contact a{display:flex;align-items:center;gap:8px;font-family:'IBM Plex Mono',monospace;font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--silver);text-decoration:none;transition:color .2s}
 .cta-contact a:hover{color:var(--gold)}
-/* SEO-19: GBP link */
 .gbp-link{display:inline-flex;align-items:center;gap:8px;margin-top:24px;font-family:'IBM Plex Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(184,141,60,.4);padding-bottom:2px}
 .gbp-link:hover{color:var(--white);border-color:var(--white)}
+
 /* ── FOOTER ── */
 #footer{background:var(--navy);border-top:1px solid rgba(184,141,60,.3);padding:48px 0 36px}
 .footer-inner{display:flex;justify-content:space-between;align-items:flex-start;gap:40px;flex-wrap:wrap}
@@ -191,7 +199,8 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
 .footer-links{display:flex;gap:24px;align-items:center;flex-wrap:wrap}
 .footer-links a{font-size:12px;color:var(--silver);text-decoration:none;font-family:'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.06em;transition:color .2s;cursor:pointer}
 .footer-links a:hover{color:var(--gold)}
-/* ── LEGAL MODALS (NAV-07 / UX-24 / UX-25) ── */
+
+/* ── LEGAL MODALS ── */
 .legal-overlay{display:none;position:fixed;inset:0;z-index:9998;background:rgba(13,31,68,.82);align-items:flex-start;justify-content:center;padding:40px 20px;overflow-y:auto}
 .legal-overlay.open{display:flex;animation:fadeIn .2s ease}
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
@@ -211,6 +220,7 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
 .legal-footer-note{background:var(--warm);border-left:3px solid var(--gold);padding:16px 20px;margin-top:32px}
 .legal-footer-note p{font-size:13px;margin:0}
 @media(max-width:600px){.legal-box{padding:36px 24px 32px}.legal-overlay{padding:16px}}
+
 /* ── MODAL ── */
 .modal-overlay{display:none;position:fixed;inset:0;z-index:9999;background:rgba(13,31,68,.85);align-items:center;justify-content:center;padding:20px}
 .modal-overlay.open{display:flex}
@@ -220,7 +230,6 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
 .modal-box h2{font-size:28px;margin-bottom:8px}
 .modal-sub{font-size:14px;color:var(--charcoal);margin-bottom:32px}
 .modal-rule{width:48px;height:1px;background:var(--gold);border:none;margin:0 0 32px;display:block}
-/* ACC-07: labels navy on white (high contrast) + explicit error text */
 .form-group{display:flex;flex-direction:column;gap:6px;margin-bottom:20px}
 .form-group label{font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--navy)}
 .form-group input,.form-group select,.form-group textarea{font-family:'Inter',sans-serif;font-size:15px;color:var(--charcoal);border:1px solid #888;padding:12px 16px;background:var(--white);outline:none;transition:border-color .2s;width:100%;border-radius:0;-webkit-appearance:none;appearance:none}
@@ -244,7 +253,7 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
 </head>
 <body>
 
-<!-- NAVBAR — NAV-02: Resources added -->
+<!-- NAVBAR -->
 <header id="navbar" role="banner">
   <div class="container">
     <nav class="nav-inner" aria-label="Main navigation">
@@ -381,7 +390,7 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
   </div>
 </section>
 
-<!-- PROCESS — CON-25 -->
+<!-- PROCESS -->
 <section id="process" aria-labelledby="process-heading">
   <div class="container">
     <span class="section-label">How It Works</span>
@@ -412,14 +421,13 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
   </div>
 </section>
 
-<!-- TEAM — CON-24: Photos, names, credentials, titles, bios -->
+<!-- TEAM -->
 <section id="team" aria-labelledby="team-heading">
   <div class="container">
     <span class="section-label">Our Team</span>
     <h2 id="team-heading" class="section-title">Meet the Parsi &amp; Company CPAs</h2>
     <hr class="section-rule" aria-hidden="true">
     <div class="team-grid">
-
       <div class="team-card">
         <div class="team-photo">
           <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" aria-label="Bo Lin, CPA, EA" role="img">
@@ -436,7 +444,6 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
           <p class="team-bio">Bo leads tax strategy and IRS representation for Parsi's business and individual clients. As a licensed Enrolled Agent, Bo is authorized to represent clients before the IRS in all 50 states — one of the firm's most critical credentials.</p>
         </div>
       </div>
-
       <div class="team-card">
         <div class="team-photo">
           <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" aria-label="Andrea Mason, CPA" role="img">
@@ -453,7 +460,6 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
           <p class="team-bio">Andrea specializes in business tax preparation and monthly bookkeeping for small and medium-sized companies. Her meticulous approach ensures every filing is accurate, compliant, and strategically optimized.</p>
         </div>
       </div>
-
       <div class="team-card">
         <div class="team-photo">
           <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" aria-label="Ryan Bakke, CPA" role="img">
@@ -470,7 +476,6 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
           <p class="team-bio">Ryan focuses on personal tax preparation, trust and estate planning, and the long-term client relationships that define Parsi's reputation across Los Angeles. He ensures every client feels heard, not just filed.</p>
         </div>
       </div>
-
     </div>
   </div>
 </section>
@@ -497,7 +502,7 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
   </div>
 </section>
 
-<!-- RESOURCES — NAV-08 / CON-32 -->
+<!-- RESOURCES -->
 <section id="resources" aria-labelledby="resources-heading">
   <div class="container">
     <span class="section-label">Tax Alerts &amp; Resources</span>
@@ -545,7 +550,6 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
           info@parsicocpa.com
         </a>
       </div>
-      <!-- SEO-19: Google Business Profile reference -->
       <a href="https://g.co/kgs/parsicocpa" target="_blank" rel="noopener" class="gbp-link" aria-label="View Parsi & Company on Google Business Profile">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg>
         View us on Google Business Profile
@@ -561,6 +565,7 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
   <div class="container">
     <div class="footer-inner">
       <div class="footer-left">
+        <!-- Logo dark: misma estructura HTML exacta que logo-light, solo colores distintos -->
         <a href="#" class="logo logo-dark" aria-label="Parsi & Company CPA">
           <span class="lo-parsi">Parsi</span>
           <span class="lo-ampco">
@@ -579,7 +584,6 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
         </address>
         <p class="footer-copy">© 2026 Parsi &amp; Company, CPA. All rights reserved.</p>
       </div>
-      <!-- NAV-07: Links now open real legal content pages -->
       <div class="footer-links">
         <a onclick="openLegal('privacy')">Privacy Policy</a>
         <a onclick="openLegal('terms')">Terms of Use</a>
@@ -589,7 +593,7 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
   </div>
 </footer>
 
-<!-- PRIVACY POLICY MODAL — UX-24 / NAV-07 -->
+<!-- PRIVACY POLICY MODAL -->
 <div class="legal-overlay" id="privacy-page" role="dialog" aria-modal="true" aria-labelledby="privacy-title">
   <div class="legal-box">
     <div class="legal-box-header">
@@ -602,23 +606,19 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
       </button>
     </div>
     <hr class="legal-divider" aria-hidden="true">
-
     <p>Parsi &amp; Company Legacy LLP ("Parsi &amp; Company," "we," "our," or "us") is committed to protecting the privacy and security of your personal information. This Privacy Policy describes how we collect, use, and protect information obtained through <strong>parsicocpa.com</strong> and in connection with our professional CPA services.</p>
-
     <h3>1. Information We Collect</h3>
     <ul>
       <li><strong>Contact and identification data:</strong> name, email address, phone number, and mailing address when you contact us or submit a consultation request.</li>
       <li><strong>Professional and financial data:</strong> entity type, tax filing status, and financial details you provide as part of a CPA engagement.</li>
       <li><strong>Technical data:</strong> IP address, browser type, and pages visited, collected automatically via standard web server logs.</li>
     </ul>
-
     <h3>2. How We Use Your Information</h3>
     <ul>
       <li>To respond to consultation requests and deliver accounting, tax, and advisory services.</li>
       <li>To communicate regarding your engagement, tax deadlines, and service updates.</li>
       <li>To comply with legal and regulatory requirements applicable to California-licensed CPA firms.</li>
     </ul>
-
     <h3>3. California Privacy Rights (CCPA / CPRA)</h3>
     <p>If you are a California resident, you have the following rights:</p>
     <ul>
@@ -629,23 +629,19 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
       <li><strong>Right to Non-Discrimination:</strong> We will not discriminate against you for exercising your CCPA rights.</li>
     </ul>
     <p>To submit a privacy request, contact us at <strong>info@parsicocpa.com</strong> or call <strong>(310) 556-3655</strong>. We will respond within 45 days as required by California law.</p>
-
     <h3>4. Data Retention</h3>
     <p>We retain client records per California Board of Accountancy requirements and applicable federal tax law. Contact form data is retained for up to 24 months unless you request earlier deletion.</p>
-
     <h3>5. Third-Party Services</h3>
     <p>We use TaxDome as our secure client portal for document exchange. We do not sell, rent, or share your personal information with third parties for marketing purposes.</p>
-
     <h3>6. Security</h3>
     <p>We implement appropriate technical and organizational safeguards. All client document exchange occurs through our encrypted TaxDome portal.</p>
-
     <div class="legal-footer-note">
       <p><strong>Questions?</strong> Contact Parsi &amp; Company Legacy LLP at 1801 Century Park East, Suite 1600, Los Angeles, CA 90067 · <a href="mailto:info@parsicocpa.com" style="color:var(--navy)">info@parsicocpa.com</a> · (310) 556-3655</p>
     </div>
   </div>
 </div>
 
-<!-- TERMS OF USE MODAL — UX-25 / NAV-07 -->
+<!-- TERMS OF USE MODAL -->
 <div class="legal-overlay" id="terms-page" role="dialog" aria-modal="true" aria-labelledby="terms-title">
   <div class="legal-box">
     <div class="legal-box-header">
@@ -658,46 +654,36 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
       </button>
     </div>
     <hr class="legal-divider" aria-hidden="true">
-
     <p>These Terms of Use govern your access to and use of the Parsi &amp; Company, CPA website at <strong>parsicocpa.com</strong>, operated by Parsi &amp; Company Legacy LLP. By accessing this site you agree to these Terms.</p>
-
     <h3>1. No CPA-Client Relationship</h3>
     <p>Information on this site is for general informational purposes only and does not constitute professional tax, accounting, legal, or financial advice. Use of this site does not create a CPA-client relationship. A formal engagement letter signed by both parties is required before professional services commence.</p>
-
     <h3>2. Accuracy of Information</h3>
     <p>Tax laws and regulations change frequently. Parsi &amp; Company makes no representations regarding the completeness, accuracy, or timeliness of content on this site. Consult a licensed CPA for advice specific to your situation.</p>
-
     <h3>3. Intellectual Property</h3>
     <p>All content on this site — including text, graphics, logos, and the Parsi &amp; Company brand identity — is the exclusive property of Parsi &amp; Company Legacy LLP and is protected by applicable copyright and trademark law. Unauthorized use or reproduction is prohibited.</p>
-
     <h3>4. Limitation of Liability</h3>
     <p>To the maximum extent permitted by California law, Parsi &amp; Company shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of this site or reliance on information contained herein.</p>
-
     <h3>5. Governing Law</h3>
     <p>These Terms are governed by the laws of the State of California. Any disputes shall be resolved in the courts of Los Angeles County, California.</p>
-
     <h3>6. Changes to These Terms</h3>
     <p>We reserve the right to modify these Terms at any time. Changes will be posted on this page with an updated effective date. Continued use of the site after changes are posted constitutes acceptance of the revised Terms.</p>
-
     <div class="legal-footer-note">
       <p><strong>Questions?</strong> Contact Parsi &amp; Company Legacy LLP at 1801 Century Park East, Suite 1600, Los Angeles, CA 90067 · <a href="mailto:info@parsicocpa.com" style="color:var(--navy)">info@parsicocpa.com</a> · (310) 556-3655</p>
     </div>
   </div>
 </div>
 
-<!-- CONSULTATION MODAL — CON-33: Entity/Filing Type + Timeline added -->
+<!-- CONSULTATION MODAL -->
 <div class="modal-overlay" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
   <div class="modal-box">
     <button class="modal-close-btn" onclick="closeModal()" aria-label="Close">&times;</button>
     <h2 id="modal-title">Schedule a Free Consultation</h2>
-    <!-- Answers "A qué correo llegaría?" — makes destination explicit to user -->
     <p class="modal-sub">Tell us about your needs. Your request will be sent to <strong>info@parsicocpa.com</strong> and a team member will respond within one business day.</p>
     <hr class="modal-rule" aria-hidden="true">
     <div id="consultation-form">
       <div class="form-group">
         <label for="f-name">Full Name *</label>
         <input type="text" id="f-name" autocomplete="name" placeholder="Your full name" aria-required="true" aria-describedby="f-name-err">
-        <!-- ACC-07: error shown as text, not color alone -->
         <span class="form-error-msg" id="f-name-err" role="alert">Please enter your full name.</span>
       </div>
       <div class="form-group">
@@ -724,7 +710,6 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
         </select>
         <span class="form-error-msg" id="f-service-err" role="alert">Please select a service type.</span>
       </div>
-      <!-- CON-33: Entity/Filing Type field (Brand Book p.36) -->
       <div class="form-group">
         <label for="f-entity">Entity / Filing Type</label>
         <select id="f-entity">
@@ -737,7 +722,6 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
           <option>Not sure yet</option>
         </select>
       </div>
-      <!-- CON-33: Timeline field (Brand Book p.36) -->
       <div class="form-group">
         <label for="f-timeline">Timeline</label>
         <select id="f-timeline">
@@ -763,11 +747,9 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
 </div>
 
 <script>
-  // Navbar scroll blur
   const navbar = document.getElementById('navbar');
   window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 40); }, { passive: true });
 
-  // Mobile menu
   const hamburger = document.getElementById('hamburger');
   const mobileMenu = document.getElementById('mobile-menu');
   hamburger.addEventListener('click', () => {
@@ -776,7 +758,6 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
   });
   function closeMobileMenu() { mobileMenu.classList.remove('open'); hamburger.setAttribute('aria-expanded', 'false'); }
 
-  // Consultation modal
   const modal = document.getElementById('modal');
   function openModal() {
     modal.classList.add('open');
@@ -786,31 +767,26 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
   function closeModal() { modal.classList.remove('open'); document.body.style.overflow = ''; }
   modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
 
-  // Legal modals — backdrop click closes, scroll resets
   function openLegal(p) {
     const el = document.getElementById(p + '-page');
     el.classList.add('open');
     document.body.style.overflow = 'hidden';
     el.scrollTop = 0;
-    // close when clicking the dark backdrop (not the box)
     el.addEventListener('click', function handler(e) {
       if (e.target === el) { closeLegal(p); el.removeEventListener('click', handler); }
     });
   }
   function closeLegal(p) { document.getElementById(p + '-page').classList.remove('open'); document.body.style.overflow = ''; }
 
-  // Escape closes everything
   document.addEventListener('keydown', e => {
     if (e.key !== 'Escape') return;
     closeModal(); closeLegal('privacy'); closeLegal('terms');
   });
 
-  // Resource cards keyboard support
   document.querySelectorAll('.resource-card').forEach(card => {
     card.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openModal(); } });
   });
 
-  // ACC-07: validation with text error messages (not color alone)
   function validateField(id, errId) {
     const el = document.getElementById(id);
     const err = document.getElementById(errId);
@@ -830,7 +806,6 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
     document.getElementById('thank-you').style.display = 'block';
   }
 
-  // Smooth scroll — no forced reflow
   let navH = navbar.offsetHeight;
   window.addEventListener('resize', () => { navH = navbar.offsetHeight; }, { passive: true });
   document.querySelectorAll('a[href^="#"]').forEach(a => {
