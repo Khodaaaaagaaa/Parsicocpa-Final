@@ -34,16 +34,17 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
 @media(max-width:768px){.container{padding:0 var(--side-sm)}}
 /* ── LOGO — HTML puro, fondo transparente ── */
 .logo{display:inline-flex;flex-direction:column;align-items:center;gap:0;text-decoration:none;flex-shrink:0}
-/* PARSI */
+/* PARSI — centered */
 .logo .lo-parsi{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:28px;letter-spacing:.35em;text-transform:uppercase;line-height:1;padding-right:.35em}
-/* & COMPANY row */
-.logo .lo-ampco{display:flex;align-items:center;width:100%;justify-content:center;margin:5px 0 3px}
-.logo .lo-line{flex:1;height:1px;background:#b59a44;min-width:20px;max-width:36px}
+/* & COMPANY row — shifted left to mirror x=365 vs center 400 → offset ~9% left */
+.logo .lo-ampco{display:flex;align-items:center;width:100%;justify-content:center;margin:5px 0 3px;transform:translateX(-4%)}
+/* Left line: x1=195→265 = 70px wide; right line: x1=465→535 = 70px wide — equal */
+.logo .lo-line{height:1px;background:#b59a44;width:28px;flex-shrink:0}
 .logo .lo-amp{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:15px;color:#b59a44;margin:0 6px;white-space:nowrap}
 .logo .lo-company{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:15px;letter-spacing:.12em;text-transform:uppercase;margin-right:6px;white-space:nowrap}
-/* Separator line */
+/* Separator line — centered, above CPA */
 .logo .lo-sep{display:block;width:55%;height:1px;background:#b59a44;margin:3px auto 5px}
-/* CPA */
+/* CPA — centered at x=400, no offset */
 .logo .lo-cpa{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:18px;letter-spacing:.5em;text-transform:uppercase;line-height:1;padding-right:.5em}
 /* Location */
 .logo .lo-location{font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:8px;letter-spacing:.14em;text-transform:uppercase;margin-top:5px;white-space:nowrap}
