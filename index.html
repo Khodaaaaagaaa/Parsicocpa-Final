@@ -37,13 +37,13 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
 /* PARSI — centered */
 .logo .lo-parsi{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:28px;letter-spacing:.35em;text-transform:uppercase;line-height:1;padding-right:.35em}
 /* & COMPANY row — shifted left to mirror x=365 vs center 400 → offset ~9% left */
-.logo .lo-ampco{display:flex;align-items:center;width:100%;justify-content:center;margin:5px 0 3px;}
+.logo .lo-ampco{display:flex;align-items:center;width:100%;justify-content:center;margin:5px 0 3px;transform:translateX(-6%)}
 /* Left line: x1=195→265 = 70px wide; right line: x1=465→535 = 70px wide — equal */
 .logo .lo-line{height:1px;background:#b59a44;width:28px;flex-shrink:0}
 .logo .lo-amp{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:15px;color:#b59a44;margin:0 6px;white-space:nowrap}
 .logo .lo-company{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:15px;letter-spacing:.12em;text-transform:uppercase;margin-right:6px;white-space:nowrap}
 /* Separator line — centered, above CPA */
-.logo .lo-sep{display:block;width:45%;height:1px;background:#b59a44;margin:3px auto 5px;}
+.logo .lo-sep{display:block;width:55%;height:1px;background:#b59a44;margin:3px auto 5px;transform:translateX(-6%)}
 /* CPA — centered at x=400, no offset */
 .logo .lo-cpa{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:18px;letter-spacing:.5em;text-transform:uppercase;line-height:1;padding-right:.5em}
 /* Location */
@@ -62,6 +62,15 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
 .logo.logo-dark .lo-company{ color: #ffffff; }
 .logo.logo-dark .lo-cpa    { color: #ffffff; }
 .logo.logo-dark .lo-location{ color: #ffffff; }
+    .logo.logo-dark .lo-ampco {
+    transform: none !important;
+    justify-content: center;
+  }
+  .logo.logo-dark .lo-sep {
+    transform: none !important;
+    width: 42%;
+    margin: 3px auto 5px;
+  }
 /* ── NAVBAR ── */
 #navbar{position:sticky;top:0;z-index:1000;background:var(--white);border-bottom:1px solid var(--gold);transition:backdrop-filter .3s,background .3s}
 #navbar.scrolled{background:rgba(255,255,255,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
