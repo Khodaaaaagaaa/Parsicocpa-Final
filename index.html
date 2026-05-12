@@ -160,19 +160,26 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
 .footer-links{display:flex;gap:24px;align-items:center;flex-wrap:wrap}
 .footer-links a{font-size:12px;color:var(--silver);text-decoration:none;font-family:'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.06em;transition:color .2s;cursor:pointer}
 .footer-links a:hover{color:var(--gold)}
-/* ── LEGAL PAGES (NAV-07 / UX-24 / UX-25) ── */
-.legal-page{display:none;position:fixed;inset:0;z-index:9998;background:var(--white);overflow-y:auto;padding:80px var(--side) 60px}
-.legal-page.open{display:block}
-.legal-page-inner{max-width:800px;margin:0 auto}
-.legal-page h1{font-size:36px;margin-bottom:8px}
-.legal-date{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--gold);text-transform:uppercase;letter-spacing:.08em;margin-bottom:32px;display:block}
-.legal-page h2{font-size:20px;margin:32px 0 12px}
-.legal-page p,.legal-page li{font-size:15px;line-height:1.8;margin-bottom:12px}
-.legal-page ul{padding-left:20px;margin-bottom:16px}
-.legal-close{position:fixed;top:20px;right:28px;background:var(--navy);color:var(--white);border:none;cursor:pointer;font-size:12px;font-family:'Inter',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.06em;height:44px;padding:0 20px;display:flex;align-items:center;gap:8px;z-index:9999}
+/* ── LEGAL MODALS (NAV-07 / UX-24 / UX-25) ── */
+.legal-overlay{display:none;position:fixed;inset:0;z-index:9998;background:rgba(13,31,68,.82);align-items:flex-start;justify-content:center;padding:40px 20px;overflow-y:auto}
+.legal-overlay.open{display:flex;animation:fadeIn .2s ease}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+.legal-box{background:var(--white);width:100%;max-width:720px;position:relative;padding:52px 52px 48px;margin:auto;animation:slideUp .25s ease}
+@keyframes slideUp{from{transform:translateY(24px);opacity:0}to{transform:translateY(0);opacity:1}}
+.legal-box-header{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;margin-bottom:0}
+.legal-box-header h2{font-size:clamp(22px,3vw,30px);margin:0;flex:1}
+.legal-close{background:none;border:none;cursor:pointer;width:36px;height:36px;display:flex;align-items:center;justify-content:center;color:var(--charcoal);flex-shrink:0;margin-top:4px;transition:color .2s}
 .legal-close:hover{color:var(--gold)}
-.legal-hr{height:1px;background:var(--silver);border:none;margin:24px 0}
-@media(max-width:768px){.legal-page{padding:70px var(--side-sm) 60px}}
+.legal-close svg{pointer-events:none}
+.legal-date{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--gold);text-transform:uppercase;letter-spacing:.08em;margin:10px 0 0;display:block}
+.legal-divider{height:1px;background:var(--gold);width:48px;border:none;margin:20px 0 28px;display:block}
+.legal-box h3{font-family:'Inter',sans-serif;font-weight:700;font-size:14px;color:var(--navy);text-transform:uppercase;letter-spacing:.04em;margin:28px 0 10px}
+.legal-box p,.legal-box li{font-size:14px;line-height:1.8;color:var(--charcoal);margin-bottom:10px}
+.legal-box ul{padding-left:18px;margin-bottom:14px}
+.legal-box li::marker{color:var(--gold)}
+.legal-footer-note{background:var(--warm);border-left:3px solid var(--gold);padding:16px 20px;margin-top:32px}
+.legal-footer-note p{font-size:13px;margin:0}
+@media(max-width:600px){.legal-box{padding:36px 24px 32px}.legal-overlay{padding:16px}}
 /* ── MODAL ── */
 .modal-overlay{display:none;position:fixed;inset:0;z-index:9999;background:rgba(13,31,68,.85);align-items:center;justify-content:center;padding:20px}
 .modal-overlay.open{display:flex}
@@ -544,27 +551,37 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
   </div>
 </footer>
 
-<!-- PRIVACY POLICY — UX-24 / NAV-07: Real CCPA-compliant legal content -->
-<div class="legal-page" id="privacy-page" role="dialog" aria-modal="true" aria-labelledby="privacy-title">
-  <button class="legal-close" onclick="closeLegal('privacy')" aria-label="Close Privacy Policy">✕ Close</button>
-  <div class="legal-page-inner">
-    <h1 id="privacy-title">Privacy Policy</h1>
-    <span class="legal-date">Effective: January 1, 2026 · Last updated: May 2026</span>
-    <hr class="legal-hr">
-    <p>Parsi &amp; Company Legacy LLP ("Parsi &amp; Company," "we," "our," or "us") is committed to protecting the privacy and security of your personal information. This Privacy Policy describes how we collect, use, disclose, and protect information obtained through <strong>parsicocpa.com</strong> and in connection with our professional CPA services.</p>
-    <h2>1. Information We Collect</h2>
+<!-- PRIVACY POLICY MODAL — UX-24 / NAV-07 -->
+<div class="legal-overlay" id="privacy-page" role="dialog" aria-modal="true" aria-labelledby="privacy-title">
+  <div class="legal-box">
+    <div class="legal-box-header">
+      <div>
+        <h2 id="privacy-title">Privacy Policy</h2>
+        <span class="legal-date">Effective: January 1, 2026 · Last updated: May 2026</span>
+      </div>
+      <button class="legal-close" onclick="closeLegal('privacy')" aria-label="Close Privacy Policy">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <hr class="legal-divider" aria-hidden="true">
+
+    <p>Parsi &amp; Company Legacy LLP ("Parsi &amp; Company," "we," "our," or "us") is committed to protecting the privacy and security of your personal information. This Privacy Policy describes how we collect, use, and protect information obtained through <strong>parsicocpa.com</strong> and in connection with our professional CPA services.</p>
+
+    <h3>1. Information We Collect</h3>
     <ul>
       <li><strong>Contact and identification data:</strong> name, email address, phone number, and mailing address when you contact us or submit a consultation request.</li>
       <li><strong>Professional and financial data:</strong> entity type, tax filing status, and financial details you provide as part of a CPA engagement.</li>
-      <li><strong>Technical data:</strong> IP address, browser type, and pages visited collected automatically via standard web server logs.</li>
+      <li><strong>Technical data:</strong> IP address, browser type, and pages visited, collected automatically via standard web server logs.</li>
     </ul>
-    <h2>2. How We Use Your Information</h2>
+
+    <h3>2. How We Use Your Information</h3>
     <ul>
       <li>To respond to consultation requests and deliver accounting, tax, and advisory services.</li>
       <li>To communicate regarding your engagement, tax deadlines, and service updates.</li>
       <li>To comply with legal and regulatory requirements applicable to California-licensed CPA firms.</li>
     </ul>
-    <h2>3. California Privacy Rights (CCPA / CPRA)</h2>
+
+    <h3>3. California Privacy Rights (CCPA / CPRA)</h3>
     <p>If you are a California resident, you have the following rights:</p>
     <ul>
       <li><strong>Right to Know:</strong> Request disclosure of the personal information we have collected about you.</li>
@@ -574,39 +591,59 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
       <li><strong>Right to Non-Discrimination:</strong> We will not discriminate against you for exercising your CCPA rights.</li>
     </ul>
     <p>To submit a privacy request, contact us at <strong>info@parsicocpa.com</strong> or call <strong>(310) 556-3655</strong>. We will respond within 45 days as required by California law.</p>
-    <h2>4. Data Retention</h2>
-    <p>We retain client records in accordance with California Board of Accountancy requirements and applicable federal tax law. Contact form data is retained for up to 24 months unless you request earlier deletion.</p>
-    <h2>5. Third-Party Services</h2>
-    <p>We use TaxDome as our secure client portal for document exchange. TaxDome maintains its own security practices. We do not sell, rent, or share your personal information with third parties for marketing purposes.</p>
-    <h2>6. Security</h2>
-    <p>We implement appropriate technical and organizational safeguards to protect your personal information. All client document exchange occurs through our encrypted TaxDome portal.</p>
-    <h2>7. Contact</h2>
-    <p><strong>Parsi &amp; Company Legacy LLP</strong><br>1801 Century Park East, Suite 1600, Los Angeles, CA 90067<br>Email: info@parsicocpa.com · Phone: (310) 556-3655</p>
+
+    <h3>4. Data Retention</h3>
+    <p>We retain client records per California Board of Accountancy requirements and applicable federal tax law. Contact form data is retained for up to 24 months unless you request earlier deletion.</p>
+
+    <h3>5. Third-Party Services</h3>
+    <p>We use TaxDome as our secure client portal for document exchange. We do not sell, rent, or share your personal information with third parties for marketing purposes.</p>
+
+    <h3>6. Security</h3>
+    <p>We implement appropriate technical and organizational safeguards. All client document exchange occurs through our encrypted TaxDome portal.</p>
+
+    <div class="legal-footer-note">
+      <p><strong>Questions?</strong> Contact Parsi &amp; Company Legacy LLP at 1801 Century Park East, Suite 1600, Los Angeles, CA 90067 · <a href="mailto:info@parsicocpa.com" style="color:var(--navy)">info@parsicocpa.com</a> · (310) 556-3655</p>
+    </div>
   </div>
 </div>
 
-<!-- TERMS OF USE — UX-25 / NAV-07: Real legal content -->
-<div class="legal-page" id="terms-page" role="dialog" aria-modal="true" aria-labelledby="terms-title">
-  <button class="legal-close" onclick="closeLegal('terms')" aria-label="Close Terms of Use">✕ Close</button>
-  <div class="legal-page-inner">
-    <h1 id="terms-title">Terms of Use</h1>
-    <span class="legal-date">Effective: January 1, 2026 · Last updated: May 2026</span>
-    <hr class="legal-hr">
+<!-- TERMS OF USE MODAL — UX-25 / NAV-07 -->
+<div class="legal-overlay" id="terms-page" role="dialog" aria-modal="true" aria-labelledby="terms-title">
+  <div class="legal-box">
+    <div class="legal-box-header">
+      <div>
+        <h2 id="terms-title">Terms of Use</h2>
+        <span class="legal-date">Effective: January 1, 2026 · Last updated: May 2026</span>
+      </div>
+      <button class="legal-close" onclick="closeLegal('terms')" aria-label="Close Terms of Use">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <hr class="legal-divider" aria-hidden="true">
+
     <p>These Terms of Use govern your access to and use of the Parsi &amp; Company, CPA website at <strong>parsicocpa.com</strong>, operated by Parsi &amp; Company Legacy LLP. By accessing this site you agree to these Terms.</p>
-    <h2>1. No CPA-Client Relationship</h2>
+
+    <h3>1. No CPA-Client Relationship</h3>
     <p>Information on this site is for general informational purposes only and does not constitute professional tax, accounting, legal, or financial advice. Use of this site does not create a CPA-client relationship. A formal engagement letter signed by both parties is required before professional services commence.</p>
-    <h2>2. Accuracy of Information</h2>
+
+    <h3>2. Accuracy of Information</h3>
     <p>Tax laws and regulations change frequently. Parsi &amp; Company makes no representations regarding the completeness, accuracy, or timeliness of content on this site. Consult a licensed CPA for advice specific to your situation.</p>
-    <h2>3. Intellectual Property</h2>
+
+    <h3>3. Intellectual Property</h3>
     <p>All content on this site — including text, graphics, logos, and the Parsi &amp; Company brand identity — is the exclusive property of Parsi &amp; Company Legacy LLP and is protected by applicable copyright and trademark law. Unauthorized use or reproduction is prohibited.</p>
-    <h2>4. Limitation of Liability</h2>
-    <p>To the maximum extent permitted by California law, Parsi &amp; Company shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of this site or reliance on any information contained herein.</p>
-    <h2>5. Governing Law</h2>
+
+    <h3>4. Limitation of Liability</h3>
+    <p>To the maximum extent permitted by California law, Parsi &amp; Company shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of this site or reliance on information contained herein.</p>
+
+    <h3>5. Governing Law</h3>
     <p>These Terms are governed by the laws of the State of California. Any disputes shall be resolved in the courts of Los Angeles County, California.</p>
-    <h2>6. Changes to These Terms</h2>
+
+    <h3>6. Changes to These Terms</h3>
     <p>We reserve the right to modify these Terms at any time. Changes will be posted on this page with an updated effective date. Continued use of the site after changes are posted constitutes acceptance of the revised Terms.</p>
-    <h2>7. Contact</h2>
-    <p><strong>Parsi &amp; Company Legacy LLP</strong><br>1801 Century Park East, Suite 1600, Los Angeles, CA 90067<br>Email: info@parsicocpa.com · Phone: (310) 556-3655</p>
+
+    <div class="legal-footer-note">
+      <p><strong>Questions?</strong> Contact Parsi &amp; Company Legacy LLP at 1801 Century Park East, Suite 1600, Los Angeles, CA 90067 · <a href="mailto:info@parsicocpa.com" style="color:var(--navy)">info@parsicocpa.com</a> · (310) 556-3655</p>
+    </div>
   </div>
 </div>
 
@@ -711,8 +748,17 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
   function closeModal() { modal.classList.remove('open'); document.body.style.overflow = ''; }
   modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
 
-  // Legal pages
-  function openLegal(p) { document.getElementById(p + '-page').classList.add('open'); document.body.style.overflow = 'hidden'; window.scrollTo(0,0); }
+  // Legal modals — backdrop click closes, scroll resets
+  function openLegal(p) {
+    const el = document.getElementById(p + '-page');
+    el.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    el.scrollTop = 0;
+    // close when clicking the dark backdrop (not the box)
+    el.addEventListener('click', function handler(e) {
+      if (e.target === el) { closeLegal(p); el.removeEventListener('click', handler); }
+    });
+  }
   function closeLegal(p) { document.getElementById(p + '-page').classList.remove('open'); document.body.style.overflow = ''; }
 
   // Escape closes everything
