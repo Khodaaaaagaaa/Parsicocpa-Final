@@ -32,21 +32,39 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
 .mono{font-family:'IBM Plex Mono',monospace;font-weight:500;text-transform:uppercase;font-size:11px;letter-spacing:.08em}
 .container{max-width:var(--max-w);margin:0 auto;padding:0 var(--side)}
 @media(max-width:768px){.container{padding:0 var(--side-sm)}}
-/* ── LOGOS — HTML lockups (SVG text ignores Google Fonts; CSS does not) ── */
-/* Navbar: Lockup 02 Horizontal Compact (Brand Book p.6) */
-.logo-h{display:inline-flex;align-items:baseline;gap:0;line-height:1;text-decoration:none;flex-shrink:0}
-.logo-h .l-parsi{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:21px;color:var(--navy);letter-spacing:.3em;text-transform:uppercase}
-.logo-h .l-amp{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:21px;color:var(--gold);margin:0 .3em 0 .12em;letter-spacing:0}
-.logo-h .l-company{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:21px;color:var(--navy);letter-spacing:.3em;text-transform:uppercase}
-/* Gold separator line between COMPANY and CPA, matching Brand Book p.6 */
-.logo-h .l-sep{display:inline-block;width:1px;height:14px;background:var(--gold);margin:0 .6em;align-self:center;opacity:.8}
-.logo-h .l-cpa{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:11px;color:var(--navy);letter-spacing:.22em;text-transform:uppercase;align-self:center}
-/* Footer: reversed (white on navy) */
-.logo-h.logo-rev .l-parsi,.logo-h.logo-rev .l-company,.logo-h.logo-rev .l-cpa{color:var(--white)}
+/* ── LOGO — HTML puro, fondo transparente ── */
+.logo{display:inline-flex;flex-direction:column;align-items:center;gap:0;text-decoration:none;flex-shrink:0}
+/* PARSI */
+.logo .lo-parsi{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:28px;letter-spacing:.35em;text-transform:uppercase;line-height:1;padding-right:.35em}
+/* & COMPANY row */
+.logo .lo-ampco{display:flex;align-items:center;width:100%;justify-content:center;margin:5px 0 3px}
+.logo .lo-line{flex:1;height:1px;background:#b59a44;min-width:20px;max-width:36px}
+.logo .lo-amp{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:15px;color:#b59a44;margin:0 6px;white-space:nowrap}
+.logo .lo-company{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:15px;letter-spacing:.12em;text-transform:uppercase;margin-right:6px;white-space:nowrap}
+/* Separator line */
+.logo .lo-sep{display:block;width:55%;height:1px;background:#b59a44;margin:3px auto 5px}
+/* CPA */
+.logo .lo-cpa{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:18px;letter-spacing:.5em;text-transform:uppercase;line-height:1;padding-right:.5em}
+/* Location */
+.logo .lo-location{font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:8px;letter-spacing:.14em;text-transform:uppercase;margin-top:5px;white-space:nowrap}
+
+/* LIGHT variant — navbar (fondo blanco) */
+.logo.logo-light .lo-parsi  { color: #1a2a47; }
+.logo.logo-light .lo-amp    { color: #b59a44; }
+.logo.logo-light .lo-company{ color: #1a2a47; }
+.logo.logo-light .lo-cpa    { color: #1a2a47; }
+.logo.logo-light .lo-location{ color: #c0c0c0; }
+
+/* DARK variant — footer (fondo azul oscuro) */
+.logo.logo-dark .lo-parsi  { color: #ffffff; }
+.logo.logo-dark .lo-amp    { color: #b59a44; }
+.logo.logo-dark .lo-company{ color: #ffffff; }
+.logo.logo-dark .lo-cpa    { color: #ffffff; }
+.logo.logo-dark .lo-location{ color: #ffffff; }
 /* ── NAVBAR ── */
 #navbar{position:sticky;top:0;z-index:1000;background:var(--white);border-bottom:1px solid var(--gold);transition:backdrop-filter .3s,background .3s}
 #navbar.scrolled{background:rgba(255,255,255,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
-.nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px;gap:24px}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:auto;min-height:90px;padding:12px 0;gap:24px}
 .nav-logo{flex-shrink:0;text-decoration:none}
 .nav-links{display:flex;align-items:center;gap:24px;list-style:none}
 .nav-links a{font-family:'Inter',sans-serif;font-weight:500;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--navy);text-decoration:none;transition:color .2s}
@@ -228,12 +246,16 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
 <header id="navbar" role="banner">
   <div class="container">
     <nav class="nav-inner" aria-label="Main navigation">
-      <a href="#" class="nav-logo logo-h" aria-label="Parsi & Company CPA – Home">
-        <span class="l-parsi">Parsi</span>
-        <span class="l-amp">&amp;</span>
-        <span class="l-company">Company</span>
-        <span class="l-sep" aria-hidden="true"></span>
-        <span class="l-cpa">CPA</span>
+      <a href="#" class="logo logo-light" aria-label="Parsi & Company CPA – Home">
+        <span class="lo-parsi">Parsi</span>
+        <span class="lo-ampco">
+          <span class="lo-line" aria-hidden="true"></span>
+          <span class="lo-amp">&amp;</span><span class="lo-company">Company</span>
+          <span class="lo-line" aria-hidden="true"></span>
+        </span>
+        <span class="lo-sep" aria-hidden="true"></span>
+        <span class="lo-cpa">C P A</span>
+        <span class="lo-location">Los Angeles &amp; Century City</span>
       </a>
       <ul class="nav-links" role="list">
         <li><a href="#services">Services</a></li>
@@ -269,13 +291,12 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
 
 <main id="main-content">
 
-<!-- HERO — SEO-08: H1 includes "Century City" geo keyword -->
+<!-- HERO -->
 <section id="hero" aria-labelledby="hero-heading">
   <div class="container">
     <div class="hero-inner">
       <span class="hero-badge">Century City CPA Firm · Los Angeles</span>
-      <!-- SEO-08: geo keyword "Century City" integrated in H1 -->
-      <h1 id="hero-heading" class="hero-h1">Precision You Can Trust.<br>Century City CPA Guidance That Lasts.</h1>
+      <h1 id="hero-heading" class="hero-h1">Precision You Can Trust.<br>Personal CPA Guidance That Lasts.</h1>
       <p class="hero-sub">Tax, accounting, bookkeeping and advisory support for businesses, individuals and families in Los Angeles — built on expert precision and long-term relationships.</p>
       <div class="hero-ctas">
         <button class="btn-primary gold-bg" onclick="openModal()">SCHEDULE A FREE CONSULTATION</button>
@@ -538,12 +559,16 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
   <div class="container">
     <div class="footer-inner">
       <div class="footer-left">
-        <a href="#" class="logo-h logo-rev" aria-label="Parsi & Company CPA">
-          <span class="l-parsi">Parsi</span>
-          <span class="l-amp">&amp;</span>
-          <span class="l-company">Company</span>
-          <span class="l-sep" aria-hidden="true"></span>
-          <span class="l-cpa">CPA</span>
+        <a href="#" class="logo logo-dark" aria-label="Parsi & Company CPA">
+          <span class="lo-parsi">Parsi</span>
+          <span class="lo-ampco">
+            <span class="lo-line" aria-hidden="true"></span>
+            <span class="lo-amp">&amp;</span><span class="lo-company">Company</span>
+            <span class="lo-line" aria-hidden="true"></span>
+          </span>
+          <span class="lo-sep" aria-hidden="true"></span>
+          <span class="lo-cpa">C P A</span>
+          <span class="lo-location">Los Angeles &amp; Century City</span>
         </a>
         <address class="footer-address">
           1801 Century Park East, Suite 1600<br>
