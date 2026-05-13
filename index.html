@@ -37,10 +37,10 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
 .logo .lo-amp{font-family:'Cormorant Garamond',serif;font-weight:700;font-style:italic;font-size:32px;color:#b59a44;margin:0 .2em;line-height:1}
 .logo .lo-company{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:28px;letter-spacing:.12em;text-transform:uppercase;line-height:1;padding-right:.12em}
 
-/* Line 2: golden rule with CPA centered in the middle */
-.logo .lo-rule{position:relative;width:100%;display:flex;align-items:center;justify-content:center;margin:2px 0}
-.logo .lo-rule::before{content:'';position:absolute;left:0;right:0;top:50%;height:1px;background:#b59a44}
-.logo .lo-cpa{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:18px;letter-spacing:.3em;text-transform:uppercase;line-height:1;padding:0 8px;position:relative;z-index:1;padding-right:calc(.3em + 8px)}
+/* Line 2: two gold segments flanking C P A — no background on text */
+.logo .lo-rule{display:flex;align-items:center;width:100%;gap:0;margin:2px 0}
+.logo .lo-rule-line{flex:1;height:1px;background:#b59a44}
+.logo .lo-cpa{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:18px;letter-spacing:.3em;text-transform:uppercase;line-height:1;padding:0 10px;padding-right:calc(.3em + 10px);background:transparent}
 
 /* Line 3: location */
 .logo .lo-location{font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#c0c0c0;line-height:1}
@@ -48,13 +48,13 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
 /* LIGHT — navbar (fondo blanco) */
 .logo.logo-light .lo-parsi  { color: #1a2a47; }
 .logo.logo-light .lo-company{ color: #1a2a47; }
-.logo.logo-light .lo-cpa    { color: #1a2a47; background: #ffffff; }
+.logo.logo-light .lo-cpa    { color: #1a2a47; }
 .logo.logo-light .lo-location{ color: #c0c0c0; }
 
 /* DARK — footer (fondo azul oscuro) */
 .logo.logo-dark .lo-parsi  { color: #ffffff; }
 .logo.logo-dark .lo-company{ color: #ffffff; }
-.logo.logo-dark .lo-cpa    { color: #ffffff; background: #0D1F44; }
+.logo.logo-dark .lo-cpa    { color: #ffffff; }
 .logo.logo-dark .lo-location{ color: #c0c0c0; }
 
 /* ── NAVBAR ── */
@@ -260,7 +260,9 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
           <span class="lo-company">Company</span>
         </span>
         <span class="lo-rule">
+          <span class="lo-rule-line" aria-hidden="true"></span>
           <span class="lo-cpa">C P A</span>
+          <span class="lo-rule-line" aria-hidden="true"></span>
         </span>
         <span class="lo-location">Los Angeles &nbsp;•&nbsp; Century City</span>
       </a>
@@ -569,7 +571,9 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
             <span class="lo-company">Company</span>
           </span>
           <span class="lo-rule">
+            <span class="lo-rule-line" aria-hidden="true"></span>
             <span class="lo-cpa">C P A</span>
+            <span class="lo-rule-line" aria-hidden="true"></span>
           </span>
           <span class="lo-location">Los Angeles &nbsp;•&nbsp; Century City</span>
         </a>
