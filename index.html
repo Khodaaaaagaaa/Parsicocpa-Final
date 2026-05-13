@@ -28,41 +28,34 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
 .container{max-width:var(--max-w);margin:0 auto;padding:0 var(--side)}
 @media(max-width:768px){.container{padding:0 var(--side-sm)}}
 
-/* ── LOGO — HTML puro, fondo transparente, misma estructura para light y dark ── */
-.logo{display:inline-flex;flex-direction:column;align-items:center;gap:0;text-decoration:none;flex-shrink:0}
-/* PARSI */
-.logo .lo-parsi{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:28px;letter-spacing:.35em;text-transform:uppercase;line-height:1;padding-right:.35em}
-/* & COMPANY row — offset izquierda para replicar x=365 del SVG (centro=400) */
-.logo .lo-ampco{display:flex;align-items:center;width:100%;justify-content:center;margin:5px 0 3px;transform:translateX(-4%)}
-/* Líneas laterales — 28px cada una, simétricas */
-.logo .lo-line{height:1px;background:#b59a44;width:28px;flex-shrink:0}
-/* & dorado siempre — italic para recrear el ampersand elegante del Brand Book */
-.logo .lo-amp{font-family:'Cormorant Garamond',serif;font-weight:1000;font-style:italic;font-size:17px;color:#b59a44;margin:0 5px;white-space:nowrap}
-/* COMPANY — color según variante */
-.logo .lo-company{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:15px;letter-spacing:.25em;text-transform:uppercase;margin-right:6px;white-space:nowrap}
-/* Línea separadora sobre CPA — centrada con mismo offset que fila & COMPANY */
-.logo .lo-sep{display:block;width:55%;height:1px;background:#b59a44;margin:3px auto 5px;transform:translateX(-4%)}
+/* ── LOGO — Vertical stacked lockup per spec ── */
+.logo{display:inline-flex;flex-direction:column;align-items:center;gap:4px;text-decoration:none;flex-shrink:0}
 
-/* Logo dark: línea empieza en el & y termina en la Y de Company */
-.logo.logo-dark .lo-sep{width:35%;transform:translateX(-9%)}
-/* CPA — junto, sin letter-spacing excesivo, como PARSI */
-.logo .lo-cpa{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:18px;letter-spacing:.08em;text-transform:uppercase;line-height:1;padding-right:.08em;transform:translateX(-7.5px)}
-/* Ubicación */
-.logo .lo-location{font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:8px;letter-spacing:.14em;text-transform:uppercase;margin-top:5px;white-space:nowrap}
+/* Line 1: PARSI & COMPANY */
+.logo .lo-line1{display:flex;align-items:baseline;gap:0;white-space:nowrap}
+.logo .lo-parsi{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:28px;letter-spacing:.12em;text-transform:uppercase;line-height:1;padding-right:.12em}
+.logo .lo-amp{font-family:'Cormorant Garamond',serif;font-weight:700;font-style:italic;font-size:32px;color:#b59a44;margin:0 .2em;line-height:1}
+.logo .lo-company{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:28px;letter-spacing:.12em;text-transform:uppercase;line-height:1;padding-right:.12em}
+
+/* Line 2: golden rule with CPA centered in the middle */
+.logo .lo-rule{position:relative;width:100%;display:flex;align-items:center;justify-content:center;margin:2px 0}
+.logo .lo-rule::before{content:'';position:absolute;left:0;right:0;top:50%;height:1px;background:#b59a44}
+.logo .lo-cpa{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:18px;letter-spacing:.3em;text-transform:uppercase;line-height:1;padding:0 8px;position:relative;z-index:1;padding-right:calc(.3em + 8px)}
+
+/* Line 3: location */
+.logo .lo-location{font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#c0c0c0;line-height:1}
 
 /* LIGHT — navbar (fondo blanco) */
 .logo.logo-light .lo-parsi  { color: #1a2a47; }
-.logo.logo-light .lo-amp    { color: #b59a44; }
 .logo.logo-light .lo-company{ color: #1a2a47; }
-.logo.logo-light .lo-cpa    { color: #1a2a47; }
+.logo.logo-light .lo-cpa    { color: #1a2a47; background: #ffffff; }
 .logo.logo-light .lo-location{ color: #c0c0c0; }
 
-/* DARK — footer (fondo azul oscuro) — mismos tamaños y espaciados, solo colores distintos */
+/* DARK — footer (fondo azul oscuro) */
 .logo.logo-dark .lo-parsi  { color: #ffffff; }
-.logo.logo-dark .lo-amp    { color: #b59a44; }
 .logo.logo-dark .lo-company{ color: #ffffff; }
-.logo.logo-dark .lo-cpa    { color: #ffffff; }
-.logo.logo-dark .lo-location{ color: #ffffff; }
+.logo.logo-dark .lo-cpa    { color: #ffffff; background: #0D1F44; }
+.logo.logo-dark .lo-location{ color: #c0c0c0; }
 
 /* ── NAVBAR ── */
 #navbar{position:sticky;top:0;z-index:1000;background:var(--white);border-bottom:1px solid var(--gold);transition:backdrop-filter .3s,background .3s}
@@ -261,14 +254,15 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
   <div class="container">
     <nav class="nav-inner" aria-label="Main navigation">
       <a href="#" class="logo logo-light" aria-label="Parsi & Company CPA – Home">
-        <span class="lo-parsi">Parsi</span>
-        <span class="lo-ampco">
-          <span class="lo-line" aria-hidden="true"></span>
-          <span class="lo-amp">&amp;</span><span class="lo-company">Company</span>
-          <span class="lo-line" aria-hidden="true"></span>
+        <span class="lo-line1">
+          <span class="lo-parsi">Parsi</span>
+          <span class="lo-amp">&amp;</span>
+          <span class="lo-company">Company</span>
         </span>
-        <span class="lo-sep" aria-hidden="true"></span>
-        <span class="lo-cpa">C P A</span>
+        <span class="lo-rule">
+          <span class="lo-cpa">C P A</span>
+        </span>
+        <span class="lo-location">Los Angeles &nbsp;•&nbsp; Century City</span>
       </a>
       <ul class="nav-links" role="list">
         <li><a href="#services">Services</a></li>
@@ -569,14 +563,15 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
       <div class="footer-left">
         <!-- Logo dark: misma estructura HTML exacta que logo-light, solo colores distintos -->
         <a href="#" class="logo logo-dark" aria-label="Parsi & Company CPA">
-          <span class="lo-parsi">Parsi</span>
-          <span class="lo-ampco">
-            <span class="lo-line" aria-hidden="true"></span>
-            <span class="lo-amp">&amp;</span><span class="lo-company">Company</span>
-            <span class="lo-line" aria-hidden="true"></span>
+          <span class="lo-line1">
+            <span class="lo-parsi">Parsi</span>
+            <span class="lo-amp">&amp;</span>
+            <span class="lo-company">Company</span>
           </span>
-          <span class="lo-sep" aria-hidden="true"></span>
-          <span class="lo-cpa">C P A</span>
+          <span class="lo-rule">
+            <span class="lo-cpa">C P A</span>
+          </span>
+          <span class="lo-location">Los Angeles &nbsp;•&nbsp; Century City</span>
         </a>
         <address class="footer-address">
           1801 Century Park East, Suite 1600<br>
