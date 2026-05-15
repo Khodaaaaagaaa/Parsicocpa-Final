@@ -30,28 +30,18 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
 
 /* ── LOGO — Vertical stacked lockup per spec ── */
 .logo{display:inline-flex;flex-direction:column;align-items:center;gap:4px;text-decoration:none;flex-shrink:0}
-
-/* Line 1: PARSI & COMPANY */
 .logo .lo-line1{display:flex;align-items:baseline;gap:0;white-space:nowrap}
-.logo .lo-parsi{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:28px;letter-spacing:.12em;text-transform:uppercase;line-height:1;padding-right:.12em}
-.logo .lo-amp{font-family:'Cormorant Garamond',serif;font-weight:700;font-style:italic;font-size:22px;color:#b59a44;margin:0 .45em;line-height:1}
+.logo .lo-parsi{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:28px;letter-spacing:.12em;text-transform:uppercase;line-height:1;padding-right:.12em;margin-right:.45em}
+.logo .lo-amp{font-family:'Cormorant Garamond',serif;font-weight:700;font-style:italic;font-size:22px;color:#b59a44;margin:0 .45em 0 0;line-height:1}
 .logo .lo-company{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:28px;letter-spacing:.12em;text-transform:uppercase;line-height:1;padding-right:.12em}
-
-/* Line 2: two gold segments flanking C P A — no background on text */
 .logo .lo-rule{display:flex;align-items:center;width:100%;gap:0;margin:2px 0}
 .logo .lo-rule-line{flex:1;height:1px;background:#b59a44}
 .logo .lo-cpa{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:18px;letter-spacing:.3em;text-transform:uppercase;line-height:1;padding:0 10px;padding-right:calc(.3em + 10px);background:transparent}
-
-/* Line 3: location */
 .logo .lo-location{font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#c0c0c0;line-height:1}
-
-/* LIGHT — navbar (fondo blanco) */
 .logo.logo-light .lo-parsi  { color: #1a2a47; }
 .logo.logo-light .lo-company{ color: #1a2a47; }
 .logo.logo-light .lo-cpa    { color: #1a2a47; }
 .logo.logo-light .lo-location{ color: #c0c0c0; }
-
-/* DARK — footer (fondo azul oscuro) */
 .logo.logo-dark .lo-parsi  { color: #ffffff; }
 .logo.logo-dark .lo-company{ color: #ffffff; }
 .logo.logo-dark .lo-cpa    { color: #ffffff; }
@@ -93,41 +83,52 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
 .section-rule{margin-bottom:56px;width:48px;height:1px;background:var(--gold);border:none;display:block}
 *:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
 
-/* ── HERO ── */
+/* ── HERO — CHANGE 2: two-column layout with trust panel on right ── */
 #hero{background:var(--navy);padding:120px 0}
-.hero-inner{display:flex;flex-direction:column;align-items:flex-start;max-width:780px}
+.hero-inner{display:grid;grid-template-columns:1fr auto;gap:56px;align-items:center}
+.hero-left{display:flex;flex-direction:column;align-items:flex-start}
 .hero-badge{font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--gold);margin-bottom:24px}
 .hero-h1{color:var(--white);margin-bottom:28px}
-.hero-sub{font-size:18px;line-height:1.6;color:var(--silver);margin-bottom:40px;max-width:640px}
+.hero-sub{font-size:18px;line-height:1.6;color:var(--silver);margin-bottom:40px;max-width:560px}
 .hero-ctas{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:36px}
 .hero-trust{font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--silver)}
-@media(max-width:600px){#hero{padding:80px 0}}
+/* Trust panel — right side of hero, navy-compatible style */
+.hero-trust-panel{display:grid;grid-template-columns:1fr 1fr;gap:1px;flex-shrink:0;min-width:260px;border:1px solid rgba(184,141,60,.3)}
+.hero-trust-item{display:flex;flex-direction:column;gap:6px;padding:20px 20px 18px;background:rgba(255,255,255,.05);border-top:2px solid var(--gold)}
+.hero-trust-num{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:clamp(28px,3vw,38px);color:var(--white);line-height:1}
+.hero-trust-label{font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:9px;text-transform:uppercase;letter-spacing:.1em;color:var(--silver);line-height:1.4}
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr}
+  .hero-trust-panel{grid-template-columns:repeat(4,1fr);min-width:unset;width:100%}
+}
+@media(max-width:600px){#hero{padding:80px 0}.hero-trust-panel{grid-template-columns:repeat(2,1fr)}}
 
-/* ── TRUST STRIP ── */
-#trust-strip{background:var(--warm);padding:56px 0}
-.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:40px;text-align:center}
-.trust-item .big-num{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:clamp(36px,4vw,52px);color:var(--navy);line-height:1;display:block;margin-bottom:8px}
-.trust-item .trust-desc{font-size:13px;color:var(--charcoal)}
-@media(max-width:700px){.trust-grid{grid-template-columns:repeat(2,1fr);gap:32px}}
+/* ── TRUST STRIP — software tools used by Parsi ── */
+#trust-strip{display:block;background:var(--warm);padding:40px 0}
+.trust-grid{display:flex;align-items:center;justify-content:center;gap:0;flex-wrap:wrap}
+.trust-tool{display:flex;align-items:center;gap:12px;padding:16px 40px;border-right:1px solid var(--silver)}
+.trust-tool:last-child{border-right:none}
+.trust-tool-icon{width:32px;height:32px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.trust-tool-name{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:18px;color:var(--navy);letter-spacing:.04em}
+.trust-tool-tag{font-family:'IBM Plex Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:.1em;color:var(--gold);font-weight:500}
+@media(max-width:700px){.trust-tool{padding:14px 24px}.trust-grid{gap:0}}
+@media(max-width:480px){.trust-tool{flex:1 1 calc(50% - 1px);border-right:none;border-bottom:1px solid var(--silver);justify-content:center}.trust-tool:nth-child(odd){border-right:1px solid var(--silver)}.trust-tool:nth-last-child(-n+2){border-bottom:none}}
 
 /* ── PROBLEM ── */
 #problem{background:var(--white);padding:100px 0}
-.problem-inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.problem-inner{display:grid;grid-template-columns:1fr;gap:40px;max-width:780px}
 .problem-left h2{margin-bottom:24px}
 .problem-left p{font-size:17px;line-height:1.7}
-.problem-list{list-style:none;display:flex;flex-direction:column;gap:18px}
-.problem-list li{display:flex;align-items:flex-start;gap:14px;font-size:16px;font-weight:500;color:var(--navy)}
-.problem-list li .gb{flex-shrink:0;margin-top:3px}
-@media(max-width:768px){.problem-inner{grid-template-columns:1fr;gap:40px}}
+@media(max-width:768px){.problem-inner{gap:32px}}
 
-/* ── SERVICES ── */
+/* ── SERVICES — CHANGE 1: 2 columns so 4 cards form a balanced 2×2 grid ── */
 #services{background:var(--warm);padding:100px 0}
-.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;max-width:880px}
 .service-card{background:var(--white);border:1px solid var(--silver);padding:32px;display:flex;flex-direction:column;gap:14px;transition:border-color .2s}
 .service-card:hover{border-color:var(--gold)}
 .service-card h3{font-size:15px;font-weight:600;margin:0}
 .service-card p{font-size:14px;line-height:1.6}
-@media(max-width:768px){.services-grid{grid-template-columns:1fr}}
+@media(max-width:600px){.services-grid{grid-template-columns:1fr}}
 
 /* ── PROCESS ── */
 #process{background:var(--white);padding:100px 0}
@@ -243,7 +244,7 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
 </style>
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":["LocalBusiness","AccountingService"],"name":"Parsi & Company, CPA","legalName":"Parsi & Company Legacy LLP","description":"Century City CPA firm providing tax preparation, bookkeeping, IRS dispute resolution, trust and estate planning, and advisory services for businesses and individuals.","url":"https://parsicocpa.com","telephone":"+13105563655","email":"info@parsicocpa.com","address":{"@type":"PostalAddress","streetAddress":"1801 Century Park East, Suite 1600","addressLocality":"Los Angeles","addressRegion":"CA","postalCode":"90067","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":34.0577,"longitude":-118.4168},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"}],"areaServed":"United States","hasOfferCatalog":{"@type":"OfferCatalog","name":"CPA Services","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Business Tax Preparation"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Personal Tax Preparation"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Bookkeeping"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Tax Dispute Resolution"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Trust & Estate Planning"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Forensic Accounting"}}]},"sameAs":["https://www.linkedin.com/company/parsi-company-cpa","https://g.co/kgs/parsicocpa"]}
+{"@context":"https://schema.org","@type":["LocalBusiness","AccountingService"],"name":"Parsi & Company, CPA","legalName":"Parsi & Company Legacy LLP","description":"Century City CPA firm providing tax preparation, bookkeeping, IRS dispute resolution, trust and estate planning, and advisory services for businesses and individuals.","url":"https://parsicocpa.com","telephone":"+13105563655","email":"info@parsicocpa.com","address":{"@type":"PostalAddress","streetAddress":"1801 Century Park East, Suite 1600","addressLocality":"Los Angeles","addressRegion":"CA","postalCode":"90067","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":34.0577,"longitude":-118.4168},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"}],"areaServed":"United States","hasOfferCatalog":{"@type":"OfferCatalog","name":"CPA Services","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Business Tax Preparation"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Personal Tax Preparation"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Bookkeeping"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Tax Dispute Resolution"}}]},"sameAs":["https://www.linkedin.com/company/parsi-company-cpa","https://g.co/kgs/parsicocpa"]}
 </script>
 </head>
 <body>
@@ -299,30 +300,83 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
 
 <main id="main-content">
 
-<!-- HERO -->
+<!-- HERO — trust panel on right, stats removed from separate strip -->
 <section id="hero" aria-labelledby="hero-heading">
   <div class="container">
     <div class="hero-inner">
-      <span class="hero-badge">Century City CPA Firm · Los Angeles</span>
-      <h1 id="hero-heading" class="hero-h1">Precision You Can Trust.<br>Personal CPA Guidance That Lasts.</h1>
-      <p class="hero-sub">Tax, accounting, bookkeeping and advisory support for businesses, individuals and families in Los Angeles — built on expert precision and long-term relationships.</p>
-      <div class="hero-ctas">
-        <button class="btn-primary gold-bg" onclick="openModal()">SCHEDULE A FREE CONSULTATION</button>
-        <a href="#services" class="btn-secondary">EXPLORE SERVICES</a>
+      <div class="hero-left">
+        <span class="hero-badge">Century City CPA Firm · Los Angeles</span>
+        <h1 id="hero-heading" class="hero-h1">Precision You Can Trust.<br>Personal CPA Guidance That Lasts.</h1>
+        <p class="hero-sub">Tax, accounting, bookkeeping and advisory support for businesses, individuals and families in Los Angeles — built on expert precision and long-term relationships.</p>
+        <div class="hero-ctas">
+          <button class="btn-primary gold-bg" onclick="openModal()">SCHEDULE A FREE CONSULTATION</button>
+          <a href="#services" class="btn-secondary">EXPLORE SERVICES</a>
+        </div>
+        <p class="hero-trust mono">CPA/EA CREDENTIALS · BUSINESS + PERSONAL TAX · BOOKKEEPING + ADVISORY</p>
       </div>
-      <p class="hero-trust mono">CPA/EA CREDENTIALS · BUSINESS + PERSONAL TAX · BOOKKEEPING + ADVISORY</p>
+      <!-- Trust stats panel — right side -->
+      <div class="hero-trust-panel" aria-label="Firm credentials">
+        <div class="hero-trust-item">
+          <span class="hero-trust-num">25+</span>
+          <span class="hero-trust-label">Years of trusted relationships</span>
+        </div>
+        <div class="hero-trust-item">
+          <span class="hero-trust-num">5.0 ★</span>
+          <span class="hero-trust-label">Google rating · 32+ Reviews</span>
+        </div>
+        <div class="hero-trust-item">
+          <span class="hero-trust-num">50</span>
+          <span class="hero-trust-label">States served nationwide</span>
+        </div>
+        <div class="hero-trust-item">
+          <span class="hero-trust-num">3</span>
+          <span class="hero-trust-label">Licensed CPAs &amp; EAs in-house</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- TRUST STRIP -->
-<section id="trust-strip" aria-label="Firm credentials and statistics">
+<!-- TRUST STRIP — software tools -->
+<section id="trust-strip" aria-label="Technology platforms we use">
   <div class="container">
     <div class="trust-grid">
-      <div class="trust-item"><span class="big-num">25+</span><span class="trust-desc">Years of trusted relationships</span></div>
-      <div class="trust-item"><span class="big-num">5.0 ★</span><span class="trust-desc">Google rating · 32+ Reviews</span></div>
-      <div class="trust-item"><span class="big-num">50</span><span class="trust-desc">States served nationwide</span></div>
-      <div class="trust-item"><span class="big-num">3</span><span class="trust-desc">Licensed CPAs &amp; EAs in-house</span></div>
+      <div class="trust-tool">
+        <div class="trust-tool-icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#B88D3C" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="0"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+        </div>
+        <div>
+          <div class="trust-tool-name">TaxDome</div>
+          <div class="trust-tool-tag">Client Portal</div>
+        </div>
+      </div>
+      <div class="trust-tool">
+        <div class="trust-tool-icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#B88D3C" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="0"/><path d="M9 9h6M9 12h6M9 15h4"/></svg>
+        </div>
+        <div>
+          <div class="trust-tool-name">ProSeries</div>
+          <div class="trust-tool-tag">Tax Software</div>
+        </div>
+      </div>
+      <div class="trust-tool">
+        <div class="trust-tool-icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#B88D3C" stroke-width="1.5"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/></svg>
+        </div>
+        <div>
+          <div class="trust-tool-name">SmartVault</div>
+          <div class="trust-tool-tag">Document Storage</div>
+        </div>
+      </div>
+      <div class="trust-tool">
+        <div class="trust-tool-icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#B88D3C" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
+        </div>
+        <div>
+          <div class="trust-tool-name">PandaDoc</div>
+          <div class="trust-tool-tag">E-Signatures</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -335,18 +389,11 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
         <h2 id="problem-heading">You deserve a CPA who knows your name, not just your file number.</h2>
         <p>Most business owners and individuals feel anxious about taxes, fear audits, and waste time they could spend growing their business or enjoying life. At Parsi, we replace uncertainty with clarity and long-term peace of mind.</p>
       </div>
-      <div class="problem-right">
-        <ul class="problem-list" role="list">
-          <li><svg class="gb" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><rect width="20" height="20" fill="#B88D3C"/><path d="M5 10l4 4 6-6" stroke="white" stroke-width="1.5"/></svg>Never lose an audit</li>
-          <li><svg class="gb" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><rect width="20" height="20" fill="#B88D3C"/><path d="M5 10l4 4 6-6" stroke="white" stroke-width="1.5"/></svg>Minimize tax exposure legally</li>
-          <li><svg class="gb" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><rect width="20" height="20" fill="#B88D3C"/><path d="M5 10l4 4 6-6" stroke="white" stroke-width="1.5"/></svg>Personal guidance for decades, not seasons</li>
-        </ul>
-      </div>
     </div>
   </div>
 </section>
 
-<!-- SERVICES -->
+<!-- SERVICES — 2×2 balanced grid -->
 <section id="services" aria-labelledby="services-heading">
   <div class="container">
     <span class="section-label">What We Do</span>
@@ -552,7 +599,6 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
   <div class="container">
     <div class="footer-inner">
       <div class="footer-left">
-        <!-- Logo dark: misma estructura HTML exacta que logo-light, solo colores distintos -->
         <a href="#" class="logo logo-dark" aria-label="Parsi & Company CPA">
           <span class="lo-line1">
             <span class="lo-parsi">Parsi</span>
