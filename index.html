@@ -117,14 +117,15 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
 
 /* ── PROBLEM ── */
 #problem{background:var(--white);padding:100px 0}
-.problem-inner{display:grid;grid-template-columns:1fr;gap:40px;max-width:780px}
+.problem-inner{display:grid;grid-template-columns:1fr;gap:40px;max-width:800px;margin:0 auto}
 .problem-left h2{margin-bottom:24px}
 .problem-left p{font-size:17px;line-height:1.7}
+.problem-left{text-align:center}
 @media(max-width:768px){.problem-inner{gap:32px}}
 
 /* ── SERVICES — CHANGE 1: 2 columns so 4 cards form a balanced 2×2 grid ── */
 #services{background:var(--warm);padding:100px 0}
-.services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;max-width:880px}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:880px}
 .service-card{background:var(--white);border:1px solid var(--silver);padding:32px;display:flex;flex-direction:column;gap:14px;transition:border-color .2s}
 .service-card:hover{border-color:var(--gold)}
 .service-card h3{font-size:15px;font-weight:600;margin:0}
@@ -416,7 +417,7 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
         <h3>Personal Tax Preparation</h3>
         <p>Individual and family tax preparation (1040, complex) designed to reduce stress, avoid costly mistakes, and file with confidence.</p>
       </article>
-      <article class="service-card">
+      <article class="service-card" style="grid-column:2/3">
         <div aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#B88D3C" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
         <h3>Tax Dispute Resolution</h3>
         <p>Calm, experienced representation for IRS and FTB disputes, notices, and audits — so you respond with clarity and confidence.</p>
