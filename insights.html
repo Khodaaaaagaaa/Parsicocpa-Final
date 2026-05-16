@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insights | Parsi &amp; Company, CPA</title>
+<meta name="description" content="Tax strategies, bookkeeping guides, IRS dispute advice, and estate planning insights from the CPAs at Parsi & Company in Century City, Los Angeles.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=IBM+Plex+Mono:wght@500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=IBM+Plex+Mono:wght@500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--navy:#0D1F44;--gold:#B88D3C;--warm:#F5F7FA;--silver:#D6D6D6;--charcoal:#2D2D2D;--white:#FFFFFF;--max-w:1240px;--side:58px;--side-sm:20px}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);background:var(--white);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased}
+h1,h2{font-family:'Cormorant Garamond',serif;line-height:1.2;color:var(--navy)}
+h1{font-weight:700;font-size:clamp(38px,5vw,52px)}
+h2{font-weight:700;font-size:clamp(24px,3vw,36px)}
+h3{font-family:'Inter',sans-serif;font-weight:700;font-size:clamp(14px,1.4vw,17px);color:var(--navy);line-height:1.35}
+p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-height:1.6}
+.container{max-width:var(--max-w);margin:0 auto;padding:0 var(--side)}
+@media(max-width:768px){.container{padding:0 var(--side-sm)}}
+*:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+/* ── LOGO ── */
+.logo{display:inline-flex;flex-direction:column;align-items:center;gap:4px;text-decoration:none;flex-shrink:0}
+.logo .lo-line1{display:flex;align-items:baseline;gap:0;white-space:nowrap}
+.logo .lo-parsi{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:28px;letter-spacing:.12em;text-transform:uppercase;line-height:1;padding-right:.12em;margin-right:0;transform:translateX(7px)}
+.logo .lo-amp{font-family:'Cormorant Garamond',serif;font-weight:700;font-style:italic;font-size:22px;color:#b59a44;margin:0 .8em 0 0;transform:translateX(9px);line-height:1}
+.logo .lo-company{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:28px;letter-spacing:.12em;text-transform:uppercase;line-height:1;padding-right:.12em}
+.logo .lo-rule{display:flex;align-items:center;width:100%;gap:0;margin:2px 0}
+.logo .lo-rule-line{flex:1;height:1px;background:#b59a44}
+.logo .lo-cpa{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:18px;letter-spacing:.3em;text-transform:uppercase;line-height:1;padding:0 10px;padding-right:calc(.3em + 10px);background:transparent}
+.logo .lo-location{font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#c0c0c0;line-height:1}
+.logo.logo-light .lo-parsi{color:#1a2a47}
+.logo.logo-light .lo-company{color:#1a2a47}
+.logo.logo-light .lo-cpa{color:#1a2a47}
+.logo.logo-dark .lo-parsi{color:#ffffff}
+.logo.logo-dark .lo-company{color:#ffffff}
+.logo.logo-dark .lo-cpa{color:#ffffff}
+
+/* ── NAVBAR ── */
+#navbar{position:sticky;top:0;z-index:1000;background:var(--white);border-bottom:1px solid var(--gold);transition:backdrop-filter .3s,background .3s}
+#navbar.scrolled{background:rgba(255,255,255,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;min-height:90px;padding:12px 0;gap:24px}
+.nav-links{display:flex;align-items:center;gap:24px;list-style:none}
+.nav-links a{font-family:'Inter',sans-serif;font-weight:500;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--navy);text-decoration:none;transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--gold)}
+.nav-right{display:flex;align-items:center;gap:14px;flex-shrink:0}
+.btn-nav-cta{background:var(--navy);color:var(--white);font-family:'Inter',sans-serif;font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.06em;border:none;cursor:pointer;padding:0 18px;height:44px;text-decoration:none;display:inline-flex;align-items:center;transition:color .2s;white-space:nowrap}
+.btn-nav-cta:hover{color:var(--gold)}
+.nav-portal{display:flex;align-items:center;gap:6px;font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--charcoal);text-decoration:none;transition:color .2s;white-space:nowrap}
+.nav-portal:hover{color:var(--gold)}
+.hamburger{display:none;background:none;border:none;cursor:pointer;padding:4px;flex-direction:column;gap:5px}
+.hamburger span{display:block;width:22px;height:1.5px;background:var(--navy)}
+.mobile-menu{display:none;background:var(--white);border-top:1px solid var(--silver);padding:20px var(--side-sm)}
+.mobile-menu.open{display:block}
+.mobile-menu ul{list-style:none;display:flex;flex-direction:column}
+.mobile-menu ul li a{display:block;padding:12px 0;font-family:'Inter',sans-serif;font-weight:500;font-size:14px;text-transform:uppercase;letter-spacing:.06em;color:var(--navy);text-decoration:none;border-bottom:1px solid var(--warm)}
+.mobile-menu .btn-nav-cta{margin-top:16px;width:100%;justify-content:center}
+@media(max-width:1000px){.nav-links{display:none}.nav-portal{display:none}.hamburger{display:flex}.btn-nav-cta.desktop-only{display:none}}
+
+/* ── HERO ── */
+#insights-hero{background:var(--navy);padding:72px 0 64px}
+.insights-hero-inner{max-width:680px}
+.insights-eyebrow{font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--gold);margin-bottom:16px;display:block}
+#insights-hero h1{color:var(--white);margin-bottom:16px}
+#insights-hero p{font-size:17px;color:rgba(214,214,214,.85);max-width:560px}
+
+/* ── FILTER BAR ── */
+#filter-bar{background:var(--warm);border-bottom:1px solid var(--silver);padding:24px 0;position:sticky;top:90px;z-index:900}
+.filter-inner{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.filter-group{display:flex;flex-direction:column;gap:4px}
+.filter-label{font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:9px;text-transform:uppercase;letter-spacing:.1em;color:var(--gold)}
+.filter-select{font-family:'Inter',sans-serif;font-size:12px;font-weight:500;color:var(--navy);background:var(--white);border:1px solid var(--silver);padding:8px 32px 8px 12px;appearance:none;-webkit-appearance:none;cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%232D2D2D' stroke-width='1.4' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 10px center;transition:border-color .2s}
+.filter-select:focus{outline:none;border-color:var(--gold)}
+.filter-reset{font-family:'IBM Plex Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--charcoal);background:none;border:none;cursor:pointer;padding:8px 0;text-decoration:underline;text-underline-offset:3px;transition:color .2s;margin-left:auto}
+.filter-reset:hover{color:var(--gold)}
+.filter-count{font-family:'IBM Plex Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--charcoal);padding:8px 0;white-space:nowrap}
+@media(max-width:768px){#filter-bar{position:static}.filter-inner{gap:12px}.filter-group{flex:1 1 calc(50% - 6px)}.filter-select{width:100%}}
+
+/* ── MAIN LAYOUT ── */
+#insights-main{padding:64px 0 100px;background:var(--white)}
+.insights-layout{display:grid;grid-template-columns:1fr 320px;gap:48px;align-items:start}
+@media(max-width:1024px){.insights-layout{grid-template-columns:1fr}}
+
+/* ── ARTICLES GRID ── */
+.articles-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+@media(max-width:900px){.articles-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.articles-grid{grid-template-columns:1fr}}
+
+/* ── ARTICLE CARD ── */
+.article-card{background:var(--white);border:1px solid var(--silver);display:flex;flex-direction:column;transition:border-color .2s;text-decoration:none}
+.article-card:hover{border-color:var(--gold)}
+.card-top{padding:24px 24px 0}
+.card-pillar{display:inline-flex;align-items:center;gap:6px;margin-bottom:12px}
+.pillar-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.pillar-label{font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:9px;text-transform:uppercase;letter-spacing:.1em;color:var(--charcoal)}
+.card-service{font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:9px;text-transform:uppercase;letter-spacing:.08em;color:var(--gold);margin-bottom:10px;display:block}
+.card-title{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:19px;line-height:1.3;color:var(--navy);margin-bottom:10px}
+.card-excerpt{font-size:13px;line-height:1.6;color:var(--charcoal);flex:1}
+.card-bottom{padding:16px 24px 20px;display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--warm);margin-top:16px}
+.card-meta{font-family:'IBM Plex Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:.08em;color:#888}
+.card-cta{font-family:'Inter',sans-serif;font-size:12px;font-weight:600;color:var(--navy);text-transform:uppercase;letter-spacing:.06em;display:flex;align-items:center;gap:4px;transition:color .2s}
+.article-card:hover .card-cta{color:var(--gold)}
+
+/* Pillar colors */
+.pillar-dot.p1{background:#0D1F44}
+.pillar-dot.p2{background:#B88D3C}
+.pillar-dot.p3{background:#6B8E9F}
+.pillar-dot.p4{background:#7A6E5F}
+
+/* ── NO RESULTS ── */
+.no-results{grid-column:1/-1;text-align:center;padding:64px 24px}
+.no-results h3{margin-bottom:8px}
+.no-results p{font-size:14px;color:#888}
+
+/* ── SIDEBAR ── */
+.sidebar{display:flex;flex-direction:column;gap:32px}
+.sidebar-block{border:1px solid var(--silver);padding:28px}
+.sidebar-block h3{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:20px;color:var(--navy);margin-bottom:4px}
+.sidebar-rule{width:32px;height:1px;background:var(--gold);margin:10px 0 18px;display:block}
+.sidebar-list{list-style:none;display:flex;flex-direction:column;gap:0}
+.sidebar-list li{border-bottom:1px solid var(--warm);padding:12px 0}
+.sidebar-list li:last-child{border-bottom:none;padding-bottom:0}
+.sidebar-list a{text-decoration:none;display:flex;flex-direction:column;gap:3px}
+.sidebar-list .sl-pillar{font-family:'IBM Plex Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:.08em;color:var(--gold);font-weight:500}
+.sidebar-list .sl-title{font-size:13px;font-weight:600;color:var(--navy);line-height:1.35;transition:color .2s}
+.sidebar-list a:hover .sl-title{color:var(--gold)}
+/* Newsletter sidebar block */
+.sidebar-newsletter{background:var(--navy);padding:28px;border:none}
+.sidebar-newsletter h3{color:var(--white);font-family:'Cormorant Garamond',serif;font-weight:700;font-size:20px;margin-bottom:4px}
+.sidebar-newsletter .sidebar-rule{background:var(--gold)}
+.sidebar-newsletter p{font-size:13px;color:rgba(214,214,214,.85);margin-bottom:16px}
+.nl-form{display:flex;flex-direction:column;gap:10px}
+.nl-input{font-family:'Inter',sans-serif;font-size:13px;padding:10px 14px;border:1px solid rgba(184,141,60,.4);background:rgba(255,255,255,.06);color:var(--white);outline:none;transition:border-color .2s}
+.nl-input::placeholder{color:rgba(255,255,255,.4)}
+.nl-input:focus{border-color:var(--gold)}
+.nl-btn{background:var(--gold);color:var(--navy);font-family:'Inter',sans-serif;font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:.07em;border:none;cursor:pointer;padding:12px;transition:opacity .2s}
+.nl-btn:hover{opacity:.88}
+
+/* ── CTA STRIP ── */
+#cta-strip{background:var(--navy);padding:72px 0}
+.cta-strip-inner{text-align:center;max-width:600px;margin:0 auto}
+.cta-strip-inner h2{color:var(--white);margin-bottom:16px}
+.cta-strip-inner p{color:rgba(214,214,214,.85);font-size:17px;margin-bottom:32px}
+.btn-gold{background:var(--gold);color:var(--navy);font-family:'Inter',sans-serif;font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.07em;border:none;cursor:pointer;height:52px;padding:0 36px;display:inline-flex;align-items:center;transition:opacity .2s;text-decoration:none}
+.btn-gold:hover{opacity:.9}
+
+/* ── FOOTER ── */
+#footer{background:var(--navy);border-top:1px solid rgba(184,141,60,.3);padding:48px 0 36px}
+.footer-inner{display:flex;justify-content:space-between;align-items:flex-start;gap:40px;flex-wrap:wrap}
+.footer-left{display:flex;flex-direction:column;gap:16px}
+.footer-address{font-family:'IBM Plex Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--silver);line-height:1.8;font-style:normal}
+.footer-copy{font-size:12px;color:rgba(214,214,214,.6)}
+.footer-links{display:flex;gap:24px;align-items:center;flex-wrap:wrap}
+.footer-links a{font-size:12px;color:var(--silver);text-decoration:none;font-family:'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.06em;transition:color .2s;cursor:pointer}
+.footer-links a:hover{color:var(--gold)}
+
+/* ── MODAL ── */
+.modal-overlay{display:none;position:fixed;inset:0;z-index:9999;background:rgba(13,31,68,.85);align-items:center;justify-content:center;padding:20px}
+.modal-overlay.open{display:flex}
+.modal-box{background:var(--white);max-width:560px;width:100%;max-height:90vh;overflow-y:auto;padding:48px;position:relative}
+.modal-close-btn{position:absolute;top:20px;right:20px;background:none;border:none;cursor:pointer;font-size:20px;color:var(--charcoal);line-height:1}
+.modal-close-btn:hover{color:var(--gold)}
+.modal-box h2{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:28px;color:var(--navy);margin-bottom:8px}
+.modal-sub{font-size:14px;color:var(--charcoal);margin-bottom:32px}
+.modal-rule{width:48px;height:1px;background:var(--gold);border:none;margin:0 0 32px;display:block}
+.form-group{display:flex;flex-direction:column;gap:6px;margin-bottom:20px}
+.form-group label{font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--navy)}
+.form-group input,.form-group select,.form-group textarea{font-family:'Inter',sans-serif;font-size:15px;color:var(--charcoal);border:1px solid #888;padding:12px 16px;background:var(--white);outline:none;transition:border-color .2s;width:100%;border-radius:0;-webkit-appearance:none;appearance:none}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--gold)}
+.form-group input.error,.form-group select.error{border-color:#C0392B}
+.form-error-msg{font-size:12px;color:#C0392B;font-weight:600;display:none;margin-top:2px}
+.form-error-msg.visible{display:block}
+.form-group textarea{min-height:100px;resize:vertical}
+.form-group select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%232D2D2D' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:36px}
+.btn-submit{width:100%;height:52px;background:var(--navy);color:var(--white);border:none;cursor:pointer;font-family:'Inter',sans-serif;font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:.07em;transition:color .2s;margin-top:8px}
+.btn-submit:hover{color:var(--gold)}
+.thank-you{display:none;text-align:center;padding:40px 0}
+.thank-you h3{font-size:24px;color:var(--navy);font-family:'Cormorant Garamond',serif;margin-bottom:12px}
+.thank-you p{font-size:15px}
+.thank-you .gold-icon{color:var(--gold);font-size:40px;margin-bottom:16px;display:block}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header id="navbar" role="banner">
+  <div class="container">
+    <nav class="nav-inner" aria-label="Main navigation">
+      <a href="/index" class="logo logo-light" aria-label="Parsi & Company CPA – Home">
+        <span class="lo-line1">
+          <span class="lo-parsi">Parsi</span>
+          <span class="lo-amp">&amp;</span>
+          <span class="lo-company">Company</span>
+        </span>
+        <span class="lo-rule">
+          <span class="lo-rule-line" aria-hidden="true"></span>
+          <span class="lo-cpa">C P A</span>
+          <span class="lo-rule-line" aria-hidden="true"></span>
+        </span>
+        <span class="lo-location">Los Angeles &nbsp;•&nbsp; Century City</span>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="/index#services">Services</a></li>
+        <li><a href="/index#team">Our Team</a></li>
+        <li><a href="/index#testimonials">Testimonials</a></li>
+        <li><a href="/insights" class="active">Insights</a></li>
+        <li><a href="/index#cta">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <a href="https://app.taxdome.com" class="nav-portal" target="_blank" rel="noopener" aria-label="Client portal TaxDome">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="0"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+          TaxDome
+        </a>
+        <button class="btn-nav-cta desktop-only" onclick="openModal()">SCHEDULE A CONSULTATION</button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </div>
+  <div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Mobile navigation">
+    <ul role="list">
+      <li><a href="/index#services">Services</a></li>
+      <li><a href="/index#team">Our Team</a></li>
+      <li><a href="/index#testimonials">Testimonials</a></li>
+      <li><a href="/insights">Insights</a></li>
+      <li><a href="/index#cta">Contact</a></li>
+      <li><a href="https://app.taxdome.com" target="_blank" rel="noopener">Client Portal</a></li>
+    </ul>
+    <button class="btn-nav-cta" onclick="openModal()">SCHEDULE A CONSULTATION</button>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section id="insights-hero">
+  <div class="container">
+    <div class="insights-hero-inner">
+      <span class="insights-eyebrow">Insights &amp; Resources</span>
+      <h1>Precision Guidance.<br>Straight From Our CPAs.</h1>
+      <p>Tax strategies, bookkeeping best practices, IRS dispute guidance, and estate planning insight — written by the licensed CPAs and EAs at Parsi &amp; Company for families and business owners who value long-term relationships.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FILTER BAR -->
+<section id="filter-bar" aria-label="Filter articles">
+  <div class="container">
+    <div class="filter-inner">
+
+      <div class="filter-group">
+        <span class="filter-label">Pillar</span>
+        <select class="filter-select" id="filter-pillar" aria-label="Filter by pillar">
+          <option value="all">All Pillars</option>
+          <option value="precision-updates">Precision Updates</option>
+          <option value="actionable-guidance">Actionable Guidance</option>
+          <option value="trust-through-experience">Trust Through Experience</option>
+          <option value="value-first-resources">Value-First Resources</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <span class="filter-label">Service</span>
+        <select class="filter-select" id="filter-service" aria-label="Filter by service">
+          <option value="all">All Services</option>
+          <option value="tax-planning">Tax Planning</option>
+          <option value="bookkeeping">Bookkeeping</option>
+          <option value="write-up">Write-Up &amp; Accounting</option>
+          <option value="dispute-resolution">Dispute Resolution</option>
+          <option value="estate-planning">Estate Planning</option>
+          <option value="advisory">Advisory</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <span class="filter-label">Client Type</span>
+        <select class="filter-select" id="filter-client" aria-label="Filter by client type">
+          <option value="all">All Clients</option>
+          <option value="families">Families</option>
+          <option value="business-owners">Business Owners</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <span class="filter-label">Tax Year</span>
+        <select class="filter-select" id="filter-year" aria-label="Filter by tax year">
+          <option value="all">All Years</option>
+          <option value="2026">2026</option>
+          <option value="2025">2025</option>
+        </select>
+      </div>
+
+      <span class="filter-count" id="filter-count" aria-live="polite">Showing 8 articles</span>
+      <button class="filter-reset" id="filter-reset" aria-label="Reset all filters">Reset filters</button>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN: GRID + SIDEBAR -->
+<section id="insights-main">
+  <div class="container">
+    <div class="insights-layout">
+
+      <!-- ARTICLES GRID -->
+      <div>
+        <div class="articles-grid" id="articles-grid">
+
+          <!-- ARTICLE 1 — Precision Updates / Tax Planning / Business Owners / 2026 -->
+          <a href="/insights-post"
+             class="article-card"
+             data-pillar="precision-updates"
+             data-service="tax-planning"
+             data-client="business-owners"
+             data-year="2026"
+             aria-label="Read: 2026 IRS Changes Affecting Family Business Write-Up">
+            <div class="card-top">
+              <div class="card-pillar">
+                <span class="pillar-dot p1" aria-hidden="true"></span>
+                <span class="pillar-label">Precision Updates</span>
+              </div>
+              <span class="card-service">Tax Planning · 2026</span>
+              <h3 class="card-title">2026 IRS Changes Affecting Family Business Write-Up</h3>
+              <p class="card-excerpt">The IRS released updated guidelines for write-up and accounting services that every family-owned business should understand before filing. Here's what changed and what action you should take now.</p>
+            </div>
+            <div class="card-bottom">
+              <span class="card-meta">Bo Lin, CPA · 5 min read</span>
+              <span class="card-cta">Read more →</span>
+            </div>
+          </a>
+
+          <!-- ARTICLE 2 — Actionable Guidance / Bookkeeping / Business Owners / 2026 -->
+          <a href="/insights-post"
+             class="article-card"
+             data-pillar="actionable-guidance"
+             data-service="bookkeeping"
+             data-client="business-owners"
+             data-year="2026"
+             aria-label="Read: How Monthly Write-Up Services Reduce Tax Surprises">
+            <div class="card-top">
+              <div class="card-pillar">
+                <span class="pillar-dot p2" aria-hidden="true"></span>
+                <span class="pillar-label">Actionable Guidance</span>
+              </div>
+              <span class="card-service">Bookkeeping · 2026</span>
+              <h3 class="card-title">How Monthly Write-Up Services Reduce Tax Surprises for Growing Families</h3>
+              <p class="card-excerpt">When your books are reconciled monthly, tax season stops being a surprise and starts being a formality. A step-by-step guide to setting up a write-up system that actually works year-round.</p>
+            </div>
+            <div class="card-bottom">
+              <span class="card-meta">Andrea Mason, CPA · 9 min read</span>
+              <span class="card-cta">Read more →</span>
+            </div>
+          </a>
+
+          <!-- ARTICLE 3 — Trust Through Experience / Estate Planning / Families / 2026 -->
+          <a href="/insights-post"
+             class="article-card"
+             data-pillar="trust-through-experience"
+             data-service="estate-planning"
+             data-client="families"
+             data-year="2026"
+             aria-label="Read: How We Helped a Multi-Generational Family Reduce Estate Tax Exposure">
+            <div class="card-top">
+              <div class="card-pillar">
+                <span class="pillar-dot p3" aria-hidden="true"></span>
+                <span class="pillar-label">Trust Through Experience</span>
+              </div>
+              <span class="card-service">Estate Planning · 2026</span>
+              <h3 class="card-title">How We Helped a Multi-Generational Family Reduce Estate Tax Exposure by $87,000</h3>
+              <p class="card-excerpt">A long-term Parsi client came to us with an estate that had grown significantly but had no structured plan. Over 18 months, we restructured their holdings and reduced their exposure dramatically.</p>
+            </div>
+            <div class="card-bottom">
+              <span class="card-meta">Ryan Bakke, CPA · 7 min read</span>
+              <span class="card-cta">Read more →</span>
+            </div>
+          </a>
+
+          <!-- ARTICLE 4 — Value-First Resources / Bookkeeping / Business Owners / 2026 -->
+          <a href="/insights-post"
+             class="article-card"
+             data-pillar="value-first-resources"
+             data-service="bookkeeping"
+             data-client="business-owners"
+             data-year="2026"
+             aria-label="Read: 2026 Family Business Bookkeeping Checklist">
+            <div class="card-top">
+              <div class="card-pillar">
+                <span class="pillar-dot p4" aria-hidden="true"></span>
+                <span class="pillar-label">Value-First Resources</span>
+              </div>
+              <span class="card-service">Bookkeeping · 2026</span>
+              <h3 class="card-title">2026 Family Business Bookkeeping Checklist</h3>
+              <p class="card-excerpt">Download our CPA-approved checklist covering the 14 monthly bookkeeping tasks every family business should complete to stay compliant, audit-ready, and tax-efficient throughout the year.</p>
+            </div>
+            <div class="card-bottom">
+              <span class="card-meta">Parsi &amp; Company · 4 min read</span>
+              <span class="card-cta">Read more →</span>
+            </div>
+          </a>
+
+          <!-- ARTICLE 5 — Actionable Guidance / Tax Planning / Business Owners / 2026 -->
+          <a href="/insights-post"
+             class="article-card"
+             data-pillar="actionable-guidance"
+             data-service="tax-planning"
+             data-client="business-owners"
+             data-year="2026"
+             aria-label="Read: Cost Segregation Strategies for Real Estate Investors in California">
+            <div class="card-top">
+              <div class="card-pillar">
+                <span class="pillar-dot p2" aria-hidden="true"></span>
+                <span class="pillar-label">Actionable Guidance</span>
+              </div>
+              <span class="card-service">Tax Planning · 2026</span>
+              <h3 class="card-title">Cost Segregation Strategies for Real Estate Investors in California</h3>
+              <p class="card-excerpt">California real estate investors can significantly accelerate depreciation through cost segregation studies. Here's how the strategy works, when it makes sense, and how Parsi implements it for clients.</p>
+            </div>
+            <div class="card-bottom">
+              <span class="card-meta">Bo Lin, CPA, EA · 10 min read</span>
+              <span class="card-cta">Read more →</span>
+            </div>
+          </a>
+
+          <!-- ARTICLE 6 — Precision Updates / Bookkeeping / Business Owners / 2026 -->
+          <a href="/insights-post"
+             class="article-card"
+             data-pillar="precision-updates"
+             data-service="bookkeeping"
+             data-client="business-owners"
+             data-year="2026"
+             aria-label="Read: New Bookkeeping Requirements Under 2026 Tax Legislation">
+            <div class="card-top">
+              <div class="card-pillar">
+                <span class="pillar-dot p1" aria-hidden="true"></span>
+                <span class="pillar-label">Precision Updates</span>
+              </div>
+              <span class="card-service">Bookkeeping · 2026</span>
+              <h3 class="card-title">New Bookkeeping Requirements Under 2026 Tax Legislation</h3>
+              <p class="card-excerpt">The 2026 legislative updates introduced specific recordkeeping changes that affect how small and mid-size businesses must document expenses. Non-compliance can result in disallowed deductions.</p>
+            </div>
+            <div class="card-bottom">
+              <span class="card-meta">Andrea Mason, CPA · 6 min read</span>
+              <span class="card-cta">Read more →</span>
+            </div>
+          </a>
+
+          <!-- ARTICLE 7 — Trust Through Experience / Dispute Resolution / Business Owners / 2025 -->
+          <a href="/insights-post"
+             class="article-card"
+             data-pillar="trust-through-experience"
+             data-service="dispute-resolution"
+             data-client="business-owners"
+             data-year="2025"
+             aria-label="Read: From IRS Notice to Full Resolution: A Client Case Study">
+            <div class="card-top">
+              <div class="card-pillar">
+                <span class="pillar-dot p3" aria-hidden="true"></span>
+                <span class="pillar-label">Trust Through Experience</span>
+              </div>
+              <span class="card-service">Dispute Resolution · 2025</span>
+              <h3 class="card-title">From IRS Notice to Full Resolution: A Client Case Study</h3>
+              <p class="card-excerpt">When a long-term business client received an unexpected IRS audit notice, our EA stepped in to represent them directly. Here's how we navigated the process and reached a favorable outcome.</p>
+            </div>
+            <div class="card-bottom">
+              <span class="card-meta">Bo Lin, EA · 7 min read</span>
+              <span class="card-cta">Read more →</span>
+            </div>
+          </a>
+
+          <!-- ARTICLE 8 — Value-First Resources / Estate Planning / Families / 2026 -->
+          <a href="/insights-post"
+             class="article-card"
+             data-pillar="value-first-resources"
+             data-service="estate-planning"
+             data-client="families"
+             data-year="2026"
+             aria-label="Read: Estate Planning Checklist for Multi-Generational Families">
+            <div class="card-top">
+              <div class="card-pillar">
+                <span class="pillar-dot p4" aria-hidden="true"></span>
+                <span class="pillar-label">Value-First Resources</span>
+              </div>
+              <span class="card-service">Estate Planning · 2026</span>
+              <h3 class="card-title">Estate Planning Checklist for Multi-Generational Families</h3>
+              <p class="card-excerpt">A practical checklist covering trusts, beneficiary designations, step-up basis planning, and the 12 critical decisions every family should make with their CPA before assets transfer to the next generation.</p>
+            </div>
+            <div class="card-bottom">
+              <span class="card-meta">Ryan Bakke, CPA · 5 min read</span>
+              <span class="card-cta">Read more →</span>
+            </div>
+          </a>
+
+          <!-- NO RESULTS state (hidden by default) -->
+          <div class="no-results" id="no-results" style="display:none" aria-live="polite">
+            <h3>No articles found</h3>
+            <p>Try adjusting your filters or <button onclick="resetFilters()" style="background:none;border:none;cursor:pointer;color:var(--gold);font-weight:600;font-size:14px;padding:0">reset all filters</button> to see all insights.</p>
+          </div>
+
+        </div><!-- /articles-grid -->
+      </div><!-- /grid wrapper -->
+
+      <!-- SIDEBAR -->
+      <aside class="sidebar" aria-label="Sidebar">
+
+        <!-- Featured Resources -->
+        <div class="sidebar-block">
+          <h3>Featured Resources</h3>
+          <span class="sidebar-rule" aria-hidden="true"></span>
+          <ul class="sidebar-list">
+            <li>
+              <a href="/insights-post">
+                <span class="sl-pillar">Value-First Resources</span>
+                <span class="sl-title">2026 Family Business Bookkeeping Checklist</span>
+              </a>
+            </li>
+            <li>
+              <a href="/insights-post">
+                <span class="sl-pillar">Value-First Resources</span>
+                <span class="sl-title">Estate Planning Checklist for Multi-Generational Families</span>
+              </a>
+            </li>
+            <li>
+              <a href="/insights-post">
+                <span class="sl-pillar">Precision Updates</span>
+                <span class="sl-title">2026 IRS Changes Affecting Family Business Write-Up</span>
+              </a>
+            </li>
+            <li>
+              <a href="/insights-post">
+                <span class="sl-pillar">Trust Through Experience</span>
+                <span class="sl-title">From IRS Notice to Full Resolution: A Client Case Study</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Newsletter -->
+        <div class="sidebar-block sidebar-newsletter">
+          <h3>Stay Informed</h3>
+          <span class="sidebar-rule" aria-hidden="true"></span>
+          <p>Receive tax alerts, planning guides, and new insights from our CPAs — delivered once a month.</p>
+          <form class="nl-form" onsubmit="handleNlSubmit(event)">
+            <input type="text" class="nl-input" placeholder="Your name" aria-label="Your name" required>
+            <input type="email" class="nl-input" placeholder="Email address" aria-label="Email address" required>
+            <button type="submit" class="nl-btn">Subscribe →</button>
+          </form>
+        </div>
+
+        <!-- Browse by Topic -->
+        <div class="sidebar-block">
+          <h3>Browse by Topic</h3>
+          <span class="sidebar-rule" aria-hidden="true"></span>
+          <ul class="sidebar-list">
+            <li><a href="#" onclick="applyFilter('service','tax-planning');return false;"><span class="sl-pillar">Service</span><span class="sl-title">Tax Planning</span></a></li>
+            <li><a href="#" onclick="applyFilter('service','bookkeeping');return false;"><span class="sl-pillar">Service</span><span class="sl-title">Bookkeeping &amp; Write-Up</span></a></li>
+            <li><a href="#" onclick="applyFilter('service','dispute-resolution');return false;"><span class="sl-pillar">Service</span><span class="sl-title">IRS Dispute Resolution</span></a></li>
+            <li><a href="#" onclick="applyFilter('service','estate-planning');return false;"><span class="sl-pillar">Service</span><span class="sl-title">Estate Planning</span></a></li>
+            <li><a href="#" onclick="applyFilter('client','families');return false;"><span class="sl-pillar">Client Type</span><span class="sl-title">For Families</span></a></li>
+            <li><a href="#" onclick="applyFilter('client','business-owners');return false;"><span class="sl-pillar">Client Type</span><span class="sl-title">For Business Owners</span></a></li>
+          </ul>
+        </div>
+
+      </aside>
+    </div><!-- /insights-layout -->
+  </div>
+</section>
+
+<!-- CTA STRIP -->
+<section id="cta-strip">
+  <div class="container">
+    <div class="cta-strip-inner">
+      <h2 style="color:var(--white)">Ready for Precision Guidance?</h2>
+      <p>Schedule a free consultation with a licensed CPA at Parsi &amp; Company — Century City's boutique firm for families and business owners.</p>
+      <button class="btn-gold" onclick="openModal()">SCHEDULE A FREE CONSULTATION</button>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer id="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <a href="/index" class="logo logo-dark" aria-label="Parsi & Company CPA – Home">
+          <span class="lo-line1">
+            <span class="lo-parsi">Parsi</span>
+            <span class="lo-amp">&amp;</span>
+            <span class="lo-company">Company</span>
+          </span>
+          <span class="lo-rule">
+            <span class="lo-rule-line" aria-hidden="true"></span>
+            <span class="lo-cpa">C P A</span>
+            <span class="lo-rule-line" aria-hidden="true"></span>
+          </span>
+          <span class="lo-location">Los Angeles &nbsp;•&nbsp; Century City</span>
+        </a>
+        <address class="footer-address">
+          1801 Century Park East, Suite 1600<br>
+          Los Angeles, CA 90067<br>
+          (310) 556-3655 · info@parsicocpa.com
+        </address>
+        <p class="footer-copy">© 2026 Parsi &amp; Company, CPA. All rights reserved.</p>
+      </div>
+      <div class="footer-links">
+        <a href="/index">Home</a>
+        <a href="/insights">Insights</a>
+        <a href="https://app.taxdome.com" target="_blank" rel="noopener">Client Portal</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- CONSULTATION MODAL -->
+<div class="modal-overlay" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal-box">
+    <button class="modal-close-btn" onclick="closeModal()" aria-label="Close">&times;</button>
+    <h2 id="modal-title">Schedule a Free Consultation</h2>
+    <p class="modal-sub">Your request will be sent to <strong>info@parsicocpa.com</strong> and a team member will respond within one business day.</p>
+    <hr class="modal-rule" aria-hidden="true">
+    <div id="consultation-form">
+      <div class="form-group">
+        <label for="f-name">Full Name *</label>
+        <input type="text" id="f-name" autocomplete="name" placeholder="Your full name" aria-required="true" aria-describedby="f-name-err">
+        <span class="form-error-msg" id="f-name-err" role="alert">Please enter your full name.</span>
+      </div>
+      <div class="form-group">
+        <label for="f-email">Email *</label>
+        <input type="email" id="f-email" autocomplete="email" placeholder="name@email.com" aria-required="true" aria-describedby="f-email-err">
+        <span class="form-error-msg" id="f-email-err" role="alert">Please enter a valid email address.</span>
+      </div>
+      <div class="form-group">
+        <label for="f-phone">Phone</label>
+        <input type="tel" id="f-phone" autocomplete="tel" placeholder="(310) 000-0000">
+      </div>
+      <div class="form-group">
+        <label for="f-service">Service Type *</label>
+        <select id="f-service" aria-required="true" aria-describedby="f-service-err">
+          <option value="" disabled selected>Select a service…</option>
+          <option>Business Tax Preparation</option>
+          <option>Personal Tax Preparation</option>
+          <option>Bookkeeping</option>
+          <option>Tax Dispute Resolution / IRS Notice</option>
+          <option>Estate Planning</option>
+          <option>Advisory</option>
+          <option>Other</option>
+        </select>
+        <span class="form-error-msg" id="f-service-err" role="alert">Please select a service type.</span>
+      </div>
+      <div class="form-group">
+        <label for="f-message">Message</label>
+        <textarea id="f-message" placeholder="Briefly describe what you need…"></textarea>
+      </div>
+      <button type="button" class="btn-submit" onclick="handleSubmit()">SEND REQUEST</button>
+    </div>
+    <div class="thank-you" id="thank-you" aria-live="polite">
+      <span class="gold-icon" aria-hidden="true">✓</span>
+      <h3>Request Received</h3>
+      <p>Your request has been sent to <strong>info@parsicocpa.com</strong>. A member of our team will be in touch within one business day.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+// ── Navbar scroll
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 40); }, { passive: true });
+
+// ── Mobile menu
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobile-menu');
+hamburger.addEventListener('click', () => {
+  const open = mobileMenu.classList.toggle('open');
+  hamburger.setAttribute('aria-expanded', String(open));
+});
+
+// ── Modal
+const modal = document.getElementById('modal');
+function openModal() { modal.classList.add('open'); document.body.style.overflow = 'hidden'; }
+function closeModal() { modal.classList.remove('open'); document.body.style.overflow = ''; }
+modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+// ── Form validation
+function validateField(id, errId) {
+  const el = document.getElementById(id);
+  const err = document.getElementById(errId);
+  const empty = !el.value.trim();
+  el.classList.toggle('error', empty);
+  if (err) err.classList.toggle('visible', empty);
+  return !empty;
+}
+function handleSubmit() {
+  const ok = [validateField('f-name','f-name-err'), validateField('f-email','f-email-err'), validateField('f-service','f-service-err')].every(Boolean);
+  if (!ok) return;
+  document.getElementById('consultation-form').style.display = 'none';
+  document.getElementById('thank-you').style.display = 'block';
+}
+
+// ── Newsletter submit
+function handleNlSubmit(e) {
+  e.preventDefault();
+  e.target.innerHTML = '<p style="color:#b59a44;font-family:\'IBM Plex Mono\',monospace;font-size:12px;text-transform:uppercase;letter-spacing:.08em;">✓ You\'re subscribed</p>';
+}
+
+// ── FILTERING
+const cards = Array.from(document.querySelectorAll('.article-card'));
+const noResults = document.getElementById('no-results');
+const countEl = document.getElementById('filter-count');
+
+function getFilters() {
+  return {
+    pillar: document.getElementById('filter-pillar').value,
+    service: document.getElementById('filter-service').value,
+    client: document.getElementById('filter-client').value,
+    year: document.getElementById('filter-year').value
+  };
+}
+
+function applyFilters() {
+  const f = getFilters();
+  let visible = 0;
+  cards.forEach(card => {
+    const match =
+      (f.pillar === 'all' || card.dataset.pillar === f.pillar) &&
+      (f.service === 'all' || card.dataset.service === f.service) &&
+      (f.client === 'all' || card.dataset.client === f.client) &&
+      (f.year === 'all' || card.dataset.year === f.year);
+    card.style.display = match ? '' : 'none';
+    if (match) visible++;
+  });
+  noResults.style.display = visible === 0 ? 'block' : 'none';
+  countEl.textContent = `Showing ${visible} article${visible !== 1 ? 's' : ''}`;
+}
+
+function resetFilters() {
+  ['filter-pillar','filter-service','filter-client','filter-year'].forEach(id => {
+    document.getElementById(id).value = 'all';
+  });
+  applyFilters();
+}
+
+function applyFilter(type, value) {
+  document.getElementById('filter-' + type).value = value;
+  applyFilters();
+  document.getElementById('filter-bar').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+['filter-pillar','filter-service','filter-client','filter-year'].forEach(id => {
+  document.getElementById(id).addEventListener('change', applyFilters);
+});
+document.getElementById('filter-reset').addEventListener('click', resetFilters);
+</script>
+
+</body>
+</html>
