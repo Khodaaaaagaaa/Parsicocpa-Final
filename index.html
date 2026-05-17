@@ -125,7 +125,7 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
 
 /* ── SERVICES — CHANGE 1: 2 columns so 4 cards form a balanced 2×2 grid ── */
 #services{background:var(--warm);padding:100px 0}
-.services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;max-width:880px;margin-left:auto;margin-right:auto}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:880px;margin:0 auto}
 .service-card{background:var(--white);border:1px solid var(--silver);padding:32px;display:flex;flex-direction:column;gap:14px;transition:border-color .2s}
 .service-card:hover{border-color:var(--gold)}
 .service-card h3{font-size:15px;font-weight:600;margin:0}
@@ -175,6 +175,28 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
 .resource-card p{font-size:13px;line-height:1.6;flex:1}
 .resource-read{font-size:12px;font-weight:600;color:var(--navy);text-transform:uppercase;letter-spacing:.06em;display:flex;align-items:center;gap:6px;margin-top:4px}
 @media(max-width:768px){.resources-grid{grid-template-columns:1fr}}
+
+/* ── LATEST INSIGHTS ── */
+#latest-insights{background:var(--white);padding:100px 0}
+.insights-grid-home{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:40px}
+.insight-card-home{background:var(--white);border:1px solid var(--silver);display:flex;flex-direction:column;text-decoration:none;transition:border-color .2s}
+.insight-card-home:hover{border-color:var(--gold)}
+.insight-card-top{padding:24px 24px 0}
+.insight-pillar-row{display:flex;align-items:center;gap:6px;margin-bottom:10px}
+.insight-dot{width:7px;height:7px;border-radius:50%;background:var(--gold);flex-shrink:0}
+.insight-pillar{font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:9px;text-transform:uppercase;letter-spacing:.1em;color:var(--charcoal)}
+.insight-service{font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:9px;text-transform:uppercase;letter-spacing:.08em;color:var(--gold);margin-bottom:10px;display:block}
+.insight-title{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:19px;line-height:1.3;color:var(--navy);margin-bottom:10px}
+.insight-excerpt{font-size:13px;line-height:1.6;color:var(--charcoal)}
+.insight-card-bottom{padding:14px 24px 18px;display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--warm);margin-top:16px}
+.insight-meta{font-family:'IBM Plex Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:.08em;color:#888}
+.insight-cta{font-family:'Inter',sans-serif;font-size:12px;font-weight:600;color:var(--navy);text-transform:uppercase;letter-spacing:.06em;transition:color .2s}
+.insight-card-home:hover .insight-cta{color:var(--gold)}
+.insights-view-all{text-align:center}
+.btn-view-all{display:inline-flex;align-items:center;gap:8px;font-family:'Inter',sans-serif;font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:.07em;color:var(--navy);border:1px solid var(--navy);padding:0 32px;height:52px;text-decoration:none;transition:background .2s,color .2s}
+.btn-view-all:hover{background:var(--navy);color:var(--white)}
+@media(max-width:900px){.insights-grid-home{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:580px){.insights-grid-home{grid-template-columns:1fr}}
 
 /* ── CTA ── */
 #cta{background:var(--navy);padding:100px 0}
@@ -273,6 +295,7 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
         <li><a href="#team">Our Team</a></li>
         <li><a href="#testimonials">Testimonials</a></li>
         <li><a href="#resources">Resources</a></li>
+        <li><a href="/insights">Insights</a></li>
         <li><a href="#cta">Contact</a></li>
       </ul>
       <div class="nav-right">
@@ -293,6 +316,7 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
       <li><a href="#team" onclick="closeMobileMenu()">Our Team</a></li>
       <li><a href="#testimonials" onclick="closeMobileMenu()">Testimonials</a></li>
       <li><a href="#resources" onclick="closeMobileMenu()">Resources</a></li>
+      <li><a href="/insights">Insights</a></li>
       <li><a href="#cta" onclick="closeMobileMenu()">Contact</a></li>
       <li><a href="https://app.taxdome.com" target="_blank" rel="noopener">Client Portal</a></li>
     </ul>
@@ -563,6 +587,69 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
         <p>From home office to mileage, vehicle use, and Section 179 — many LA business owners leave thousands on the table. A CPA review can recover them.</p>
         <span class="resource-read">Ask our team →</span>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- LATEST INSIGHTS -->
+<section id="latest-insights" aria-labelledby="insights-heading">
+  <div class="container">
+    <span class="section-label">From Our CPAs</span>
+    <h2 id="insights-heading" class="section-title">Latest Insights</h2>
+    <hr class="section-rule" aria-hidden="true">
+    <div class="insights-grid-home">
+
+      <a href="/insights-post" class="insight-card-home" aria-label="Read: 2026 IRS Changes Affecting Family Business Write-Up">
+        <div class="insight-card-top">
+          <div class="insight-pillar-row">
+            <span class="insight-dot" aria-hidden="true"></span>
+            <span class="insight-pillar">Precision Updates</span>
+          </div>
+          <span class="insight-service">Tax Planning · 2026</span>
+          <h3 class="insight-title">2026 IRS Changes Affecting Family Business Write-Up</h3>
+          <p class="insight-excerpt">The IRS released updated guidelines every family-owned business should understand before filing. Here's what changed and what action to take now.</p>
+        </div>
+        <div class="insight-card-bottom">
+          <span class="insight-meta">Bo Lin, CPA · 5 min</span>
+          <span class="insight-cta">Read →</span>
+        </div>
+      </a>
+
+      <a href="/insights-post" class="insight-card-home" aria-label="Read: How Monthly Write-Up Services Reduce Tax Surprises">
+        <div class="insight-card-top">
+          <div class="insight-pillar-row">
+            <span class="insight-dot" aria-hidden="true"></span>
+            <span class="insight-pillar">Actionable Guidance</span>
+          </div>
+          <span class="insight-service">Bookkeeping · 2026</span>
+          <h3 class="insight-title">How Monthly Write-Up Services Reduce Tax Surprises for Growing Families</h3>
+          <p class="insight-excerpt">When your books are reconciled monthly, tax season stops being a surprise. A step-by-step guide to a write-up system that works year-round.</p>
+        </div>
+        <div class="insight-card-bottom">
+          <span class="insight-meta">Andrea Mason, CPA · 9 min</span>
+          <span class="insight-cta">Read →</span>
+        </div>
+      </a>
+
+      <a href="/insights-post" class="insight-card-home" aria-label="Read: How We Helped a Multi-Generational Family Reduce Estate Tax Exposure">
+        <div class="insight-card-top">
+          <div class="insight-pillar-row">
+            <span class="insight-dot" aria-hidden="true"></span>
+            <span class="insight-pillar">Trust Through Experience</span>
+          </div>
+          <span class="insight-service">Estate Planning · 2026</span>
+          <h3 class="insight-title">How We Helped a Multi-Generational Family Reduce Estate Tax Exposure by $87,000</h3>
+          <p class="insight-excerpt">A long-term Parsi client had an estate that had grown with no structured plan. Over 18 months, we restructured their holdings and reduced their exposure dramatically.</p>
+        </div>
+        <div class="insight-card-bottom">
+          <span class="insight-meta">Ryan Bakke, CPA · 7 min</span>
+          <span class="insight-cta">Read →</span>
+        </div>
+      </a>
+
+    </div>
+    <div class="insights-view-all">
+      <a href="/insights" class="btn-view-all">VIEW ALL INSIGHTS →</a>
     </div>
   </div>
 </section>
