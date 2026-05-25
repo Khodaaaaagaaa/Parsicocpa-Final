@@ -128,7 +128,6 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
 .sidebar-list .sl-pillar{font-family:'IBM Plex Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:.08em;color:var(--gold);font-weight:500}
 .sidebar-list .sl-title{font-size:13px;font-weight:600;color:var(--navy);line-height:1.35;transition:color .2s}
 .sidebar-list a:hover .sl-title{color:var(--gold)}
-/* Newsletter sidebar block */
 .sidebar-newsletter{background:var(--navy);padding:28px;border:none}
 .sidebar-newsletter h3{color:var(--white);font-family:'Cormorant Garamond',serif;font-weight:700;font-size:20px;margin-bottom:4px}
 .sidebar-newsletter .sidebar-rule{background:var(--gold)}
@@ -154,6 +153,7 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
 .footer-left{display:flex;flex-direction:column;gap:16px}
 .footer-address{font-family:'IBM Plex Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--silver);line-height:1.8;font-style:normal}
 .footer-copy{font-size:12px;color:rgba(214,214,214,.6)}
+.footer-disclaimer{font-size:11px;color:rgba(214,214,214,.5);line-height:1.7;max-width:680px;margin-top:20px;border-top:1px solid rgba(184,141,60,.2);padding-top:20px}
 .footer-links{display:flex;gap:24px;align-items:center;flex-wrap:wrap}
 .footer-links a{font-size:12px;color:var(--silver);text-decoration:none;font-family:'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.06em;transition:color .2s;cursor:pointer}
 .footer-links a:hover{color:var(--gold)}
@@ -252,7 +252,6 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
 <section id="filter-bar" aria-label="Filter articles">
   <div class="container">
     <div class="filter-inner">
-
       <div class="filter-group">
         <span class="filter-label">Pillar</span>
         <select class="filter-select" id="filter-pillar" aria-label="Filter by pillar">
@@ -263,7 +262,6 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
           <option value="value-first-resources">Value-First Resources</option>
         </select>
       </div>
-
       <div class="filter-group">
         <span class="filter-label">Service</span>
         <select class="filter-select" id="filter-service" aria-label="Filter by service">
@@ -276,7 +274,6 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
           <option value="advisory">Advisory</option>
         </select>
       </div>
-
       <div class="filter-group">
         <span class="filter-label">Client Type</span>
         <select class="filter-select" id="filter-client" aria-label="Filter by client type">
@@ -285,7 +282,6 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
           <option value="business-owners">Business Owners</option>
         </select>
       </div>
-
       <div class="filter-group">
         <span class="filter-label">Tax Year</span>
         <select class="filter-select" id="filter-year" aria-label="Filter by tax year">
@@ -294,8 +290,7 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
           <option value="2025">2025</option>
         </select>
       </div>
-
-      <span class="filter-count" id="filter-count" aria-live="polite">Showing 10 articles</span>
+      <span class="filter-count" id="filter-count" aria-live="polite">Showing 2 articles</span>
       <button class="filter-reset" id="filter-reset" aria-label="Reset all filters">Reset filters</button>
     </div>
   </div>
@@ -310,189 +305,7 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
       <div>
         <div class="articles-grid" id="articles-grid">
 
-          <!-- ARTICLE 1 — Precision Updates / Tax Planning / Business Owners / 2026 -->
-          <a href="/insights-post"
-             class="article-card"
-             data-pillar="precision-updates"
-             data-service="tax-planning"
-             data-client="business-owners"
-             data-year="2026"
-             aria-label="Read: 2026 IRS Changes Affecting Family Business Write-Up">
-            <div class="card-top">
-              <div class="card-pillar">
-                <span class="pillar-dot p1" aria-hidden="true"></span>
-                <span class="pillar-label">Precision Updates</span>
-              </div>
-              <span class="card-service">Tax Planning · 2026</span>
-              <h3 class="card-title">2026 IRS Changes Affecting Family Business Write-Up</h3>
-              <p class="card-excerpt">The IRS released updated guidelines for write-up and accounting services that every family-owned business should understand before filing. Here's what changed and what action you should take now.</p>
-            </div>
-            <div class="card-bottom">
-              <span class="card-meta">Bo Lin, CPA · 5 min read</span>
-              <span class="card-cta">Read more →</span>
-            </div>
-          </a>
-
-          <!-- ARTICLE 2 — Actionable Guidance / Bookkeeping / Business Owners / 2026 -->
-          <a href="/insights-post"
-             class="article-card"
-             data-pillar="actionable-guidance"
-             data-service="bookkeeping"
-             data-client="business-owners"
-             data-year="2026"
-             aria-label="Read: How Monthly Write-Up Services Reduce Tax Surprises">
-            <div class="card-top">
-              <div class="card-pillar">
-                <span class="pillar-dot p2" aria-hidden="true"></span>
-                <span class="pillar-label">Actionable Guidance</span>
-              </div>
-              <span class="card-service">Bookkeeping · 2026</span>
-              <h3 class="card-title">How Monthly Write-Up Services Reduce Tax Surprises for Growing Families</h3>
-              <p class="card-excerpt">When your books are reconciled monthly, tax season stops being a surprise and starts being a formality. A step-by-step guide to setting up a write-up system that actually works year-round.</p>
-            </div>
-            <div class="card-bottom">
-              <span class="card-meta">Andrea Mason, CPA · 9 min read</span>
-              <span class="card-cta">Read more →</span>
-            </div>
-          </a>
-
-          <!-- ARTICLE 3 — Trust Through Experience / Estate Planning / Families / 2026 -->
-          <a href="/insights-post"
-             class="article-card"
-             data-pillar="trust-through-experience"
-             data-service="estate-planning"
-             data-client="families"
-             data-year="2026"
-             aria-label="Read: How We Helped a Multi-Generational Family Reduce Estate Tax Exposure">
-            <div class="card-top">
-              <div class="card-pillar">
-                <span class="pillar-dot p3" aria-hidden="true"></span>
-                <span class="pillar-label">Trust Through Experience</span>
-              </div>
-              <span class="card-service">Estate Planning · 2026</span>
-              <h3 class="card-title">How We Helped a Multi-Generational Family Reduce Estate Tax Exposure by $87,000</h3>
-              <p class="card-excerpt">A long-term Parsi client came to us with an estate that had grown significantly but had no structured plan. Over 18 months, we restructured their holdings and reduced their exposure dramatically.</p>
-            </div>
-            <div class="card-bottom">
-              <span class="card-meta">Ryan Bakke, CPA · 7 min read</span>
-              <span class="card-cta">Read more →</span>
-            </div>
-          </a>
-
-          <!-- ARTICLE 4 — Value-First Resources / Bookkeeping / Business Owners / 2026 -->
-          <a href="/insights-post"
-             class="article-card"
-             data-pillar="value-first-resources"
-             data-service="bookkeeping"
-             data-client="business-owners"
-             data-year="2026"
-             aria-label="Read: 2026 Family Business Bookkeeping Checklist">
-            <div class="card-top">
-              <div class="card-pillar">
-                <span class="pillar-dot p4" aria-hidden="true"></span>
-                <span class="pillar-label">Value-First Resources</span>
-              </div>
-              <span class="card-service">Bookkeeping · 2026</span>
-              <h3 class="card-title">2026 Family Business Bookkeeping Checklist</h3>
-              <p class="card-excerpt">Download our CPA-approved checklist covering the 14 monthly bookkeeping tasks every family business should complete to stay compliant, audit-ready, and tax-efficient throughout the year.</p>
-            </div>
-            <div class="card-bottom">
-              <span class="card-meta">Parsi &amp; Company · 4 min read</span>
-              <span class="card-cta">Read more →</span>
-            </div>
-          </a>
-
-          <!-- ARTICLE 5 — Actionable Guidance / Tax Planning / Business Owners / 2026 -->
-          <a href="/insights-post"
-             class="article-card"
-             data-pillar="actionable-guidance"
-             data-service="tax-planning"
-             data-client="business-owners"
-             data-year="2026"
-             aria-label="Read: Cost Segregation Strategies for Real Estate Investors in California">
-            <div class="card-top">
-              <div class="card-pillar">
-                <span class="pillar-dot p2" aria-hidden="true"></span>
-                <span class="pillar-label">Actionable Guidance</span>
-              </div>
-              <span class="card-service">Tax Planning · 2026</span>
-              <h3 class="card-title">Cost Segregation Strategies for Real Estate Investors in California</h3>
-              <p class="card-excerpt">California real estate investors can significantly accelerate depreciation through cost segregation studies. Here's how the strategy works, when it makes sense, and how Parsi implements it for clients.</p>
-            </div>
-            <div class="card-bottom">
-              <span class="card-meta">Bo Lin, CPA, EA · 10 min read</span>
-              <span class="card-cta">Read more →</span>
-            </div>
-          </a>
-
-          <!-- ARTICLE 6 — Precision Updates / Bookkeeping / Business Owners / 2026 -->
-          <a href="/insights-post"
-             class="article-card"
-             data-pillar="precision-updates"
-             data-service="bookkeeping"
-             data-client="business-owners"
-             data-year="2026"
-             aria-label="Read: New Bookkeeping Requirements Under 2026 Tax Legislation">
-            <div class="card-top">
-              <div class="card-pillar">
-                <span class="pillar-dot p1" aria-hidden="true"></span>
-                <span class="pillar-label">Precision Updates</span>
-              </div>
-              <span class="card-service">Bookkeeping · 2026</span>
-              <h3 class="card-title">New Bookkeeping Requirements Under 2026 Tax Legislation</h3>
-              <p class="card-excerpt">The 2026 legislative updates introduced specific recordkeeping changes that affect how small and mid-size businesses must document expenses. Non-compliance can result in disallowed deductions.</p>
-            </div>
-            <div class="card-bottom">
-              <span class="card-meta">Andrea Mason, CPA · 6 min read</span>
-              <span class="card-cta">Read more →</span>
-            </div>
-          </a>
-
-          <!-- ARTICLE 7 — Trust Through Experience / Dispute Resolution / Business Owners / 2025 -->
-          <a href="/insights-post"
-             class="article-card"
-             data-pillar="trust-through-experience"
-             data-service="dispute-resolution"
-             data-client="business-owners"
-             data-year="2025"
-             aria-label="Read: From IRS Notice to Full Resolution: A Client Case Study">
-            <div class="card-top">
-              <div class="card-pillar">
-                <span class="pillar-dot p3" aria-hidden="true"></span>
-                <span class="pillar-label">Trust Through Experience</span>
-              </div>
-              <span class="card-service">Dispute Resolution · 2025</span>
-              <h3 class="card-title">From IRS Notice to Full Resolution: A Client Case Study</h3>
-              <p class="card-excerpt">When a long-term business client received an unexpected IRS audit notice, our EA stepped in to represent them directly. Here's how we navigated the process and reached a favorable outcome.</p>
-            </div>
-            <div class="card-bottom">
-              <span class="card-meta">Bo Lin, EA · 7 min read</span>
-              <span class="card-cta">Read more →</span>
-            </div>
-          </a>
-
-          <!-- ARTICLE 8 — Value-First Resources / Estate Planning / Families / 2026 -->
-          <a href="/insights-post"
-             class="article-card"
-             data-pillar="value-first-resources"
-             data-service="estate-planning"
-             data-client="families"
-             data-year="2026"
-             aria-label="Read: Estate Planning Checklist for Multi-Generational Families">
-            <div class="card-top">
-              <div class="card-pillar">
-                <span class="pillar-dot p4" aria-hidden="true"></span>
-                <span class="pillar-label">Value-First Resources</span>
-              </div>
-              <span class="card-service">Estate Planning · 2026</span>
-              <h3 class="card-title">Estate Planning Checklist for Multi-Generational Families</h3>
-              <p class="card-excerpt">A practical checklist covering trusts, beneficiary designations, step-up basis planning, and the 12 critical decisions every family should make with their CPA before assets transfer to the next generation.</p>
-            </div>
-            <div class="card-bottom">
-              <span class="card-meta">Ryan Bakke, CPA · 5 min read</span>
-              <span class="card-cta">Read more →</span>
-            </div>
-          </a>
+          <!-- ARTICLE 1 — Actionable Guidance / Tax Planning / Business Owners / 2026 -->
           <a href="/insights-california-estimated-tax-2026"
              class="article-card"
              data-pillar="actionable-guidance"
@@ -506,7 +319,7 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
                 <span class="pillar-label">Actionable Guidance</span>
               </div>
               <span class="card-service">Tax Planning · 2026</span>
-              <h3 class="card-title">California Estimated Tax Payments 2026 – Safe Harbor Rules, Deadlines & FTB Requirements</h3>
+              <h3 class="card-title">California Estimated Tax Payments 2026 – Safe Harbor Rules, Deadlines &amp; FTB Requirements</h3>
               <p class="card-excerpt">An educational overview of 2026 federal and California estimated tax payment rules, safe harbor thresholds, FTB installment schedules, and the critical $1M AGI limitation for California taxpayers.</p>
             </div>
             <div class="card-bottom">
@@ -514,14 +327,15 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
               <span class="card-cta">Read more →</span>
             </div>
           </a>
-          <!-- ARTICLE — Actionable Guidance / Tax Planning / Business Owners / 2026 -->
+
+          <!-- ARTICLE 2 — Actionable Guidance / Tax Planning / Business Owners / 2026 -->
           <a href="/insights-scorp-vs-llc-california-2026"
              class="article-card"
              data-pillar="actionable-guidance"
              data-service="tax-planning"
              data-client="business-owners"
              data-year="2026"
-             aria-label="Read: S-Corp vs. LLC in California 2026 – Tax Treatment, Structures, and Key Differences">
+             aria-label="Read: S-Corp vs. LLC in California 2026">
             <div class="card-top">
               <div class="card-pillar">
                 <span class="pillar-dot p2" aria-hidden="true"></span>
@@ -555,27 +369,15 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
           <span class="sidebar-rule" aria-hidden="true"></span>
           <ul class="sidebar-list">
             <li>
-              <a href="/insights-post">
-                <span class="sl-pillar">Value-First Resources</span>
-                <span class="sl-title">2026 Family Business Bookkeeping Checklist</span>
+              <a href="/insights-california-estimated-tax-2026">
+                <span class="sl-pillar">Actionable Guidance</span>
+                <span class="sl-title">California Estimated Tax Payments 2026 – Safe Harbor Rules, Deadlines &amp; FTB Requirements</span>
               </a>
             </li>
             <li>
-              <a href="/insights-post">
-                <span class="sl-pillar">Value-First Resources</span>
-                <span class="sl-title">Estate Planning Checklist for Multi-Generational Families</span>
-              </a>
-            </li>
-            <li>
-              <a href="/insights-post">
-                <span class="sl-pillar">Precision Updates</span>
-                <span class="sl-title">2026 IRS Changes Affecting Family Business Write-Up</span>
-              </a>
-            </li>
-            <li>
-              <a href="/insights-post">
-                <span class="sl-pillar">Trust Through Experience</span>
-                <span class="sl-title">From IRS Notice to Full Resolution: A Client Case Study</span>
+              <a href="/insights-scorp-vs-llc-california-2026">
+                <span class="sl-pillar">Actionable Guidance</span>
+                <span class="sl-title">S-Corp vs. LLC in California 2026 – Tax Treatment, Structures, and Key Differences</span>
               </a>
             </li>
           </ul>
@@ -649,6 +451,7 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
           (310) 556-3655 · info@parsicocpa.com
         </address>
         <p class="footer-copy">© 2026 Parsi &amp; Company, CPA. All rights reserved.</p>
+        <p class="footer-disclaimer">All information on this website is educational and general in nature. It is not a substitute for individualized professional advice. Consult a licensed CPA for advice specific to your facts and circumstances. No results are guaranteed. Last updated: May 25, 2026.</p>
       </div>
       <div class="footer-links">
         <a href="/index">Home</a>
@@ -710,26 +513,19 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
 </div>
 
 <script>
-// ── Navbar scroll
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 40); }, { passive: true });
-
-// ── Mobile menu
 const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobile-menu');
 hamburger.addEventListener('click', () => {
   const open = mobileMenu.classList.toggle('open');
   hamburger.setAttribute('aria-expanded', String(open));
 });
-
-// ── Modal
 const modal = document.getElementById('modal');
 function openModal() { modal.classList.add('open'); document.body.style.overflow = 'hidden'; }
 function closeModal() { modal.classList.remove('open'); document.body.style.overflow = ''; }
 modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
-
-// ── Form validation
 function validateField(id, errId) {
   const el = document.getElementById(id);
   const err = document.getElementById(errId);
@@ -744,18 +540,13 @@ function handleSubmit() {
   document.getElementById('consultation-form').style.display = 'none';
   document.getElementById('thank-you').style.display = 'block';
 }
-
-// ── Newsletter submit
 function handleNlSubmit(e) {
   e.preventDefault();
   e.target.innerHTML = '<p style="color:#b59a44;font-family:\'IBM Plex Mono\',monospace;font-size:12px;text-transform:uppercase;letter-spacing:.08em;">✓ You\'re subscribed</p>';
 }
-
-// ── FILTERING
 const cards = Array.from(document.querySelectorAll('.article-card'));
 const noResults = document.getElementById('no-results');
 const countEl = document.getElementById('filter-count');
-
 function getFilters() {
   return {
     pillar: document.getElementById('filter-pillar').value,
@@ -764,7 +555,6 @@ function getFilters() {
     year: document.getElementById('filter-year').value
   };
 }
-
 function applyFilters() {
   const f = getFilters();
   let visible = 0;
@@ -780,20 +570,17 @@ function applyFilters() {
   noResults.style.display = visible === 0 ? 'block' : 'none';
   countEl.textContent = `Showing ${visible} article${visible !== 1 ? 's' : ''}`;
 }
-
 function resetFilters() {
   ['filter-pillar','filter-service','filter-client','filter-year'].forEach(id => {
     document.getElementById(id).value = 'all';
   });
   applyFilters();
 }
-
 function applyFilter(type, value) {
   document.getElementById('filter-' + type).value = value;
   applyFilters();
   document.getElementById('filter-bar').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
-
 ['filter-pillar','filter-service','filter-client','filter-year'].forEach(id => {
   document.getElementById(id).addEventListener('change', applyFilters);
 });
