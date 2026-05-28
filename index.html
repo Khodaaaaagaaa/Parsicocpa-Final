@@ -258,6 +258,34 @@
         .ms-option.selected .ms-checkbox{background:var(--navy);border-color:var(--navy)}
         .ms-checkmark{display:none;color:#fff;font-size:11px;line-height:1}
         .ms-option.selected .ms-checkmark{display:block}
+
+        /* ── ANIMATIONS ── */
+        @media (prefers-reduced-motion: no-preference) {
+            .anim-hidden {
+                opacity: 0;
+                transform: translateY(22px);
+            }
+            .anim-visible {
+                opacity: 1;
+                transform: translateY(0);
+                transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+            }
+            /* Section gold rule grows in */
+            .section-rule {
+                width: 0;
+                overflow: hidden;
+                transition: width 0.45s ease-out;
+            }
+            .section-rule.rule-visible {
+                width: 48px;
+            }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .anim-hidden { opacity: 1; transform: none; }
+            .anim-visible { opacity: 1; transform: none; }
+            .section-rule { width: 48px; }
+            .section-rule.rule-visible { width: 48px; }
+        }
     </style>
 
     <script type="application/ld+json">{"@context":"https://schema.org","@type":["LocalBusiness","AccountingService"],"name":"Parsi & Company, CPA","legalName":"Parsi & Company Legacy LLP","description":"Century City CPA firm providing tax preparation, bookkeeping, IRS dispute resolution, trust and estate planning, and advisory services.","url":"https://parsicocpa.com","telephone":"+13105563655","email":"info@parsicocpa.com","address":{"@type":"PostalAddress","streetAddress":"1801 Century Park East, Suite 1600","addressLocality":"Los Angeles","addressRegion":"CA","postalCode":"90067","addressCountry":"US"}}</script>
@@ -334,7 +362,7 @@
 <section id="problem" aria-labelledby="problem-heading">
   <div class="container">
     <div class="problem-inner">
-      <div class="problem-left">
+      <div class="problem-left anim-hidden" data-delay="0">
         <h2 id="problem-heading">You deserve a CPA who knows your name, not just your file number.</h2>
         <p>Most business owners and individuals feel anxious about taxes, fear audits, and waste time they could spend growing their business or enjoying life. At Parsi, we replace uncertainty with clarity and long-term peace of mind.</p>
       </div>
@@ -345,26 +373,26 @@
 <!-- SERVICES -->
 <section id="services" aria-labelledby="services-heading">
   <div class="container">
-    <span class="section-label">What We Do</span>
-    <h2 id="services-heading" class="section-title">Our Core Services</h2>
+    <span class="section-label anim-hidden" data-delay="0">What We Do</span>
+    <h2 id="services-heading" class="section-title anim-hidden" data-delay="80">Our Core Services</h2>
     <hr class="section-rule" aria-hidden="true">
     <div class="services-grid">
-      <article class="service-card">
+      <article class="service-card anim-hidden" data-delay="0">
         <div aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#B88D3C" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="0"/><path d="M9 9h6M9 12h6M9 15h4"/></svg></div>
         <h3>Business Tax Preparation</h3>
         <p>Expert preparation for partnerships (1065), S corporations (1120-S), and C corporations (1120) — with year-round planning and audit confidence.</p>
       </article>
-      <article class="service-card">
+      <article class="service-card anim-hidden" data-delay="80">
         <div aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#B88D3C" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="0"/><path d="M7 8h10M7 12h10M7 16h6"/></svg></div>
         <h3>Bookkeeping</h3>
         <p>Monthly accounting support to keep business records organized, reconciled, and ready for smarter decisions and smoother tax seasons.</p>
       </article>
-      <article class="service-card">
+      <article class="service-card anim-hidden" data-delay="160">
         <div aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#B88D3C" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
         <h3>Personal Tax Preparation</h3>
         <p>Individual and family tax preparation (1040, complex) designed to reduce stress, avoid costly mistakes, and file with confidence.</p>
       </article>
-      <article class="service-card" style="grid-column:2/3">
+      <article class="service-card anim-hidden" data-delay="240" style="grid-column:2/3">
         <div aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#B88D3C" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
         <h3>Tax Dispute Resolution</h3>
         <p>Calm, experienced representation for IRS and FTB disputes, notices, and audits — so you respond with clarity and confidence.</p>
@@ -376,26 +404,26 @@
 <!-- PROCESS -->
 <section id="process" aria-labelledby="process-heading">
   <div class="container">
-    <span class="section-label">How It Works</span>
-    <h2 id="process-heading" class="section-title">From First Call to Filing — and Beyond</h2>
+    <span class="section-label anim-hidden" data-delay="0">How It Works</span>
+    <h2 id="process-heading" class="section-title anim-hidden" data-delay="80">From First Call to Filing — and Beyond</h2>
     <hr class="section-rule" aria-hidden="true">
     <div class="process-grid">
-      <div class="process-step">
+      <div class="process-step anim-hidden" data-delay="0">
         <div class="process-num" aria-hidden="true">01</div>
         <h3>Free Consultation</h3>
         <p>We learn about your business, tax situation, and goals. No commitment required.</p>
       </div>
-      <div class="process-step">
+      <div class="process-step anim-hidden" data-delay="0">
         <div class="process-num" aria-hidden="true">02</div>
         <h3>Secure Document Request</h3>
         <p>We send a tailored checklist. You upload securely through our TaxDome portal.</p>
       </div>
-      <div class="process-step">
+      <div class="process-step anim-hidden" data-delay="0">
         <div class="process-num" aria-hidden="true">03</div>
         <h3>Expert Review &amp; Preparation</h3>
         <p>Your licensed CPA prepares and reviews every return with precision.</p>
       </div>
-      <div class="process-step">
+      <div class="process-step anim-hidden" data-delay="0">
         <div class="process-num" aria-hidden="true">04</div>
         <h3>Filing &amp; Year-Round Guidance</h3>
         <p>We file on your behalf and remain available for planning and questions throughout the year.</p>
@@ -407,11 +435,11 @@
 <!-- TEAM -->
 <section id="team" aria-labelledby="team-heading">
   <div class="container">
-    <span class="section-label">Our Team</span>
-    <h2 id="team-heading" class="section-title">Meet the Parsi &amp; Company CPAs</h2>
+    <span class="section-label anim-hidden" data-delay="0">Our Team</span>
+    <h2 id="team-heading" class="section-title anim-hidden" data-delay="80">Meet the Parsi &amp; Company CPAs</h2>
     <hr class="section-rule" aria-hidden="true">
     <div class="team-grid">
-      <div class="team-card">
+      <div class="team-card anim-hidden" data-delay="0">
         <div class="team-photo"><img src="Ryan_Bakke.jpg" alt="Ryan Bakke, CPA" loading="lazy"></div>
         <div class="team-info">
           <h3>Ryan Bakke, CPA</h3>
@@ -420,7 +448,7 @@
           <p class="team-bio">Licensed CPA in Illinois and Trinity Christian College graduate. Started his career at Deloitte specializing in Investment Management Taxation, where he worked with some of the world's largest global investment banks. Today he focuses on helping real estate investors pay less in taxes and build lasting generational wealth through advanced tax strategies.</p>
         </div>
       </div>
-      <div class="team-card">
+      <div class="team-card anim-hidden" data-delay="80">
         <div class="team-photo"><img src="Andrea.png" alt="Andrea Mason, CPA" loading="lazy"></div>
         <div class="team-info">
           <h3>Andrea Mason, CPA</h3>
@@ -429,7 +457,7 @@
           <p class="team-bio">CPA and tax specialist with over a decade of experience in corporate and individual tax. She helps business owners, high earners, and founders reduce their tax liability through proactive planning, compliance, and strategic advisory.</p>
         </div>
       </div>
-      <div class="team-card">
+      <div class="team-card anim-hidden" data-delay="160">
         <div class="team-photo"><img src="Bo.jpg" alt="Bo Lin, CPA" loading="lazy"></div>
         <div class="team-info">
           <h3>Bo Lin, CPA</h3>
@@ -438,7 +466,7 @@
           <p class="team-bio">Oversees the preparation and review of tax returns, coordinates the tax team, ensures clients remain in full compliance, and serves as the technical point of contact between the CPAs and the rest of the staff.</p>
         </div>
       </div>
-      <div class="team-card">
+      <div class="team-card anim-hidden" data-delay="240">
         <div class="team-photo"><img src="Elvie.jpg" alt="Elvie Belmonte — Accounting Manager" loading="lazy"></div>
         <div class="team-info">
           <h3>Elvie Belmonte</h3>
@@ -446,7 +474,7 @@
           <p class="team-bio">Manages the firm's day-to-day accounting operations, including bookkeeping, payroll processing, quarterly and annual payroll reports, monthly, quarterly and annual sales tax filings, city license renewals, and property tax reporting.</p>
         </div>
       </div>
-      <div class="team-card">
+      <div class="team-card anim-hidden" data-delay="320">
         <div class="team-photo"><img src="Rodolfo.jpg" alt="Rodolfo Benito — Head of Admin" loading="lazy"></div>
         <div class="team-info">
           <h3>Rodolfo Benito</h3>
@@ -454,7 +482,7 @@
           <p class="team-bio">Keeps the firm's internal operations running smoothly — coordinating administrative processes, managing communications, scheduling, and everything that allows the technical team to stay focused on their work.</p>
         </div>
       </div>
-      <div class="team-card">
+      <div class="team-card anim-hidden" data-delay="400">
         <div class="team-photo"><img src="Lu.png" alt="Lu Yang — Operations & Client Support Coordinator" loading="lazy"></div>
         <div class="team-info">
           <h3>Lu Yang</h3>
@@ -469,18 +497,18 @@
 <!-- TESTIMONIALS -->
 <section id="testimonials" aria-labelledby="testimonials-heading">
   <div class="container">
-    <div class="testimonials-intro">
+    <div class="testimonials-intro anim-hidden" data-delay="0">
       <span class="section-label">Client Stories</span>
       <h2 id="testimonials-heading">Trusted for Over 25 Years</h2>
       <hr class="section-rule" aria-hidden="true">
       <p>Our clients stay with us for decades. Here's why:</p>
     </div>
     <div class="testimonials-grid">
-      <div class="testimonial-card">
+      <div class="testimonial-card anim-hidden" data-delay="0">
         <blockquote>"I have been a client of Parsi and Co. for twenty-five years… Small business owners are dependent on their accountants, and thank God I have Mr. Parsi and crew."</blockquote>
         <cite>— A loyal business client, 25-year relationship</cite>
       </div>
-      <div class="testimonial-card">
+      <div class="testimonial-card anim-hidden" data-delay="80">
         <blockquote>"The team from Parsi &amp; Company have been a critical partner nearly the entire life of our company, from our second tax season until now, 20+ years later."</blockquote>
         <cite>— Long-term business client, 20+ year relationship</cite>
       </div>
@@ -491,23 +519,23 @@
 <!-- RESOURCES -->
 <section id="resources" aria-labelledby="resources-heading">
   <div class="container">
-    <span class="section-label">Tax Alerts &amp; Resources</span>
-    <h2 id="resources-heading" class="section-title">Insights From Our CPAs</h2>
+    <span class="section-label anim-hidden" data-delay="0">Tax Alerts &amp; Resources</span>
+    <h2 id="resources-heading" class="section-title anim-hidden" data-delay="80">Insights From Our CPAs</h2>
     <hr class="section-rule" aria-hidden="true">
     <div class="resources-grid">
-      <div class="resource-card" onclick="openModal()" role="button" tabindex="0">
+      <div class="resource-card anim-hidden" data-delay="0" onclick="openModal()" role="button" tabindex="0">
         <span class="resource-tag">Business Tax</span>
         <h3>S-Corp vs. LLC in California: Which Structure Saves You More?</h3>
         <p>California's tax rules treat S-Corps and LLCs very differently. A licensed CPA can help you choose the structure that minimizes your tax exposure legally.</p>
         <span class="resource-read">Ask our team →</span>
       </div>
-      <div class="resource-card" onclick="openModal()" role="button" tabindex="0">
+      <div class="resource-card anim-hidden" data-delay="80" onclick="openModal()" role="button" tabindex="0">
         <span class="resource-tag">IRS &amp; Disputes</span>
         <h3>Received an IRS Notice? Here's What to Do — and What Not to Do</h3>
         <p>Most IRS notices are routine, but responding incorrectly can escalate a simple issue. Our CPAs and EA handle IRS and FTB notices calmly and precisely.</p>
         <span class="resource-read">Ask our team →</span>
       </div>
-      <div class="resource-card" onclick="openModal()" role="button" tabindex="0">
+      <div class="resource-card anim-hidden" data-delay="160" onclick="openModal()" role="button" tabindex="0">
         <span class="resource-tag">Tax Planning</span>
         <h3>Top Small Business Deductions Los Angeles Owners Miss Every Year</h3>
         <p>From home office to mileage, vehicle use, and Section 179 — many LA business owners leave thousands on the table. A CPA review can recover them.</p>
@@ -520,11 +548,11 @@
 <!-- LATEST INSIGHTS -->
 <section id="latest-insights" aria-labelledby="insights-heading">
   <div class="container">
-    <span class="section-label">From Our CPAs</span>
-    <h2 id="insights-heading" class="section-title">Latest Insights</h2>
+    <span class="section-label anim-hidden" data-delay="0">From Our CPAs</span>
+    <h2 id="insights-heading" class="section-title anim-hidden" data-delay="80">Latest Insights</h2>
     <hr class="section-rule" aria-hidden="true">
     <div class="insights-grid-home">
-      <a href="/insights-post" class="insight-card-home">
+      <a href="/insights-post" class="insight-card-home anim-hidden" data-delay="0">
         <div class="insight-card-top">
           <div class="insight-pillar-row"><span class="insight-dot" aria-hidden="true"></span><span class="insight-pillar">Precision Updates</span></div>
           <span class="insight-service">Tax Planning · 2026</span>
@@ -536,7 +564,7 @@
           <span class="insight-cta">Read →</span>
         </div>
       </a>
-      <a href="/insights-post" class="insight-card-home">
+      <a href="/insights-post" class="insight-card-home anim-hidden" data-delay="80">
         <div class="insight-card-top">
           <div class="insight-pillar-row"><span class="insight-dot" aria-hidden="true"></span><span class="insight-pillar">Actionable Guidance</span></div>
           <span class="insight-service">Bookkeeping · 2026</span>
@@ -548,7 +576,7 @@
           <span class="insight-cta">Read →</span>
         </div>
       </a>
-      <a href="/insights-post" class="insight-card-home">
+      <a href="/insights-post" class="insight-card-home anim-hidden" data-delay="160">
         <div class="insight-card-top">
           <div class="insight-pillar-row"><span class="insight-dot" aria-hidden="true"></span><span class="insight-pillar">Trust Through Experience</span></div>
           <span class="insight-service">Estate Planning · 2026</span>
@@ -561,7 +589,7 @@
         </div>
       </a>
     </div>
-    <div class="insights-view-all">
+    <div class="insights-view-all anim-hidden" data-delay="0">
       <a href="/insights" class="btn-view-all">VIEW ALL INSIGHTS →</a>
     </div>
   </div>
@@ -570,7 +598,7 @@
 <!-- CTA -->
 <section id="cta" aria-labelledby="cta-heading">
   <div class="container">
-    <div class="cta-inner">
+    <div class="cta-inner anim-hidden" data-delay="0">
       <h2 id="cta-heading" style="color:var(--white)">Ready for CPA guidance you can trust year after year?</h2>
       <p>Precision, personal attention, and long-term peace of mind — starting with a free consultation.</p>
       <div class="cta-buttons">
@@ -891,6 +919,87 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     if (t) { e.preventDefault(); window.scrollTo({ top: t.offsetTop - navH - 16, behavior: 'smooth' }); }
   });
 });
+
+// ── SCROLL ANIMATIONS ──
+(function() {
+    var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // Intersection Observer for fade-in elements
+    var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                var el = entry.target;
+                var delay = parseInt(el.getAttribute('data-delay') || '0', 10);
+                setTimeout(function() {
+                    el.classList.add('anim-visible');
+                    el.classList.remove('anim-hidden');
+                }, delay);
+                observer.unobserve(el);
+            }
+        });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.anim-hidden').forEach(function(el) {
+        observer.observe(el);
+    });
+
+    // Gold rule grow-in
+    var ruleObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('rule-visible');
+                ruleObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('.section-rule').forEach(function(el) {
+        ruleObserver.observe(el);
+    });
+
+    // Animated counters in hero trust panel
+    if (!prefersReduced) {
+        var counters = [
+            { el: document.querySelector('.hero-trust-panel .hero-trust-item:nth-child(1) .hero-trust-num'), target: 25, suffix: '+', decimals: 0 },
+            { el: document.querySelector('.hero-trust-panel .hero-trust-item:nth-child(2) .hero-trust-num'), target: 5.0, suffix: ' <span class="star-small">\u2605</span>', decimals: 1 },
+            { el: document.querySelector('.hero-trust-panel .hero-trust-item:nth-child(3) .hero-trust-num'), target: 50, suffix: '', decimals: 0 },
+            { el: document.querySelector('.hero-trust-panel .hero-trust-item:nth-child(4) .hero-trust-num'), target: 3, suffix: '', decimals: 0 }
+        ];
+
+        var counterStarted = false;
+        var heroPanel = document.querySelector('.hero-trust-panel');
+
+        function easeOut(t) { return 1 - Math.pow(1 - t, 3); }
+
+        function runCounter(cfg) {
+            var duration = 1200;
+            var start = null;
+            function step(ts) {
+                if (!start) start = ts;
+                var progress = Math.min((ts - start) / duration, 1);
+                var val = cfg.target * easeOut(progress);
+                var display = cfg.decimals > 0 ? val.toFixed(cfg.decimals) : Math.floor(val).toString();
+                cfg.el.innerHTML = display + cfg.suffix;
+                if (progress < 1) requestAnimationFrame(step);
+            }
+            requestAnimationFrame(step);
+        }
+
+        if (heroPanel) {
+            var counterObs = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting && !counterStarted) {
+                        counterStarted = true;
+                        counters.forEach(function(cfg) { if (cfg.el) runCounter(cfg); });
+                        counterObs.disconnect();
+                    }
+                });
+            }, { threshold: 0.5 });
+            counterObs.observe(heroPanel);
+        }
+    }
+})();
+
 </script>
 <script>window.tidioChatLanguage = "en";</script>
 <script src="//code.tidio.co/to34umlva1ujlfm8hkce3nopkbv6oi30.js" async></script>
