@@ -924,8 +924,38 @@ function handleSubmit() {
     validateService()
   ].every(Boolean);
   if (!ok) return;
-  document.getElementById('consultation-form').style.display = 'none';
-  document.getElementById('thank-you').style.display = 'block';
+
+  const btn = document.querySelector('.btn-submit');
+  btn.disabled = true;
+  btn.textContent = 'SENDING...';
+
+  const data = {
+    name:    document.getElementById('f-name').value.trim(),
+    email:   document.getElementById('f-email').value.trim(),
+    phone:   document.getElementById('f-phone').value.trim(),
+    service: document.getElementById('f-service').value,
+    entity:  document.getElementById('f-entity').value,
+    message: document.getElementById('f-message').value.trim()
+  };
+
+  fetch('https://formspree.io/f/xykvrzbb', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify(data)
+  })
+  .then(function(res) {
+    if (res.ok) {
+      document.getElementById('consultation-form').style.display = 'none';
+      document.getElementById('thank-you').style.display = 'block';
+    } else {
+      return res.json().then(function(err) { throw err; });
+    }
+  })
+  .catch(function() {
+    btn.disabled = false;
+    btn.textContent = 'SEND REQUEST';
+    alert('Something went wrong. Please email us directly at info@parsicocpa.com');
+  });
 }
 
 // ── SMOOTH SCROLL ──
