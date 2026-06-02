@@ -123,7 +123,7 @@
         @media(max-width:700px){.process-grid{grid-template-columns:repeat(2,1fr);gap:32px}.process-grid::before{display:none}}@media(max-width:420px){.process-grid{grid-template-columns:1fr;gap:28px}}
 
         /* TEAM */
-        #team{background:var(--warm);padding:100px 0}
+        #team{background:var(--warm);padding:100px 0;contain:layout style}
         .team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
         .team-card{background:var(--white);border:1px solid var(--silver);display:flex;flex-direction:column}
         .team-photo{width:100%;aspect-ratio:1;overflow:hidden;background:var(--warm);display:flex;align-items:center;justify-content:center}
@@ -461,7 +461,7 @@
     <hr class="section-rule" aria-hidden="true">
     <div class="team-grid">
       <div class="team-card anim-hidden" data-delay="0">
-        <div class="team-photo"><img src="Ryan_Bakke.jpg" alt="Ryan Bakke, CPA" loading="eager"></div>
+        <div class="team-photo"><img src="Ryan_Bakke.jpg" alt="Ryan Bakke, CPA" loading="eager" fetchpriority="high" width="600" height="600" decoding="async"></div>
         <div class="team-info">
           <h3>Ryan Bakke, CPA</h3>
           <span class="team-credential">CPA — Illinois Licensed</span>
@@ -470,7 +470,7 @@
         </div>
       </div>
       <div class="team-card anim-hidden" data-delay="80">
-        <div class="team-photo"><img src="Andrea.png" alt="Andrea Mason, CPA"></div>
+        <div class="team-photo"><img src="Andrea.png" alt="Andrea Mason, CPA" loading="lazy" width="600" height="600" decoding="async" sizes="(max-width:768px) 400px, 380px"></div>
         <div class="team-info">
           <h3>Andrea Mason, CPA</h3>
           <span class="team-credential">CPA</span>
@@ -479,7 +479,7 @@
         </div>
       </div>
       <div class="team-card anim-hidden" data-delay="160">
-        <div class="team-photo"><img src="Bo.jpg" alt="Bo Lin, CPA"></div>
+        <div class="team-photo"><img src="Bo.jpg" alt="Bo Lin, CPA" loading="lazy" width="600" height="600" decoding="async" sizes="(max-width:768px) 400px, 380px"></div>
         <div class="team-info">
           <h3>Bo Lin, CPA</h3>
           <span class="team-credential">CPA</span>
@@ -488,7 +488,7 @@
         </div>
       </div>
       <div class="team-card anim-hidden" data-delay="240">
-        <div class="team-photo"><img src="Elvie.jpg" alt="Elvie Belmonte — Accounting Manager"></div>
+        <div class="team-photo"><img src="Elvie.jpg" alt="Elvie Belmonte — Accounting Manager" loading="lazy" width="600" height="600" decoding="async" sizes="(max-width:768px) 400px, 380px"></div>
         <div class="team-info">
           <h3>Elvie Belmonte</h3>
           <span class="team-credential" style="color:var(--charcoal);font-weight:400;font-family:'Inter',sans-serif;text-transform:none;letter-spacing:0;font-size:12px;">Accounting Manager</span>
@@ -496,7 +496,7 @@
         </div>
       </div>
       <div class="team-card anim-hidden" data-delay="320">
-        <div class="team-photo"><img src="Rodolfo.jpg" alt="Rodolfo Benito — Head of Admin"></div>
+        <div class="team-photo"><img src="Rodolfo.jpg" alt="Rodolfo Benito — Head of Admin" loading="lazy" width="600" height="600" decoding="async" sizes="(max-width:768px) 400px, 380px"></div>
         <div class="team-info">
           <h3>Rodolfo Benito</h3>
           <span class="team-credential" style="color:var(--charcoal);font-weight:400;font-family:'Inter',sans-serif;text-transform:none;letter-spacing:0;font-size:12px;">Head of Admin</span>
@@ -504,7 +504,7 @@
         </div>
       </div>
       <div class="team-card anim-hidden" data-delay="400">
-        <div class="team-photo"><img src="Lu.png" alt="Lu Yang — Operations & Client Support Coordinator"></div>
+        <div class="team-photo"><img src="Lu.png" alt="Lu Yang — Operations &amp; Client Support Coordinator" loading="lazy" width="600" height="600" decoding="async" sizes="(max-width:768px) 400px, 380px"></div>
         <div class="team-info">
           <h3>Lu Yang</h3>
           <span class="team-credential" style="color:var(--charcoal);font-weight:400;font-family:'Inter',sans-serif;text-transform:none;letter-spacing:0;font-size:12px;">Operations &amp; Client Support Coordinator</span>
@@ -974,6 +974,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 (function() {
     var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+    function initAnimations() {
     // Intersection Observer for fade-in elements
     var observer = new IntersectionObserver(function(entries) {
         entries.forEach(function(entry) {
@@ -1048,10 +1049,36 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
             counterObs.observe(heroPanel);
         }
     }
+    } // end initAnimations
+
+    if ('requestIdleCallback' in window) {
+        requestIdleCallback(initAnimations, { timeout: 1000 });
+    } else {
+        setTimeout(initAnimations, 100);
+    }
 })();
 
 </script>
 <script>window.tidioChatLanguage = "en";</script>
-<script src="//code.tidio.co/to34umlva1ujlfm8hkce3nopkbv6oi30.js" async></script>
+<script>
+// Load Tidio after user interaction to avoid blocking main thread
+function loadTidio() {
+    var s = document.createElement('script');
+    s.src = '//code.tidio.co/to34umlva1ujlfm8hkce3nopkbv6oi30.js';
+    s.async = true;
+    document.body.appendChild(s);
+    ['mousemove','keydown','touchstart','scroll'].forEach(function(e) {
+        document.removeEventListener(e, loadTidio);
+    });
+}
+if (document.readyState === 'complete') {
+    setTimeout(loadTidio, 3000);
+} else {
+    ['mousemove','keydown','touchstart','scroll'].forEach(function(e) {
+        document.addEventListener(e, loadTidio, { once: true, passive: true });
+    });
+    setTimeout(loadTidio, 5000);
+}
+</script>
 </body>
 </html>
