@@ -1,4 +1,18 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "redirects": [
+    { "source": "/contact",                    "destination": "/#cta",      "permanent": false },
+    { "source": "/contact-us",                 "destination": "/#cta",      "permanent": false },
+    { "source": "/our-team",                   "destination": "/#team",     "permanent": false },
+    { "source": "/team",                       "destination": "/#team",     "permanent": false },
+    { "source": "/portfolio",                  "destination": "/",          "permanent": false },
+    { "source": "/portfolio-archive",          "destination": "/",          "permanent": false },
+    { "source": "/financial-statements-audits","destination": "/#services", "permanent": false },
+    { "source": "/financial-statements",       "destination": "/#services", "permanent": false },
+    { "source": "/personal-cpa-services",      "destination": "/#services", "permanent": false },
+    { "source": "/services",                   "destination": "/#services", "permanent": false },
+    { "source": "/about",                      "destination": "/#team",     "permanent": false },
+    { "source": "/blog",                       "destination": "/insights",  "permanent": false },
+    { "source": "/news",                       "destination": "/insights",  "permanent": false }
+  ]
 }
