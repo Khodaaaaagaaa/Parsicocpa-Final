@@ -9,6 +9,7 @@
     <meta property="og:description" content="Century City CPA firm providing tax preparation, bookkeeping, IRS dispute help, and advisory with personal, long-term guidance. Schedule a free consultation.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://parsicocpa.com">
+    <meta name="msvalidate.01" content="5CB3CA5B93A8DF9DCE0B9C980EDA9DE5">
         <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="shortcut icon" type="image/png" href="/favicon.png">
     <link rel="apple-touch-icon" href="/favicon.png">
@@ -155,27 +156,6 @@
         .resource-read{font-size:12px;font-weight:600;color:var(--navy);text-transform:uppercase;letter-spacing:.06em;display:flex;align-items:center;gap:6px;margin-top:4px}
         @media(max-width:768px){.resources-grid{grid-template-columns:1fr}}
 
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-
         /* LATEST INSIGHTS */
         #latest-insights{background:var(--white);padding:100px 0}
         .insights-grid-home{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:40px}
@@ -197,6 +177,7 @@
         .btn-view-all:hover{background:var(--navy);color:var(--white)}
         @media(max-width:900px){.insights-grid-home{grid-template-columns:repeat(2,1fr)}}
         @media(max-width:768px){.insights-grid-home{grid-template-columns:1fr}}
+
         /* CTA */
         #cta{background:var(--navy);padding:100px 0}
         .cta-inner{text-align:center;max-width:680px;margin:0 auto}
@@ -291,7 +272,6 @@
                 transform: translateY(0);
                 transition: opacity 0.5s ease-out, transform 0.5s ease-out;
             }
-            /* Section gold rule grows in */
             .section-rule {
                 width: 0;
                 overflow: hidden;
@@ -379,7 +359,7 @@
   </div>
 </section>
 
-<!-- PROBLEM / SOLUTION (trust strip removed — content moves up naturally) -->
+<!-- PROBLEM -->
 <section id="problem" aria-labelledby="problem-heading">
   <div class="container">
     <div class="problem-inner">
@@ -565,6 +545,7 @@
     </div>
   </div>
 </section>
+
 <!-- LATEST INSIGHTS -->
 <section id="latest-insights" aria-labelledby="insights-heading">
   <div class="container">
@@ -572,7 +553,6 @@
     <h2 id="insights-heading" class="section-title anim-hidden" data-delay="80">Latest Insights</h2>
     <hr class="section-rule" aria-hidden="true">
     <div class="insights-grid-home">
-
       <a href="/insights-post" class="insight-card-home anim-hidden" data-delay="0">
         <div class="insight-card-top">
           <div class="insight-pillar-row"><span class="insight-dot" aria-hidden="true"></span><span class="insight-pillar">Precision Updates</span></div>
@@ -585,7 +565,6 @@
           <span class="insight-cta">Read →</span>
         </div>
       </a>
-
       <a href="/insights-post" class="insight-card-home anim-hidden" data-delay="80">
         <div class="insight-card-top">
           <div class="insight-pillar-row"><span class="insight-dot" aria-hidden="true"></span><span class="insight-pillar">Actionable Guidance</span></div>
@@ -598,7 +577,6 @@
           <span class="insight-cta">Read →</span>
         </div>
       </a>
-
       <a href="/insights-post" class="insight-card-home anim-hidden" data-delay="160">
         <div class="insight-card-top">
           <div class="insight-pillar-row"><span class="insight-dot" aria-hidden="true"></span><span class="insight-pillar">Trust Through Experience</span></div>
@@ -611,7 +589,6 @@
           <span class="insight-cta">Read →</span>
         </div>
       </a>
-
     </div>
     <div class="insights-view-all anim-hidden" data-delay="0">
       <a href="/insights" class="btn-view-all">VIEW ALL INSIGHTS →</a>
@@ -731,25 +708,20 @@
     <p class="modal-sub">Tell us about your needs. Your request will be sent to <strong>info@parsicocpa.com</strong> and a team member will respond within one business day.</p>
     <hr class="modal-rule" aria-hidden="true">
     <div id="consultation-form">
-
       <div class="form-group">
         <label for="f-name">Full Name *</label>
         <input type="text" id="f-name" autocomplete="name" placeholder="Your full name" aria-required="true" aria-describedby="f-name-err">
         <span class="form-error-msg" id="f-name-err" role="alert">Please enter your full name.</span>
       </div>
-
       <div class="form-group">
         <label for="f-email">Email *</label>
         <input type="email" id="f-email" autocomplete="email" placeholder="name@email.com" aria-required="true" aria-describedby="f-email-err">
         <span class="form-error-msg" id="f-email-err" role="alert">Please enter a valid email address (e.g. name@email.com).</span>
       </div>
-
       <div class="form-group">
         <label for="f-phone">Phone</label>
         <input type="tel" id="f-phone" autocomplete="tel" placeholder="(310) 000-0000" inputmode="numeric">
       </div>
-
-      <!-- SERVICE TYPE — multi-select -->
       <div class="form-group">
         <label>Service Type *</label>
         <div class="ms-wrapper" id="ms-service-wrap">
@@ -771,8 +743,6 @@
         <input type="hidden" id="f-service">
         <span class="form-error-msg" id="f-service-err" role="alert">Please select at least one service.</span>
       </div>
-
-      <!-- ENTITY TYPE — multi-select -->
       <div class="form-group">
         <label>Entity / Filing Type</label>
         <div class="ms-wrapper" id="ms-entity-wrap">
@@ -791,15 +761,12 @@
         </div>
         <input type="hidden" id="f-entity">
       </div>
-
       <div class="form-group">
         <label for="f-message">Message</label>
         <textarea id="f-message" placeholder="Briefly describe what you need…"></textarea>
       </div>
-
       <button type="button" class="btn-submit" onclick="handleSubmit()">SEND REQUEST</button>
     </div>
-
     <div class="thank-you" id="thank-you" aria-live="polite">
       <span class="gold-icon" aria-hidden="true">✓</span>
       <h3>Request Received</h3>
@@ -866,7 +833,6 @@ function msOpen(key) {
   const btn = document.getElementById('ms-' + key + '-btn');
   const list = document.getElementById('ms-' + key + '-list');
   const isOpen = list.classList.contains('open');
-  // close all first
   document.querySelectorAll('.ms-dropdown').forEach(d => d.classList.remove('open'));
   document.querySelectorAll('.ms-trigger').forEach(b => { b.classList.remove('open'); b.setAttribute('aria-expanded', 'false'); });
   if (!isOpen) { list.classList.add('open'); btn.classList.add('open'); btn.setAttribute('aria-expanded', 'true'); }
@@ -898,7 +864,6 @@ function validateField(id, errId) {
   return !invalid;
 }
 
-// Phone: only allow digits and formatting chars
 document.getElementById('f-phone').addEventListener('keydown', function(e) {
   const allowed = ['Backspace','Delete','Tab','ArrowLeft','ArrowRight','Home','End'];
   if (allowed.includes(e.key) || e.ctrlKey || e.metaKey) return;
@@ -975,7 +940,6 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     function initAnimations() {
-    // Intersection Observer for fade-in elements
     var observer = new IntersectionObserver(function(entries) {
         entries.forEach(function(entry) {
             if (entry.isIntersecting) {
@@ -994,7 +958,6 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
         observer.observe(el);
     });
 
-    // Gold rule grow-in
     var ruleObserver = new IntersectionObserver(function(entries) {
         entries.forEach(function(entry) {
             if (entry.isIntersecting) {
@@ -1008,7 +971,6 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
         ruleObserver.observe(el);
     });
 
-    // Animated counters in hero trust panel
     if (!prefersReduced) {
         var counters = [
             { el: document.querySelector('.hero-trust-panel .hero-trust-item:nth-child(1) .hero-trust-num'), target: 25, suffix: '+', decimals: 0 },
