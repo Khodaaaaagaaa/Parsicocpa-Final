@@ -810,7 +810,7 @@ function handleSubmit() {
     message: document.getElementById('f-message').value.trim(),
     _subject: 'New Consultation Request – Parsi & Company'
   };
-  fetch('https://formspree.io/f/xykvrzbb', {
+  fetch('https://formspree.io/f/xdavgpka', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
     body: JSON.stringify(data)
@@ -840,7 +840,7 @@ function handleNlSubmit(e) {
   if (!nameVal || !emailVal) return;
   btn.disabled = true;
   btn.textContent = 'Sending...';
-  fetch('https://formspree.io/f/mjgzngbg', {
+  fetch('https://formspree.io/f/mrevqozn', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
     body: JSON.stringify({ name: nameVal, email: emailVal, _subject: 'New Newsletter Subscriber – Parsi & Company' })
