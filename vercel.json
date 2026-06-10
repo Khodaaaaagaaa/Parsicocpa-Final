@@ -13,6 +13,15 @@
     { "source": "/services",                   "destination": "/#services", "permanent": false },
     { "source": "/about",                      "destination": "/#team",     "permanent": false },
     { "source": "/blog",                       "destination": "/insights",  "permanent": false },
-    { "source": "/news",                       "destination": "/insights",  "permanent": false }
+    { "source": "/news",                       "destination": "/insights",  "permanent": false },
+    { "source": "/thank-you",                  "destination": "/",          "permanent": false },
+    { "source": "/thank-you/",                 "destination": "/",          "permanent": false },
+    { "source": "/bookkeeping/privacy-policy", "destination": "/",          "permanent": false },
+    { "source": "/bookkeeping/contact-us",     "destination": "/#cta",      "permanent": false },
+    { "source": "/our-team/contact-us",        "destination": "/#cta",      "permanent": false },
+    { "source": "/our-team/privacy-policy",    "destination": "/",          "permanent": false },
+    { "source": "/business-consulting/contact-us", "destination": "/#cta",  "permanent": false },
+    { "source": "/forensic-accounting/privacy-policy", "destination": "/",  "permanent": false },
+    { "source": "/",                           "destination": "/",          "has": [{"type": "query", "key": "p"}], "permanent": false }
   ]
 }
