@@ -916,6 +916,7 @@ function handleSubmit() {
     message: document.getElementById('f-message').value.trim()
   };
 
+  if (typeof gtag === 'function') gtag('event', 'consultation_form_submit', { service: data.service });
   fetch('https://formspree.io/f/xdavgpka', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
@@ -1054,6 +1055,50 @@ if (document.readyState === 'complete') {
     });
     setTimeout(loadTidio, 5000);
 }
+</script>
+
+<script>
+// ── GA4 EVENT TRACKING ──
+(function() {
+  function gtagEvent(name, params) {
+    if (typeof gtag === 'function') gtag('event', name, params || {});
+  }
+
+  // schedule_consultation_click — all CTA buttons
+  document.querySelectorAll('.btn-nav-cta, .btn-primary.gold-bg, .btn-gold').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      gtagEvent('schedule_consultation_click', { button_text: btn.textContent.trim() });
+    });
+  });
+
+  // consultation_form_submit — when form is successfully sent
+  var origHandleSubmit = window.handleSubmit;
+  window.handleSubmit = function() {
+    origHandleSubmit && origHandleSubmit.apply(this, arguments);
+    // fire after successful send — patched in fetch below
+  };
+
+  // phone_click
+  document.querySelectorAll('a[href^="tel:"]').forEach(function(a) {
+    a.addEventListener('click', function() {
+      gtagEvent('phone_click', { phone_number: a.href.replace('tel:', '') });
+    });
+  });
+
+  // email_click
+  document.querySelectorAll('a[href^="mailto:"]').forEach(function(a) {
+    a.addEventListener('click', function() {
+      gtagEvent('email_click', { email: a.href.replace('mailto:', '') });
+    });
+  });
+
+  // taxdome_click
+  document.querySelectorAll('a[href*="taxdome.com"]').forEach(function(a) {
+    a.addEventListener('click', function() {
+      gtagEvent('taxdome_click', {});
+    });
+  });
+})();
 </script>
 </body>
 </html>
