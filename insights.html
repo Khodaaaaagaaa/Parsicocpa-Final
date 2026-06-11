@@ -823,6 +823,7 @@ function handleSubmit() {
     message: document.getElementById('f-message').value.trim(),
     _subject: 'New Consultation Request – Parsi & Company'
   };
+  if (typeof gtag === 'function') gtag('event', 'consultation_form_submit', { service: data.service });
   fetch('https://formspree.io/f/xdavgpka', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
@@ -916,5 +917,53 @@ function applyFilter(type, value) {
 document.getElementById('filter-reset').addEventListener('click', resetFilters);
 </script>
 
+
+<script>
+// ── GA4 EVENT TRACKING ──
+(function() {
+  function gtagEvent(name, params) {
+    if (typeof gtag === 'function') gtag('event', name, params || {});
+  }
+
+  // schedule_consultation_click
+  document.querySelectorAll('.btn-nav-cta, .btn-gold').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      gtagEvent('schedule_consultation_click', { button_text: btn.textContent.trim() });
+    });
+  });
+
+  // consultation_form_submit
+  // patched via handleSubmit success path
+
+  // phone_click
+  document.querySelectorAll('a[href^="tel:"]').forEach(function(a) {
+    a.addEventListener('click', function() {
+      gtagEvent('phone_click', { phone_number: a.href.replace('tel:', '') });
+    });
+  });
+
+  // email_click
+  document.querySelectorAll('a[href^="mailto:"]').forEach(function(a) {
+    a.addEventListener('click', function() {
+      gtagEvent('email_click', { email: a.href.replace('mailto:', '') });
+    });
+  });
+
+  // taxdome_click
+  document.querySelectorAll('a[href*="taxdome.com"]').forEach(function(a) {
+    a.addEventListener('click', function() {
+      gtagEvent('taxdome_click', {});
+    });
+  });
+
+  // article_read_click
+  document.querySelectorAll('.article-card').forEach(function(card) {
+    card.addEventListener('click', function() {
+      var title = card.querySelector('.card-title');
+      gtagEvent('article_read_click', { article_title: title ? title.textContent.trim() : '' });
+    });
+  });
+})();
+</script>
 </body>
 </html>
