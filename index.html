@@ -913,11 +913,12 @@ function handleSubmit() {
     phone:   document.getElementById('f-phone').value.trim(),
     service: document.getElementById('f-service').value,
     entity:  document.getElementById('f-entity').value,
-    message: document.getElementById('f-message').value.trim()
+    message: document.getElementById('f-message').value.trim(),
+    _subject: 'New Consultation Request – Parsi & Company'
   };
 
   if (typeof gtag === 'function') gtag('event', 'consultation_form_submit', { service: data.service });
-  fetch('https://formspree.io/f/xdavgpka', {
+  fetch('/api/contact', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
     body: JSON.stringify(data)

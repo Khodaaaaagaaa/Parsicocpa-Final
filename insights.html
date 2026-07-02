@@ -824,7 +824,7 @@ function handleSubmit() {
     _subject: 'New Consultation Request – Parsi & Company'
   };
   if (typeof gtag === 'function') gtag('event', 'consultation_form_submit', { service: data.service });
-  fetch('https://formspree.io/f/xdavgpka', {
+  fetch('/api/contact', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
     body: JSON.stringify(data)
@@ -854,7 +854,7 @@ function handleNlSubmit(e) {
   if (!nameVal || !emailVal) return;
   btn.disabled = true;
   btn.textContent = 'Sending...';
-  fetch('https://formspree.io/f/mrevqozn', {
+  fetch('/api/contact', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
     body: JSON.stringify({ name: nameVal, email: emailVal, _subject: 'New Newsletter Subscriber – Parsi & Company' })
