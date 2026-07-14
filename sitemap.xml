@@ -4,7 +4,7 @@
   <!-- Homepage -->
   <url>
     <loc>https://parsicocpa.com/</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-07-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -12,14 +12,30 @@
   <!-- Insights index -->
   <url>
     <loc>https://parsicocpa.com/insights</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-07-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
+  <!-- Article: Mid-Year Tax Check-Up 2026 -->
+  <url>
+    <loc>https://parsicocpa.com/insights/mid-year-tax-check-up-2026</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Article: Quarterly Estimated Taxes 2026 -->
+  <url>
+    <loc>https://parsicocpa.com/insights/quarterly-estimated-taxes-2026</loc>
+    <lastmod>2026-07-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Article: California Estimated Tax 2026 -->
   <url>
-    <loc>https://parsicocpa.com/insights-california-estimated-tax-2026</loc>
+    <loc>https://parsicocpa.com/insights/california-estimated-tax-2026</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
@@ -27,7 +43,7 @@
 
   <!-- Article: S-Corp vs LLC California 2026 -->
   <url>
-    <loc>https://parsicocpa.com/insights-scorp-vs-llc-california-2026</loc>
+    <loc>https://parsicocpa.com/insights/scorp-vs-llc-california-2026</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
@@ -35,7 +51,7 @@
 
   <!-- Article: OBBBA Deductions 2026 -->
   <url>
-    <loc>https://parsicocpa.com/insights-obbba-deductions-2026</loc>
+    <loc>https://parsicocpa.com/insights/obbba-deductions-2026</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
@@ -43,7 +59,7 @@
 
   <!-- Article: California PTE Elective Tax 2026 -->
   <url>
-    <loc>https://parsicocpa.com/insights-california-pte-tax-2026</loc>
+    <loc>https://parsicocpa.com/insights/california-pte-tax-2026</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
@@ -51,7 +67,7 @@
 
   <!-- Article: Conservation Easement Settlement 2026 -->
   <url>
-    <loc>https://parsicocpa.com/insights-conservation-easement-settlement-2026</loc>
+    <loc>https://parsicocpa.com/insights/conservation-easement-settlement-2026</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
@@ -59,7 +75,7 @@
 
   <!-- Article: OBBBA Remittance Excise Tax 2026 -->
   <url>
-    <loc>https://parsicocpa.com/insights-obbba-remittance-excise-tax-2026</loc>
+    <loc>https://parsicocpa.com/insights/obbba-remittance-excise-tax-2026</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
@@ -67,7 +83,7 @@
 
   <!-- Article: No Tax on Tips 2026 -->
   <url>
-    <loc>https://parsicocpa.com/insights-no-tax-on-tips-2026</loc>
+    <loc>https://parsicocpa.com/insights/no-tax-on-tips-2026</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
@@ -75,7 +91,7 @@
 
   <!-- Article: Taxpayer Due Process Act 2026 -->
   <url>
-    <loc>https://parsicocpa.com/insights-taxpayer-due-process-act-2026</loc>
+    <loc>https://parsicocpa.com/insights/taxpayer-due-process-act-2026</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
@@ -83,7 +99,7 @@
 
   <!-- Article: IRS Underpayment Interest 2026 -->
   <url>
-    <loc>https://parsicocpa.com/insights-irs-underpayment-interest-2026</loc>
+    <loc>https://parsicocpa.com/insights/irs-underpayment-interest-2026</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
@@ -91,7 +107,7 @@
 
   <!-- Article: IRS Notice CP2000 2026 -->
   <url>
-    <loc>https://parsicocpa.com/insights-irs-notice-cp2000-2026</loc>
+    <loc>https://parsicocpa.com/insights/irs-notice-cp2000-2026</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
@@ -99,7 +115,7 @@
 
   <!-- Article: California Form 593 2026 -->
   <url>
-    <loc>https://parsicocpa.com/insights-california-form-593-2026</loc>
+    <loc>https://parsicocpa.com/insights/california-form-593-2026</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
@@ -107,7 +123,7 @@
 
   <!-- Article: Audit Triggers 2026 -->
   <url>
-    <loc>https://parsicocpa.com/insights-audit-triggers-2026</loc>
+    <loc>https://parsicocpa.com/insights/audit-triggers-2026</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
@@ -115,7 +131,7 @@
 
   <!-- Article: IRS Lien Levy 2026 -->
   <url>
-    <loc>https://parsicocpa.com/insights-irs-lien-levy-2026</loc>
+    <loc>https://parsicocpa.com/insights/irs-lien-levy-2026</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
@@ -123,7 +139,7 @@
 
   <!-- Article: FTB Notices Bookkeeping 2026 -->
   <url>
-    <loc>https://parsicocpa.com/insights-ftb-notices-bookkeeping-2026</loc>
+    <loc>https://parsicocpa.com/insights/ftb-notices-bookkeeping-2026</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
@@ -131,7 +147,7 @@
 
   <!-- Article: S-Corp LLC Comparison Checklist 2026 -->
   <url>
-    <loc>https://parsicocpa.com/insights-scorp-llc-comparison-checklist-2026</loc>
+    <loc>https://parsicocpa.com/insights/scorp-llc-comparison-checklist-2026</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
@@ -139,7 +155,7 @@
 
   <!-- Article: IRS Notices Guide 2026 -->
   <url>
-    <loc>https://parsicocpa.com/insights-irs-notices-guide-2026</loc>
+    <loc>https://parsicocpa.com/insights/irs-notices-guide-2026</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
@@ -147,7 +163,7 @@
 
   <!-- Article: Estate Planning S-Corp LLC 2026 -->
   <url>
-    <loc>https://parsicocpa.com/insights-estate-planning-scorp-llc-2026</loc>
+    <loc>https://parsicocpa.com/insights/estate-planning-scorp-llc-2026</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>

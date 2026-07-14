@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>California Estimated Tax Payments 2026 – Safe Harbor Rules, Deadlines &amp; FTB Requirements | Parsi &amp; Company, CPA</title>
-<meta name="description" content="An educational guide to 2026 California and federal estimated tax payment rules, safe harbor thresholds, FTB deadlines, and key exceptions for individuals and businesses.">
+<title>S-Corp vs. LLC in California 2026 – Tax Treatment, Structures, and Key Differences | Parsi &amp; Company, CPA</title>
+<meta name="description" content="An educational overview of the 2026 tax treatment differences between S corporations and LLCs in California, including franchise tax, self-employment tax, and FTB filing requirements.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=IBM+Plex+Mono:wght@500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
@@ -86,7 +86,7 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
 .byline-sep{width:1px;height:24px;background:rgba(214,214,214,.25)}
 .byline-meta{font-family:'IBM Plex Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:rgba(214,214,214,.6)}
 
-/* ── PARSI TEAM ATTRIBUTION BANNER ── */
+/* ── PARSI TEAM ATTRIBUTION ── */
 .parsi-team-banner{background:rgba(184,141,60,.08);border:1px solid rgba(184,141,60,.3);border-left:3px solid var(--gold);padding:16px 20px;margin-bottom:32px}
 .parsi-team-banner strong{font-family:'IBM Plex Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--gold);display:block;margin-bottom:6px}
 .parsi-team-banner p{font-size:13px;line-height:1.6;color:var(--charcoal);margin:0}
@@ -110,13 +110,15 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
 .article-content a{color:var(--navy);text-decoration:underline;text-underline-offset:3px;transition:color .2s}
 .article-content a:hover{color:var(--gold)}
 
-/* Deadline table */
-.deadline-table{width:100%;border-collapse:collapse;margin:24px 0 28px;font-size:14px}
-.deadline-table th{background:var(--navy);color:var(--white);font-family:'IBM Plex Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:.1em;padding:12px 16px;text-align:left;font-weight:500}
-.deadline-table td{padding:11px 16px;border-bottom:1px solid var(--silver);color:var(--charcoal);line-height:1.5}
-.deadline-table tr:last-child td{border-bottom:none}
-.deadline-table tr:nth-child(even) td{background:var(--warm)}
-.deadline-table td strong{color:var(--navy)}
+/* Comparison table */
+.compare-table{width:100%;border-collapse:collapse;margin:24px 0 28px;font-size:14px}
+.compare-table th{background:var(--navy);color:var(--white);font-family:'IBM Plex Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:.1em;padding:12px 16px;text-align:left;font-weight:500}
+.compare-table th:first-child{background:var(--navy)}
+.compare-table td{padding:12px 16px;border-bottom:1px solid var(--silver);color:var(--charcoal);line-height:1.5;vertical-align:top}
+.compare-table tr:last-child td{border-bottom:none}
+.compare-table tr:nth-child(even) td{background:var(--warm)}
+.compare-table td:first-child{font-weight:600;color:var(--navy);background:rgba(13,31,68,.03)}
+.compare-table td strong{color:var(--navy)}
 
 /* Gold rule divider */
 .gold-rule{display:flex;align-items:center;gap:16px;margin:40px 0}
@@ -127,6 +129,7 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
 .callout{background:var(--warm);border-left:3px solid var(--gold);padding:24px 28px;margin:32px 0}
 .callout-label{font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:9px;text-transform:uppercase;letter-spacing:.1em;color:var(--gold);margin-bottom:8px;display:block}
 .callout p{font-size:15px;line-height:1.7;margin-bottom:0}
+.callout p+p{margin-top:10px}
 .callout strong{color:var(--navy)}
 
 /* Warning callout */
@@ -141,9 +144,9 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
 .takeaway-box li{display:flex;align-items:flex-start;gap:10px;font-size:15px;color:var(--charcoal);line-height:1.6}
 .takeaway-box li::before{content:'→';color:var(--gold);font-weight:700;flex-shrink:0;margin-top:1px}
 
-/* References section */
+/* References */
 .references-block{background:var(--warm);border:1px solid var(--silver);padding:28px;margin:40px 0}
-.references-block h2{font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--navy);border:none;padding:0;margin:0 0 16px;font-size:11px}
+.references-block h2{font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--navy);border:none;padding:0;margin:0 0 16px}
 .references-block ol{padding-left:18px;margin:0}
 .references-block li{font-size:13px;line-height:1.8;color:var(--charcoal);margin-bottom:8px}
 .references-block li:last-child{margin-bottom:0}
@@ -151,12 +154,10 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
 .references-block a:hover{color:var(--gold)}
 
 /* Disclaimer block */
-.disclaimer-block{border:1px solid var(--silver);border-top:3px solid var(--navy);padding:28px;margin:32px 0 0;background:var(--white)}
+.disclaimer-block{border:1px solid var(--silver);border-top:3px solid var(--navy);padding:28px;margin:32px 0 0}
 .disclaimer-label{font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:9px;text-transform:uppercase;letter-spacing:.1em;color:var(--navy);margin-bottom:14px;display:block}
 .disclaimer-block p{font-size:13px;line-height:1.8;color:#555;margin-bottom:10px}
 .disclaimer-block p:last-child{margin-bottom:0}
-
-/* Parsi team notice */
 .parsi-team-notice{background:var(--warm);border-left:3px solid var(--navy);padding:20px 24px;margin-top:20px}
 .parsi-team-notice p{font-size:13px;line-height:1.7;color:var(--charcoal);margin:0}
 
@@ -165,34 +166,26 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
 .aside-block{border:1px solid var(--silver);padding:24px}
 .aside-block h4{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:18px;color:var(--navy);margin-bottom:4px}
 .aside-rule{width:28px;height:1px;background:var(--gold);margin:10px 0 16px;display:block}
-
-/* Table of contents */
 .toc-list{list-style:none;display:flex;flex-direction:column;gap:0}
 .toc-list a{display:block;padding:9px 0;font-size:13px;color:var(--charcoal);text-decoration:none;border-bottom:1px solid var(--warm);transition:color .2s;line-height:1.4}
 .toc-list a:hover{color:var(--gold)}
 .toc-list li:last-child a{border-bottom:none;padding-bottom:0}
-
-/* Share */
 .share-row{display:flex;gap:10px;flex-wrap:wrap}
 .share-btn{display:inline-flex;align-items:center;gap:6px;font-family:'IBM Plex Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--navy);border:1px solid var(--silver);padding:8px 14px;text-decoration:none;transition:border-color .2s,color .2s;background:none;cursor:pointer}
 .share-btn:hover{border-color:var(--gold);color:var(--gold)}
-
-/* Author card sidebar */
 .author-card{background:var(--warm);border:none;padding:24px}
 .author-card-avatar{width:56px;height:56px;border-radius:50%;background:rgba(13,31,68,.12);border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-weight:700;font-size:22px;color:var(--navy);margin-bottom:12px}
 .author-card-name{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:18px;color:var(--navy);margin-bottom:2px}
 .author-card-cred{font-family:'IBM Plex Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:.08em;color:var(--gold);margin-bottom:10px;display:block}
 .author-card p{font-size:13px;line-height:1.6;color:var(--charcoal)}
 
-/* ── RELATED ARTICLES ── */
+/* ── RELATED ── */
 #related{padding:64px 0;background:var(--warm);border-top:1px solid var(--silver)}
 #related h2{font-size:clamp(22px,2.5vw,30px);margin-bottom:4px}
 .related-eyebrow{font-family:'IBM Plex Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--gold);margin-bottom:12px;display:block}
 .related-rule{width:40px;height:1px;background:var(--gold);margin:14px 0 40px;display:block}
 .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 @media(max-width:768px){.related-grid{grid-template-columns:1fr}}
-
-/* Related card */
 .related-card{background:var(--white);border:1px solid var(--silver);padding:24px;display:flex;flex-direction:column;gap:10px;text-decoration:none;transition:border-color .2s}
 .related-card:hover{border-color:var(--gold)}
 .related-tag{font-family:'IBM Plex Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:.08em;color:var(--gold);font-weight:500}
@@ -295,7 +288,7 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
       <span class="breadcrumb-sep" aria-hidden="true">›</span>
       <a href="/insights">Insights</a>
       <span class="breadcrumb-sep" aria-hidden="true">›</span>
-      <span aria-current="page">California Estimated Tax Payments 2026 – Safe Harbor Rules, Deadlines &amp; FTB Requirements</span>
+      <span aria-current="page">S-Corp vs. LLC in California 2026 – Tax Treatment, Structures, and Key Differences</span>
     </div>
   </div>
 </nav>
@@ -312,10 +305,10 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
           <span class="pillar-name">Actionable Guidance</span>
         </div>
         <span class="article-service-tag">Tax Planning</span>
-        <span class="article-service-tag">Business Owners &amp; Individuals</span>
+        <span class="article-service-tag">Business Owners</span>
         <span class="article-service-tag">2026</span>
       </div>
-      <h1>California Estimated Tax Payments 2026 – Safe Harbor Rules, Deadlines &amp; FTB Requirements</h1>
+      <h1>S-Corp vs. LLC in California 2026 – Tax Treatment, Structures, and Key Differences</h1>
       <div class="article-byline">
         <div class="byline-author">
           <div class="author-avatar" aria-hidden="true">PT</div>
@@ -329,7 +322,7 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
         <div class="byline-sep" aria-hidden="true"></div>
         <span class="byline-meta">Last Reviewed: May 25, 2026</span>
         <div class="byline-sep" aria-hidden="true"></div>
-        <span class="byline-meta">9 min read</span>
+        <span class="byline-meta">10 min read</span>
       </div>
     </div>
   </div>
@@ -343,155 +336,152 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
       <!-- CONTENT -->
       <article class="article-content" aria-label="Article content">
 
-        <!-- PARSI TEAM ATTRIBUTION — top placement -->
+        <!-- PARSI TEAM ATTRIBUTION -->
         <div class="parsi-team-banner">
           <strong>Prepared by Parsi Team</strong>
           <p>This article was drafted by the Parsi Team content group and subjected to technical, legal, and compliance review and final approval by Parsi Team, CPA, prior to publication.</p>
         </div>
 
-        <p>For self-employed individuals, business owners, and higher-income taxpayers in California, estimated tax payments are a foundational compliance obligation. Under federal law, governed by <a href="https://www.irs.gov/publications/p505" target="_blank" rel="noopener">IRC §6654 and detailed in IRS Publication 505 (2026)</a> (accessed May 25, 2026), and California rules governed by the <a href="https://www.ftb.ca.gov/file/when-to-file/due-dates-personal.html" target="_blank" rel="noopener">Franchise Tax Board (FTB) estimated tax requirements</a> (accessed May 25, 2026), taxpayers who expect to owe tax beyond what is withheld may be required to make quarterly payments throughout the year. Failure to do so generally results in an underpayment penalty calculated on the shortfall for each quarter.</p>
+        <p>For business owners and self-employed individuals in California, the choice between an S corporation (S-Corp) and a limited liability company (LLC) involves distinct federal and state tax consequences that are governed by separate regulatory frameworks. At the federal level, S-Corp treatment is governed by <a href="https://www.irs.gov/businesses/small-businesses-self-employed/s-corporations" target="_blank" rel="noopener">Subchapter S of the Internal Revenue Code (IRC §§1361–1379)</a> (accessed May 25, 2026), while LLCs are generally treated as disregarded entities, partnerships, or corporations depending on their elections under the check-the-box regulations at <a href="https://www.irs.gov/businesses/small-businesses-self-employed/limited-liability-company-llc" target="_blank" rel="noopener">Treasury Regulation §301.7701</a> (accessed May 25, 2026). In California, both structures are subject to additional taxes, fees, and filing obligations administered by the <a href="https://www.ftb.ca.gov/file/business/types/index.html" target="_blank" rel="noopener">Franchise Tax Board (FTB)</a> (accessed May 25, 2026) that do not have direct federal equivalents.</p>
 
-        <p>This article provides an educational overview of the 2026 federal and California estimated tax payment framework — including safe harbor thresholds, installment schedules, key exceptions, and the critical California-specific limitation for higher-income taxpayers. This publication reflects tax law and regulations applicable as of May 2026 and is subject to change without notice. It does not address any specific taxpayer facts or circumstances.</p>
+        <p>This article provides an educational overview of the structural and tax differences between S-Corps and LLCs in California as they generally apply under 2026 law. This publication reflects tax law and regulations applicable as of May 2026 and is subject to change without notice. It does not address any specific taxpayer facts or circumstances.</p>
 
         <div class="callout">
           <span class="callout-label">What This Article Covers</span>
-          <p>This guide addresses five primary topics: (1) the federal estimated tax payment framework under IRC §6654, (2) California's separate estimated tax rules and FTB installment schedule, (3) the federal and California safe harbor thresholds that may generally prevent underpayment penalties, (4) the California AGI limitation that restricts the prior-year safe harbor for higher-income taxpayers, and (5) official IRS and FTB resources available for further reference.</p>
+          <p>This guide addresses five primary topics: (1) the federal tax classification framework for S-Corps and LLCs, (2) California's franchise tax and LLC fee obligations applicable to each structure, (3) self-employment and payroll tax considerations that generally differ between the two structures, (4) key eligibility restrictions and ongoing compliance requirements for S-Corp status, and (5) official IRS and FTB resources available for further reference.</p>
         </div>
 
-        <h2 id="sec-federal">Federal Estimated Tax Payments — The General Framework</h2>
+        <h2 id="sec-federal">Federal Tax Classification — S-Corps and LLCs</h2>
 
-        <p>Under <a href="https://www.irs.gov/forms-pubs/about-form-1040-es" target="_blank" rel="noopener">Form 1040-ES (2026) — Estimated Tax for Individuals</a> (accessed May 25, 2026), taxpayers who expect to owe at least $1,000 in federal income tax after subtracting withholding and refundable credits are generally required to make quarterly estimated payments. This threshold applies to most individuals, including sole proprietors, partners, S corporation shareholders, and others who receive income not subject to withholding.</p>
+        <p>Under federal law, an S corporation is a domestic corporation that has made a valid election under <a href="https://www.irs.gov/forms-pubs/about-form-2553" target="_blank" rel="noopener">IRC §1362 using IRS Form 2553</a> (accessed May 25, 2026) to be treated as a pass-through entity. Income, deductions, credits, and losses generally flow through to shareholders and are reported on their individual returns. The corporation itself generally does not pay federal income tax at the entity level, subject to limited exceptions such as built-in gains tax under IRC §1374 and excess passive income tax under IRC §1375.</p>
 
-        <h3>2026 Federal Installment Schedule</h3>
-        <p>Per <a href="https://www.irs.gov/publications/p509" target="_blank" rel="noopener">IRS Publication 509 (2026) – Tax Calendars</a> (accessed May 25, 2026), the 2026 federal estimated tax due dates for calendar-year individual taxpayers are generally as follows:</p>
+        <p>A single-member LLC is generally treated as a disregarded entity for federal income tax purposes, meaning its income and expenses are reported directly on the owner's individual return (typically Schedule C for a sole proprietorship or Schedule E for rental activity). A multi-member LLC is generally treated as a partnership by default, filing <a href="https://www.irs.gov/forms-pubs/about-form-1065" target="_blank" rel="noopener">Form 1065</a> (accessed May 25, 2026) and issuing Schedule K-1s to members. An LLC may elect to be taxed as a corporation — including as an S corporation — by filing the appropriate election forms with the IRS.</p>
 
-        <table class="deadline-table" aria-label="2026 Federal Estimated Tax Due Dates">
-          <thead>
-            <tr>
-              <th>Payment Period</th>
-              <th>Income Received Through</th>
-              <th>Due Date</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>1st Installment</strong></td>
-              <td>January 1 – March 31, 2026</td>
-              <td><strong>April 15, 2026</strong></td>
-            </tr>
-            <tr>
-              <td><strong>2nd Installment</strong></td>
-              <td>April 1 – May 31, 2026</td>
-              <td><strong>June 16, 2026</strong></td>
-            </tr>
-            <tr>
-              <td><strong>3rd Installment</strong></td>
-              <td>June 1 – August 31, 2026</td>
-              <td><strong>September 15, 2026</strong></td>
-            </tr>
-            <tr>
-              <td><strong>4th Installment</strong></td>
-              <td>September 1 – December 31, 2026</td>
-              <td><strong>January 15, 2027</strong></td>
-            </tr>
-          </tbody>
-        </table>
-
-        <p>When a due date falls on a weekend or federal holiday, the deadline generally shifts to the next business day, consistent with <a href="https://www.irs.gov/publications/p509" target="_blank" rel="noopener">IRS Publication 509</a>. Taxpayers are encouraged to verify current dates directly with IRS.gov, as legislative or administrative changes may affect specific deadlines.</p>
-
-        <h3>Federal Safe Harbor — General Rule</h3>
-        <p>Under IRC §6654, an underpayment penalty may generally be avoided if the taxpayer satisfies one of the following safe harbor conditions:</p>
+        <h3>S-Corp Eligibility Restrictions Under IRC §1361</h3>
+        <p>Not all businesses qualify for S-Corp status. Under <a href="https://www.irs.gov/businesses/small-businesses-self-employed/s-corporations" target="_blank" rel="noopener">IRC §1361</a> (accessed May 25, 2026), an S corporation generally must satisfy all of the following requirements:</p>
         <ul>
-          <li>The taxpayer pays at least <strong>90% of the current year's tax liability</strong> through withholding and estimated payments, or</li>
-          <li>The taxpayer pays at least <strong>100% of the prior year's tax liability</strong> shown on a return covering a full 12-month period, provided the prior-year return was filed. This threshold increases to <strong>110% of the prior year's tax liability</strong> for taxpayers whose prior-year adjusted gross income (AGI) exceeded $150,000 (or $75,000 for married filing separately).</li>
+          <li>Be a domestic corporation</li>
+          <li>Have no more than <strong>100 shareholders</strong></li>
+          <li>Have only <strong>one class of stock</strong></li>
+          <li>Have only <strong>eligible shareholders</strong> — generally, U.S. citizens, permanent residents, certain trusts, and estates (partnerships, corporations, and non-resident aliens generally may not be shareholders)</li>
+          <li>Not be an ineligible corporation (certain financial institutions, insurance companies, and international sales corporations are excluded)</li>
         </ul>
-
-        <p>These thresholds are stated as general rules under current law and regulations. Individual circumstances, changes in tax law, and administrative guidance may affect their application. Consult a licensed CPA for advice based on your individual facts and circumstances.</p>
-
-        <div class="gold-rule"><span class="gold-rule-icon" aria-hidden="true"></span></div>
-
-        <h2 id="sec-california">California Estimated Tax Payments — FTB Rules</h2>
-
-        <p>California administers its own estimated tax system separately from the federal system, under the California Revenue and Taxation Code and guidance published by the <a href="https://www.ftb.ca.gov/file/when-to-file/due-dates-personal.html" target="_blank" rel="noopener">Franchise Tax Board — Due Dates for Personal Income Tax</a> (accessed May 25, 2026). California taxpayers who expect to owe more than $500 in state income tax after withholding are generally required to make quarterly estimated payments using <a href="https://www.ftb.ca.gov/forms/2025/2025-540-es.pdf" target="_blank" rel="noopener">FTB Form 540-ES</a>.</p>
-
-        <h3>2026 California Installment Schedule</h3>
-        <p>California's estimated tax installment schedule differs from the federal schedule. Per the FTB's published guidance, the 2026 required installment percentages and due dates for individual taxpayers are generally:</p>
-
-        <table class="deadline-table" aria-label="2026 California Estimated Tax Schedule">
-          <thead>
-            <tr>
-              <th>Installment</th>
-              <th>% of Required Annual Amount</th>
-              <th>Due Date</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>1st Installment</strong></td>
-              <td>30%</td>
-              <td><strong>April 15, 2026</strong></td>
-            </tr>
-            <tr>
-              <td><strong>2nd Installment</strong></td>
-              <td>40%</td>
-              <td><strong>June 15, 2026</strong></td>
-            </tr>
-            <tr>
-              <td><strong>3rd Installment</strong></td>
-              <td>0% (no payment required)</td>
-              <td>September 15, 2026</td>
-            </tr>
-            <tr>
-              <td><strong>4th Installment</strong></td>
-              <td>30%</td>
-              <td><strong>January 15, 2027</strong></td>
-            </tr>
-          </tbody>
-        </table>
-
-        <p>Note that California's installment percentages (30%, 40%, 0%, 30%) differ materially from the federal equal-installment approach (25% per quarter). This asymmetric schedule means that California taxpayers may need to front-load a larger portion of their estimated payments earlier in the year compared to federal requirements. Taxpayers are encouraged to verify current schedules at <a href="https://www.ftb.ca.gov/file/when-to-file/due-dates-personal.html" target="_blank" rel="noopener">FTB.ca.gov</a> (accessed May 25, 2026).</p>
-
-        <h3>California Safe Harbor — General Rule</h3>
-        <p>California generally allows taxpayers to avoid the underpayment penalty by satisfying one of the following conditions:</p>
-        <ul>
-          <li>Paying at least <strong>90% of the current year's California tax liability</strong> through withholding and estimated payments, or</li>
-          <li>Paying at least <strong>100% of the prior year's California tax liability</strong>, provided the prior-year return covered a full 12 months.</li>
-        </ul>
+        <p>An LLC that elects S-Corp status must still satisfy all of these requirements in its operating structure. Failure to maintain eligibility requirements after election may result in involuntary termination of S-Corp status under IRC §1362(d).</p>
 
         <div class="callout callout-warning">
-          <span class="callout-label">⚠ Important Note — California AGI Limitation</span>
-          <p><strong>Taxpayers whose California AGI for the prior year was $1,000,000 or more (or $500,000 or more if married filing separately) cannot use the prior-year safe harbor.</strong> Under California law, these taxpayers must pay at least <strong>90% of the current year's California tax liability</strong> to avoid the underpayment penalty — the prior-year 100% safe harbor is not available to them. This is a critical California-specific rule that differs from federal law and applies regardless of the prior year's payment history. Consult a licensed CPA for advice specific to your individual facts and circumstances.</p>
+          <span class="callout-label">⚠ Important Note — S-Corp Eligibility</span>
+          <p>An inadvertent termination of S-Corp status — for example, by adding an ineligible shareholder or issuing a second class of stock — can result in the entity being reclassified as a C corporation for all tax years after the terminating event. While relief provisions exist under IRC §1362(f), they require prompt action and IRS approval. The tax consequences of an unintended termination may be significant and fact-specific. Consult a licensed CPA for advice based on your individual facts and circumstances.</p>
         </div>
 
         <div class="gold-rule"><span class="gold-rule-icon" aria-hidden="true"></span></div>
 
-        <h2 id="sec-business">Business Entity Estimated Tax — Overview</h2>
+        <h2 id="sec-california">California Tax Treatment — Key Differences</h2>
 
-        <p>Estimated tax obligations also apply to certain business entities. Per the <a href="https://www.ftb.ca.gov/file/when-to-file/due-dates-business.html" target="_blank" rel="noopener">FTB Due Dates — Business Entities</a> (accessed May 25, 2026), corporations, partnerships, and LLCs generally have separate estimated tax and fee payment obligations under California law. For example:</p>
+        <p>California imposes separate taxes and fees on both S-Corps and LLCs that are administered by the <a href="https://www.ftb.ca.gov/file/business/types/index.html" target="_blank" rel="noopener">FTB</a> (accessed May 25, 2026). These California-specific obligations are independent of federal tax treatment and may affect the relative cost of each structure under California law.</p>
+
+        <h3>S-Corp: California Franchise Tax and 1.5% Net Income Tax</h3>
+        <p>California S corporations are subject to a franchise tax equal to the greater of:</p>
         <ul>
-          <li>C corporations filing Form 100 are generally required to pay estimated tax installments throughout the tax year based on the current or prior year's California tax liability.</li>
-          <li>Pass-through entities, including S corporations (Form 100S) and partnerships (Form 565/568), may have their own installment obligations. The federal due date for Form 565/568 is generally March 15, 2026, with extensions available per IRS and FTB guidance.</li>
-          <li>LLCs are generally subject to an annual LLC fee in addition to any applicable estimated tax requirements, based on total California income.</li>
+          <li><strong>$800 minimum franchise tax</strong> per year (applicable to most entities registered in California), or</li>
+          <li><strong>1.5% of the California net income</strong> of the S corporation</li>
+        </ul>
+        <p>This 1.5% tax is assessed at the entity level on the S corporation's California net income, in addition to the pass-through income that flows to shareholders and is taxed at the individual level. Per the <a href="https://www.ftb.ca.gov/file/business/types/s-corp.html" target="_blank" rel="noopener">FTB S Corporation page</a> (accessed May 25, 2026), S corporations file California Form 100S and are subject to the same estimated tax payment requirements as other entities.</p>
+
+        <h3>LLC: Annual Minimum Tax and Gross Receipts Fee</h3>
+        <p>California LLCs are subject to two separate state-level obligations under the California Revenue and Taxation Code:</p>
+        <ul>
+          <li><strong>$800 annual minimum franchise tax</strong> — due for most LLCs registered or doing business in California, regardless of income or profitability.</li>
+          <li><strong>Annual LLC fee</strong> — a gross receipts-based fee assessed on total California income, on a sliding scale. Per the <a href="https://www.ftb.ca.gov/file/business/types/llc.html" target="_blank" rel="noopener">FTB LLC page</a> (accessed May 25, 2026), the fee generally ranges from $0 for income under $250,000 to $11,790 for income of $5,000,000 or more. These thresholds are subject to annual adjustment and should be verified directly with the FTB.</li>
         </ul>
 
-        <p>Business entity estimated tax rules are governed by specific statutes and regulations that may differ substantially from individual rules. This overview is educational in nature and does not address any specific entity's facts or circumstances. Consult a licensed CPA for guidance specific to your entity type and situation.</p>
+        <p>Unlike the S-Corp 1.5% entity-level tax, the LLC fee is based on gross receipts rather than net income, which may result in a material fee obligation even in years where the LLC is not profitable.</p>
+
+        <table class="compare-table" aria-label="S-Corp vs LLC California Tax Comparison 2026">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>S Corporation</th>
+              <th>LLC (Default / Partnership)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Federal Filing Form</td>
+              <td>Form 1120-S + Schedule K-1</td>
+              <td>Form 1065 + Schedule K-1 (multi-member); Schedule C (single-member)</td>
+            </tr>
+            <tr>
+              <td>California Filing Form</td>
+              <td>Form 100S</td>
+              <td>Form 568 (LLC) or Form 565 (Partnership)</td>
+            </tr>
+            <tr>
+              <td>California Minimum Tax</td>
+              <td>$800/year (minimum)</td>
+              <td>$800/year (minimum)</td>
+            </tr>
+            <tr>
+              <td>California Entity-Level Tax</td>
+              <td>1.5% of California net income</td>
+              <td>No net income tax at entity level</td>
+            </tr>
+            <tr>
+              <td>California LLC Fee</td>
+              <td>Not applicable</td>
+              <td>Gross receipts-based, up to ~$11,790</td>
+            </tr>
+            <tr>
+              <td>Self-Employment Tax (Federal)</td>
+              <td>Generally not on S-Corp distributions; <strong>applies to reasonable compensation paid as W-2 wages</strong></td>
+              <td>Generally applies to active members' share of net income</td>
+            </tr>
+            <tr>
+              <td>Eligibility Restrictions</td>
+              <td>Max 100 shareholders; one class of stock; eligible shareholders only</td>
+              <td>Generally no restrictions on number or type of members</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="callout callout-warning">
+          <span class="callout-label">⚠ Important Note — Reasonable Compensation Requirement</span>
+          <p>Shareholder-employees of an S corporation who perform services for the corporation are generally required to receive <strong>reasonable compensation</strong> in the form of W-2 wages, subject to payroll taxes including Social Security and Medicare (FICA). The IRS has consistently challenged S-Corp arrangements where shareholder-employees receive little or no compensation while taking large distributions, treating the difference as an attempt to avoid employment taxes. Per <a href="https://www.irs.gov/businesses/small-businesses-self-employed/s-corporation-compensation-and-medical-insurance-issues" target="_blank" rel="noopener">IRS guidance on S-Corp compensation</a> (accessed May 25, 2026), reasonable compensation is determined based on the facts and circumstances of each situation, including the duties performed, hours worked, and amounts paid for similar services in comparable businesses. Failure to pay reasonable compensation may result in reclassification of distributions as wages and assessment of FICA taxes, interest, and penalties.</p>
+        </div>
+
+        <div class="gold-rule"><span class="gold-rule-icon" aria-hidden="true"></span></div>
+
+        <h2 id="sec-selfemployment">Self-Employment and Payroll Tax Considerations</h2>
+
+        <p>One of the commonly discussed differences between S-Corps and LLCs relates to self-employment tax treatment. Under current federal law:</p>
+
+        <h3>LLC Members — General Rule</h3>
+        <p>Active members of a multi-member LLC treated as a partnership are generally subject to self-employment tax on their distributive share of ordinary business income under IRC §1402. For 2026, self-employment tax is generally assessed at 15.3% on net earnings up to the Social Security wage base (adjusted annually) and 2.9% on amounts above that threshold. An additional 0.9% Medicare surtax may apply to higher-income individuals under IRC §3101(b)(2). Per <a href="https://www.irs.gov/publications/p334" target="_blank" rel="noopener">IRS Publication 334 (2026) – Tax Guide for Small Business</a> (accessed May 25, 2026), self-employment tax applies to the net earnings from self-employment reported on Schedule SE.</p>
+
+        <h3>S-Corp Shareholders — General Rule</h3>
+        <p>S-Corp shareholder-employees generally pay FICA payroll taxes only on their W-2 wages, not on S-Corp distributions received in excess of wages. Distributions from the S corporation are not subject to self-employment tax or FICA under current law, provided the shareholder has received reasonable compensation for services rendered. This structural difference is the basis for the frequently discussed potential payroll tax savings associated with S-Corp treatment — however, as noted above, the IRS scrutinizes arrangements where reasonable compensation is not paid.</p>
+
+        <div class="callout">
+          <span class="callout-label">Note on Social Security Wage Base</span>
+          <p>The Social Security wage base is adjusted annually by the Social Security Administration. For 2026, taxpayers and practitioners are encouraged to verify the current threshold directly at <a href="https://www.ssa.gov/oact/cola/cbb.html" target="_blank" rel="noopener">SSA.gov — Contribution and Benefit Base</a> (accessed May 25, 2026), as this figure affects the calculation of both self-employment tax and FICA obligations.</p>
+        </div>
 
         <div class="gold-rule"><span class="gold-rule-icon" aria-hidden="true"></span></div>
 
         <h2 id="sec-resources">Compliance Resources and Tools</h2>
 
-        <p>Official IRS and FTB worksheets and forms for calculating estimated tax obligations are publicly available at no cost. These resources may be useful for educational reference and general understanding of the applicable computational frameworks:</p>
+        <p>Official IRS and FTB publications and forms relevant to S corporations and LLCs are publicly available at no cost. These resources may be useful for general educational reference:</p>
 
         <ul>
-          <li><a href="https://www.irs.gov/forms-pubs/about-form-1040-es" target="_blank" rel="noopener">IRS Form 1040-ES (2026) — Estimated Tax for Individuals</a>: includes worksheets for calculating federal estimated tax and determining whether payments are required (accessed May 25, 2026).</li>
-          <li><a href="https://www.irs.gov/publications/p505" target="_blank" rel="noopener">IRS Publication 505 (2026) — Tax Withholding and Estimated Tax</a>: provides detailed guidance on federal withholding and estimated tax rules under IRC §6654 (accessed May 25, 2026).</li>
-          <li><a href="https://www.irs.gov/publications/p509" target="_blank" rel="noopener">IRS Publication 509 (2026) — Tax Calendars</a>: lists official federal tax due dates for individuals and businesses (accessed May 25, 2026).</li>
-          <li><a href="https://www.ftb.ca.gov/file/when-to-file/due-dates-personal.html" target="_blank" rel="noopener">FTB Due Dates — Personal Income Tax (2026)</a>: official California installment dates for individual estimated tax payments (accessed May 25, 2026).</li>
-          <li><a href="https://www.ftb.ca.gov/file/when-to-file/due-dates-business.html" target="_blank" rel="noopener">FTB Due Dates — Business Entities (2026)</a>: California estimated tax and fee deadlines for corporations, partnerships, S corporations, and LLCs (accessed May 25, 2026).</li>
-          <li><a href="https://www.ftb.ca.gov/forms/2025/2025-540-es.pdf" target="_blank" rel="noopener">FTB Form 540-ES — Estimated Tax for Individuals</a>: California payment vouchers and worksheets for individual estimated tax (accessed May 25, 2026).</li>
+          <li><a href="https://www.irs.gov/businesses/small-businesses-self-employed/s-corporations" target="_blank" rel="noopener">IRS — S Corporations</a>: overview of federal S-Corp requirements, eligibility, and election procedures, including links to Form 2553 and Form 1120-S (accessed May 25, 2026).</li>
+          <li><a href="https://www.irs.gov/businesses/small-businesses-self-employed/limited-liability-company-llc" target="_blank" rel="noopener">IRS — Limited Liability Company (LLC)</a>: educational overview of federal LLC classification rules, check-the-box elections, and relevant filing forms (accessed May 25, 2026).</li>
+          <li><a href="https://www.irs.gov/forms-pubs/about-form-1120-s" target="_blank" rel="noopener">IRS Form 1120-S — U.S. Income Tax Return for an S Corporation</a>: the federal annual return for S corporations, with instructions (accessed May 25, 2026).</li>
+          <li><a href="https://www.irs.gov/forms-pubs/about-form-1065" target="_blank" rel="noopener">IRS Form 1065 — U.S. Return of Partnership Income</a>: the federal annual return for multi-member LLCs taxed as partnerships, with instructions (accessed May 25, 2026).</li>
+          <li><a href="https://www.ftb.ca.gov/file/business/types/s-corp.html" target="_blank" rel="noopener">FTB — S Corporations</a>: California-specific guidance on S-Corp registration, Form 100S, the 1.5% entity-level tax, and the $800 minimum franchise tax (accessed May 25, 2026).</li>
+          <li><a href="https://www.ftb.ca.gov/file/business/types/llc.html" target="_blank" rel="noopener">FTB — Limited Liability Companies</a>: California LLC annual tax, gross receipts fee schedule, Form 568, and registration requirements (accessed May 25, 2026).</li>
+          <li><a href="https://www.irs.gov/businesses/small-businesses-self-employed/s-corporation-compensation-and-medical-insurance-issues" target="_blank" rel="noopener">IRS — S-Corp Compensation and Medical Insurance Issues</a>: IRS guidance on reasonable compensation requirements for shareholder-employees (accessed May 25, 2026).</li>
         </ul>
 
-        <p>These resources are provided for general educational reference only. Official IRS and FTB worksheets are updated periodically and may reflect changes not addressed in this article. Taxpayers are encouraged to access the most current version of each document directly from IRS.gov and FTB.ca.gov.</p>
+        <p>These resources are provided for general educational reference only. Applicable forms, fee schedules, and regulatory guidance are updated periodically. Taxpayers are encouraged to access the most current version of each document directly from IRS.gov and FTB.ca.gov.</p>
 
         <div class="gold-rule"><span class="gold-rule-icon" aria-hidden="true"></span></div>
 
@@ -499,12 +489,12 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
         <div class="takeaway-box">
           <div class="takeaway-title">Key Takeaways</div>
           <ul>
-            <li>Federal estimated tax payments are generally required when a taxpayer expects to owe at least $1,000 after withholding and credits, per IRC §6654 and IRS Publication 505.</li>
-            <li>California requires estimated payments when the expected state tax liability exceeds $500 after withholding, using an asymmetric installment schedule (30%, 40%, 0%, 30%) that differs from the federal approach.</li>
-            <li>The federal prior-year safe harbor is generally 100% of the prior year's tax, increasing to 110% for taxpayers whose prior-year AGI exceeded $150,000.</li>
-            <li>California's prior-year safe harbor is 100% of the prior year's California tax — however, this safe harbor is not available to taxpayers whose California AGI for the prior year was $1,000,000 or more, who must pay 90% of the current year's tax.</li>
-            <li>Business entities, including C corporations, S corporations, partnerships, and LLCs, have separate estimated tax and fee obligations under California law with their own installment schedules and thresholds.</li>
-            <li>Tax law and regulatory guidance change frequently; the deadlines and thresholds described in this article reflect information available as of May 2026 and should be verified directly with IRS.gov and FTB.ca.gov before any compliance decision is made.</li>
+            <li>S-Corps are pass-through entities under Subchapter S of the IRC, generally not subject to federal entity-level income tax, but subject to California's 1.5% net income tax and the $800 minimum franchise tax.</li>
+            <li>LLCs taxed as partnerships are generally not subject to California's 1.5% entity-level tax but are subject to the $800 annual minimum tax and a gross receipts-based LLC fee that may apply even in unprofitable years.</li>
+            <li>S-Corp shareholder-employees are generally required to receive reasonable W-2 compensation for services performed; distributions above reasonable compensation are not subject to FICA, though the IRS actively scrutinizes arrangements that appear to minimize wages.</li>
+            <li>Active LLC members are generally subject to self-employment tax on their distributive share of ordinary business income, under IRC §1402.</li>
+            <li>S-Corp eligibility under IRC §1361 is subject to strict requirements including a maximum of 100 shareholders, one class of stock, and eligible shareholder types; failure to maintain these requirements may result in involuntary termination of S-Corp status.</li>
+            <li>The federal and California tax consequences of each structure are highly fact-specific and depend on income levels, number of owners, payroll obligations, and other circumstances; this overview is educational and does not address any specific taxpayer situation.</li>
           </ul>
         </div>
 
@@ -512,12 +502,15 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
         <div class="references-block">
           <h2>References</h2>
           <ol>
-            <li>Internal Revenue Service. <em>Publication 505 (2026) — Tax Withholding and Estimated Tax.</em> Available at: <a href="https://www.irs.gov/publications/p505" target="_blank" rel="noopener">https://www.irs.gov/publications/p505</a> (accessed May 25, 2026).</li>
-            <li>Internal Revenue Service. <em>Publication 509 (2026) — Tax Calendars.</em> Available at: <a href="https://www.irs.gov/publications/p509" target="_blank" rel="noopener">https://www.irs.gov/publications/p509</a> (accessed May 25, 2026).</li>
-            <li>Internal Revenue Service. <em>About Form 1040-ES, Estimated Tax for Individuals.</em> Available at: <a href="https://www.irs.gov/forms-pubs/about-form-1040-es" target="_blank" rel="noopener">https://www.irs.gov/forms-pubs/about-form-1040-es</a> (accessed May 25, 2026).</li>
-            <li>Franchise Tax Board. <em>Due Dates — Personal Income Tax (2026).</em> Available at: <a href="https://www.ftb.ca.gov/file/when-to-file/due-dates-personal.html" target="_blank" rel="noopener">https://www.ftb.ca.gov/file/when-to-file/due-dates-personal.html</a> (accessed May 25, 2026).</li>
-            <li>Franchise Tax Board. <em>Due Dates — Business Entities (2026).</em> Available at: <a href="https://www.ftb.ca.gov/file/when-to-file/due-dates-business.html" target="_blank" rel="noopener">https://www.ftb.ca.gov/file/when-to-file/due-dates-business.html</a> (accessed May 25, 2026).</li>
-            <li>Franchise Tax Board. <em>Form 540-ES — Estimated Tax for Individuals.</em> Available at: <a href="https://www.ftb.ca.gov/forms/2025/2025-540-es.pdf" target="_blank" rel="noopener">https://www.ftb.ca.gov/forms/2025/2025-540-es.pdf</a> (accessed May 25, 2026).</li>
+            <li>Internal Revenue Service. <em>S Corporations.</em> Available at: <a href="https://www.irs.gov/businesses/small-businesses-self-employed/s-corporations" target="_blank" rel="noopener">https://www.irs.gov/businesses/small-businesses-self-employed/s-corporations</a> (accessed May 25, 2026).</li>
+            <li>Internal Revenue Service. <em>Limited Liability Company (LLC).</em> Available at: <a href="https://www.irs.gov/businesses/small-businesses-self-employed/limited-liability-company-llc" target="_blank" rel="noopener">https://www.irs.gov/businesses/small-businesses-self-employed/limited-liability-company-llc</a> (accessed May 25, 2026).</li>
+            <li>Internal Revenue Service. <em>About Form 1120-S, U.S. Income Tax Return for an S Corporation.</em> Available at: <a href="https://www.irs.gov/forms-pubs/about-form-1120-s" target="_blank" rel="noopener">https://www.irs.gov/forms-pubs/about-form-1120-s</a> (accessed May 25, 2026).</li>
+            <li>Internal Revenue Service. <em>About Form 1065, U.S. Return of Partnership Income.</em> Available at: <a href="https://www.irs.gov/forms-pubs/about-form-1065" target="_blank" rel="noopener">https://www.irs.gov/forms-pubs/about-form-1065</a> (accessed May 25, 2026).</li>
+            <li>Internal Revenue Service. <em>S-Corporation Compensation and Medical Insurance Issues.</em> Available at: <a href="https://www.irs.gov/businesses/small-businesses-self-employed/s-corporation-compensation-and-medical-insurance-issues" target="_blank" rel="noopener">https://www.irs.gov/businesses/small-businesses-self-employed/s-corporation-compensation-and-medical-insurance-issues</a> (accessed May 25, 2026).</li>
+            <li>Internal Revenue Service. <em>Publication 334 (2026) – Tax Guide for Small Business.</em> Available at: <a href="https://www.irs.gov/publications/p334" target="_blank" rel="noopener">https://www.irs.gov/publications/p334</a> (accessed May 25, 2026).</li>
+            <li>Franchise Tax Board. <em>S Corporations.</em> Available at: <a href="https://www.ftb.ca.gov/file/business/types/s-corp.html" target="_blank" rel="noopener">https://www.ftb.ca.gov/file/business/types/s-corp.html</a> (accessed May 25, 2026).</li>
+            <li>Franchise Tax Board. <em>Limited Liability Companies.</em> Available at: <a href="https://www.ftb.ca.gov/file/business/types/llc.html" target="_blank" rel="noopener">https://www.ftb.ca.gov/file/business/types/llc.html</a> (accessed May 25, 2026).</li>
+            <li>Social Security Administration. <em>Contribution and Benefit Base (2026).</em> Available at: <a href="https://www.ssa.gov/oact/cola/cbb.html" target="_blank" rel="noopener">https://www.ssa.gov/oact/cola/cbb.html</a> (accessed May 25, 2026).</li>
           </ol>
         </div>
 
@@ -528,8 +521,6 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
           <p>The content reflects tax law and regulations applicable on the date of publication only and is subject to change without notice. Examples and illustrations are hypothetical and do not represent any specific taxpayer situation. Past results or referenced positions do not guarantee future outcomes.</p>
           <p>No reader should act or refrain from acting on the basis of this publication without first obtaining specific written advice from a licensed CPA based on the reader's individual facts and circumstances.</p>
           <p>Any federal tax advice contained herein is not intended or written to be used, and cannot be used, for the purpose of avoiding penalties that may be imposed under the Internal Revenue Code.</p>
-
-          <!-- PARSI TEAM SPECIFIC NOTICE — bottom placement -->
           <div class="parsi-team-notice">
             <p><strong>Parsi Team Specific Notice:</strong> This publication was prepared by non-licensed content personnel under the direct supervision and final approval of a licensed CPA. The reviewing CPA assumes professional responsibility for the technical accuracy and compliance of the content. All other limitations stated in the disclaimer above remain fully applicable.</p>
           </div>
@@ -540,23 +531,20 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
       <!-- SIDEBAR -->
       <aside class="article-sidebar" aria-label="Article sidebar">
 
-        <!-- Table of Contents -->
         <div class="aside-block">
           <h4>In This Article</h4>
           <span class="aside-rule" aria-hidden="true"></span>
           <ul class="toc-list">
-            <li><a href="#sec-federal">Federal Estimated Tax Framework</a></li>
-            <li><a href="#sec-federal">2026 Federal Installment Schedule</a></li>
-            <li><a href="#sec-federal">Federal Safe Harbor Rules</a></li>
-            <li><a href="#sec-california">California FTB Rules</a></li>
-            <li><a href="#sec-california">California Installment Schedule</a></li>
-            <li><a href="#sec-california">California $1M AGI Limitation</a></li>
-            <li><a href="#sec-business">Business Entity Overview</a></li>
-            <li><a href="#sec-resources">Compliance Resources &amp; Tools</a></li>
+            <li><a href="#sec-federal">Federal Tax Classification</a></li>
+            <li><a href="#sec-federal">S-Corp Eligibility Restrictions</a></li>
+            <li><a href="#sec-california">California Tax Treatment</a></li>
+            <li><a href="#sec-california">S-Corp: 1.5% Entity Tax</a></li>
+            <li><a href="#sec-california">LLC: Annual Fee Schedule</a></li>
+            <li><a href="#sec-selfemployment">Self-Employment &amp; Payroll Tax</a></li>
+            <li><a href="#sec-resources">Compliance Resources</a></li>
           </ul>
         </div>
 
-        <!-- Share -->
         <div class="aside-block">
           <h4>Share This Article</h4>
           <span class="aside-rule" aria-hidden="true"></span>
@@ -565,14 +553,13 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
               Copy Link
             </button>
-            <a href="mailto:?subject=California Estimated Tax 2026 — Parsi %26 Company&body=https://parsicocpa.com/insights/california-estimated-tax-2026" class="share-btn" aria-label="Share via email">
+            <a href="mailto:?subject=S-Corp vs LLC California 2026 — Parsi %26 Company&body=https://parsicocpa.com/insights/scorp-vs-llc-california-2026" class="share-btn" aria-label="Share via email">
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
               Email
             </a>
           </div>
         </div>
 
-        <!-- Reviewer Card -->
         <div class="aside-block author-card">
           <div class="author-card-avatar" aria-hidden="true">AM</div>
           <div class="author-card-name">Parsi Team, CPA</div>
@@ -580,14 +567,13 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
           <p>CPA and tax specialist with over a decade of experience in corporate and individual tax. Andrea reviews Parsi Team publications for technical accuracy, regulatory compliance, and adherence to all communication directives prior to publication.</p>
         </div>
 
-        <!-- Important Note sidebar callout -->
         <div class="aside-block" style="background:var(--warm);border-left:3px solid #B8603C;border-top:1px solid var(--silver);border-right:1px solid var(--silver);border-bottom:1px solid var(--silver);">
-          <h4 style="font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.1em;color:#B8603C;margin-bottom:8px;">California AGI Reminder</h4>
-          <p style="font-size:13px;line-height:1.6;color:var(--charcoal);">Taxpayers with California AGI of $1,000,000+ for the prior year cannot use the prior-year safe harbor. A 90% current-year payment is required. Verify your specific situation with a licensed CPA.</p>
+          <h4 style="font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.1em;color:#B8603C;margin-bottom:8px;">S-Corp Compensation Reminder</h4>
+          <p style="font-size:13px;line-height:1.6;color:var(--charcoal);">Shareholder-employees of S-Corps are generally required to receive reasonable W-2 compensation. The IRS actively audits arrangements where wages are minimized. Verify your specific situation with a licensed CPA.</p>
         </div>
 
       </aside>
-    </div><!-- /article-layout -->
+    </div>
   </div>
 </section>
 
@@ -599,22 +585,22 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
     <span class="related-rule" aria-hidden="true"></span>
     <div class="related-grid">
 
-      <a href="/insights-post" class="related-card" aria-label="Read: 2026 IRS Changes Affecting Family Business Write-Up">
+      <a href="/insights/california-estimated-tax-2026" class="related-card" aria-label="Read: California Estimated Tax Payments 2026">
+        <span class="related-tag">Actionable Guidance · Tax Planning</span>
+        <span class="related-title">California Estimated Tax Payments 2026 – Safe Harbor Rules, Deadlines &amp; FTB Requirements</span>
+        <span class="related-meta">Parsi Team · 9 min read</span>
+      </a>
+
+      <a href="/insights/post" class="related-card" aria-label="Read: 2026 IRS Changes Affecting Family Business Write-Up">
         <span class="related-tag">Precision Updates · Tax Planning</span>
         <span class="related-title">2026 IRS Changes Affecting Family Business Write-Up</span>
         <span class="related-meta">Bo Lin, CPA · 5 min read</span>
       </a>
 
-      <a href="/insights-post" class="related-card" aria-label="Read: Cost Segregation Strategies for Real Estate Investors in California">
+      <a href="/insights/post" class="related-card" aria-label="Read: Cost Segregation Strategies for Real Estate Investors in California">
         <span class="related-tag">Actionable Guidance · Tax Planning</span>
         <span class="related-title">Cost Segregation Strategies for Real Estate Investors in California</span>
         <span class="related-meta">Bo Lin, CPA, EA · 10 min read</span>
-      </a>
-
-      <a href="/insights-post" class="related-card" aria-label="Read: New Bookkeeping Requirements Under 2026 Tax Legislation">
-        <span class="related-tag">Precision Updates · Bookkeeping</span>
-        <span class="related-title">New Bookkeeping Requirements Under 2026 Tax Legislation</span>
-        <span class="related-meta">Parsi Team, CPA · 6 min read</span>
       </a>
 
     </div>
@@ -709,26 +695,19 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
 </div>
 
 <script>
-// Navbar scroll
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 40); }, { passive: true });
-
-// Mobile menu
 const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobile-menu');
 hamburger.addEventListener('click', () => {
   const open = mobileMenu.classList.toggle('open');
   hamburger.setAttribute('aria-expanded', String(open));
 });
-
-// Modal
 const modal = document.getElementById('modal');
 function openModal() { modal.classList.add('open'); document.body.style.overflow = 'hidden'; }
 function closeModal() { modal.classList.remove('open'); document.body.style.overflow = ''; }
 modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
-
-// Form validation
 function validateField(id, errId) {
   const el = document.getElementById(id);
   const err = document.getElementById(errId);
@@ -743,8 +722,6 @@ function handleSubmit() {
   document.getElementById('consultation-form').style.display = 'none';
   document.getElementById('thank-you').style.display = 'block';
 }
-
-// Copy link
 function copyLink() {
   navigator.clipboard.writeText(window.location.href).then(() => {
     const btn = document.querySelector('[onclick="copyLink()"]');

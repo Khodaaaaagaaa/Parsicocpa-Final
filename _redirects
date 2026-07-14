@@ -1,3 +1,25 @@
+# Insights folder migration — 301 old flat URLs to new /insights/ paths
+/insights-mid-year-tax-check-up-2026        /insights/mid-year-tax-check-up-2026        301
+/insights-quarterly-estimated-taxes-2026    /insights/quarterly-estimated-taxes-2026    301
+/insights-california-estimated-tax-2026     /insights/california-estimated-tax-2026     301
+/insights-scorp-vs-llc-california-2026      /insights/scorp-vs-llc-california-2026      301
+/insights-obbba-deductions-2026             /insights/obbba-deductions-2026             301
+/insights-california-pte-tax-2026           /insights/california-pte-tax-2026           301
+/insights-conservation-easement-settlement-2026 /insights/conservation-easement-settlement-2026 301
+/insights-obbba-remittance-excise-tax-2026  /insights/obbba-remittance-excise-tax-2026  301
+/insights-no-tax-on-tips-2026               /insights/no-tax-on-tips-2026               301
+/insights-taxpayer-due-process-act-2026     /insights/taxpayer-due-process-act-2026     301
+/insights-irs-underpayment-interest-2026    /insights/irs-underpayment-interest-2026    301
+/insights-irs-notice-cp2000-2026            /insights/irs-notice-cp2000-2026            301
+/insights-california-form-593-2026          /insights/california-form-593-2026          301
+/insights-audit-triggers-2026               /insights/audit-triggers-2026               301
+/insights-irs-lien-levy-2026                /insights/irs-lien-levy-2026                301
+/insights-ftb-notices-bookkeeping-2026      /insights/ftb-notices-bookkeeping-2026      301
+/insights-scorp-llc-comparison-checklist-2026 /insights/scorp-llc-comparison-checklist-2026 301
+/insights-irs-notices-guide-2026            /insights/irs-notices-guide-2026            301
+/insights-estate-planning-scorp-llc-2026    /insights/estate-planning-scorp-llc-2026    301
+/insights-post          /insights/post      301
+
 /contact          /index#cta      302
 /contact-us       /index#cta      302
 /our-team         /index#team     302
