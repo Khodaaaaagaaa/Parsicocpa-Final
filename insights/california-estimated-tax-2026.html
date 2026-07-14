@@ -740,8 +740,37 @@ function validateField(id, errId) {
 function handleSubmit() {
   const ok = [validateField('f-name','f-name-err'), validateField('f-email','f-email-err'), validateField('f-service','f-service-err')].every(Boolean);
   if (!ok) return;
-  document.getElementById('consultation-form').style.display = 'none';
-  document.getElementById('thank-you').style.display = 'block';
+  const btn = document.querySelector('.btn-submit');
+  btn.disabled = true;
+  btn.textContent = 'SENDING...';
+  const data = {
+    name: document.getElementById('f-name').value.trim(),
+    email: document.getElementById('f-email').value.trim(),
+    phone: document.getElementById('f-phone').value.trim(),
+    service: document.getElementById('f-service').value,
+    message: document.getElementById('f-message').value.trim(),
+    _subject: 'New Consultation Request – Parsi & Company (Insights: california-estimated-tax-2026)'
+  };
+  fetch('/api/contact', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify(data)
+  })
+  .then(function(res) {
+    if (res.ok) {
+      document.getElementById('consultation-form').style.display = 'none';
+      document.getElementById('thank-you').style.display = 'block';
+    } else {
+      btn.disabled = false;
+      btn.textContent = 'SEND REQUEST';
+      alert('Something went wrong. Please email us directly at info@parsicocpa.com');
+    }
+  })
+  .catch(function() {
+    btn.disabled = false;
+    btn.textContent = 'SEND REQUEST';
+    alert('Something went wrong. Please email us directly at info@parsicocpa.com');
+  });
 }
 
 // Copy link
