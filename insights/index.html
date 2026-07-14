@@ -306,7 +306,7 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
           <option value="2025">2025</option>
         </select>
       </div>
-      <span class="filter-count" id="filter-count" aria-live="polite">Showing 17 articles</span>
+      <span class="filter-count" id="filter-count" aria-live="polite">Showing all articles</span>
       <button class="filter-reset" id="filter-reset" aria-label="Reset all filters">Reset filters</button>
     </div>
   </div>
@@ -320,6 +320,40 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
       <!-- ARTICLES GRID -->
       <div>
         <div class="articles-grid" id="articles-grid">
+          <!-- Quarterly Estimated Taxes 2026 — Actionable Guidance / Tax Planning / Business Owners / 2026 -->
+          <a href="/insights/quarterly-estimated-taxes-2026"
+             class="article-card"
+             data-pillar="actionable-guidance" data-service="tax-planning"
+             data-client="business-owners" data-year="2026">
+            <div class="card-top">
+              <div class="card-pillar"><span class="pillar-dot p2" aria-hidden="true"></span><span class="pillar-label">Actionable Guidance</span></div>
+              <span class="card-service">Tax Planning · 2026</span>
+              <h3 class="card-title">Quarterly Estimated Taxes 2026 – How to Avoid Underpayment Penalties</h3>
+              <p class="card-excerpt">An educational guide to 2026 federal and California quarterly estimated taxes: safe-harbor thresholds, the $1M California AGI restriction, installment schedules, and the forms used to compute required payments.</p>
+            </div>
+            <div class="card-bottom">
+              <span class="card-meta">Parsi Team · 9 min read</span>
+              <span class="card-cta">Read more →</span>
+            </div>
+          </a>
+
+          <!-- Mid-Year Tax Check-Up 2026 — Actionable Guidance / Tax Planning / Business Owners / 2026 -->
+          <a href="/insights/mid-year-tax-check-up-2026"
+             class="article-card"
+             data-pillar="actionable-guidance" data-service="tax-planning"
+             data-client="business-owners" data-year="2026">
+            <div class="card-top">
+              <div class="card-pillar"><span class="pillar-dot p2" aria-hidden="true"></span><span class="pillar-label">Actionable Guidance</span></div>
+              <span class="card-service">Tax Planning · 2026</span>
+              <h3 class="card-title">Mid-Year Tax Check-Up 2026 – A Strategic Guide for Business Owners</h3>
+              <p class="card-excerpt">An educational mid-year review for business owners: estimated-tax safe harbors, 2026 retirement and HSA contribution limits, entity-level elections, and income/deduction timing under federal and California rules.</p>
+            </div>
+            <div class="card-bottom">
+              <span class="card-meta">Parsi Team · 10 min read</span>
+              <span class="card-cta">Read more →</span>
+            </div>
+          </a>
+
           <!-- ARTICLE 1 — Actionable Guidance / Tax Planning / Business Owners / 2026 -->
           <a href="/insights/california-estimated-tax-2026"
              class="article-card"
@@ -915,6 +949,8 @@ function applyFilter(type, value) {
   document.getElementById(id).addEventListener('change', applyFilters);
 });
 document.getElementById('filter-reset').addEventListener('click', resetFilters);
+// Set the count from the actual number of article cards on load (not hardcoded).
+applyFilters();
 </script>
 
 
