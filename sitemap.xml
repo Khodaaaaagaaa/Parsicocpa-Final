@@ -17,6 +17,14 @@
     <priority>0.9</priority>
   </url>
 
+  <!-- Article: Bookkeeping Cleanup Before Year-End 2026 -->
+  <url>
+    <loc>https://parsicocpa.com/insights/bookkeeping-cleanup-year-end-2026</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Article: Mid-Year Tax Check-Up 2026 -->
   <url>
     <loc>https://parsicocpa.com/insights/mid-year-tax-check-up-2026</loc>

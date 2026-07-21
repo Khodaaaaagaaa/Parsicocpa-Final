@@ -4,6 +4,13 @@
 // Handles both the consultation form and the newsletter form (any fields).
 
 const TO = process.env.CONTACT_TO || "info@parsicocpa.com";
+// Checklist / lead-magnet downloads route to the sales inbox instead.
+const TO_SALES = process.env.CONTACT_SALES || "sales@parsicocpa.com";
+// Server-side recipient map by form type — the client cannot set an arbitrary
+// destination (prevents the endpoint being used as an open email relay).
+function recipientFor(formType) {
+  return formType === "checklist" ? TO_SALES : TO;
+}
 // FROM must be a domain verified in Resend. Until parsicocpa.com is verified,
 // the Resend test sender "onboarding@resend.dev" works.
 const FROM = process.env.CONTACT_FROM || "Parsi Web <onboarding@resend.dev>";
@@ -52,7 +59,7 @@ module.exports = async function handler(req, res) {
   const subject = String(data._subject || `New form submission from ${name}`);
 
   // Render every provided field (except control fields) into the email.
-  const skip = new Set(["_subject", "_gotcha"]);
+  const skip = new Set(["_subject", "_gotcha", "formType"]);
   const rows = Object.keys(data)
     .filter((k) => !skip.has(k) && String(data[k] == null ? "" : data[k]).trim() !== "")
     .map((k) => [LABELS[k] || k, data[k]]);
@@ -77,7 +84,7 @@ module.exports = async function handler(req, res) {
       headers: { Authorization: `Bearer ${apiKey}`, "Content-Type": "application/json" },
       body: JSON.stringify({
         from: FROM,
-        to: [TO],
+        to: [recipientFor(data.formType)],
         reply_to: email,
         subject,
         html,
