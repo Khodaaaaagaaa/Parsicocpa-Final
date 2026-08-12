@@ -1,0 +1,24 @@
+# Parsi & Company, CPA
+
+> Century City (Los Angeles) CPA firm providing tax preparation, bookkeeping, IRS dispute resolution, estate planning, and advisory services with personal, long-term guidance for individuals and business owners.
+
+## Site
+- [Home](https://parsicocpa.com/): Firm overview, services, team, and consultation request.
+- [Insights](https://parsicocpa.com/insights): Educational articles on federal and California tax topics.
+
+## Insights (2026)
+- [California Conformity & Nonconformity 2026](https://parsicocpa.com/insights/california-conformity-2026)
+- [Tax Extensions 2026](https://parsicocpa.com/insights/tax-extensions-2026)
+- [Fixed Asset Review & California Depreciation Planning 2026](https://parsicocpa.com/insights/fixed-asset-review-california-depreciation-2026)
+- [Bookkeeping Cleanup Before Year-End 2026](https://parsicocpa.com/insights/bookkeeping-cleanup-year-end-2026)
+- [Quarterly Estimated Taxes 2026](https://parsicocpa.com/insights/quarterly-estimated-taxes-2026)
+- [Mid-Year Tax Check-Up 2026](https://parsicocpa.com/insights/mid-year-tax-check-up-2026)
+- [California Estimated Tax Payments 2026](https://parsicocpa.com/insights/california-estimated-tax-2026)
+
+## Contact
+- Address: 1801 Century Park East, Suite 1600, Los Angeles, CA 90067
+- Email: info@parsicocpa.com
+- Phone: (310) 556-3655
+
+## Notes
+All content is educational and general in nature and is not a substitute for individualized professional advice.
