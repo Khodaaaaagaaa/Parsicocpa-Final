@@ -2,6 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<!-- Google tag (gtag.js) — production only -->
+<script>
+if(location.hostname==='parsicocpa.com'||location.hostname==='www.parsicocpa.com'){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-N20XFV5H41';document.head.appendChild(s);window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config','G-N20XFV5H41');}
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="geo.region" content="US-CA">
 <meta name="geo.placename" content="Los Angeles, Century City">
@@ -653,6 +657,7 @@ function handleSubmit() {
     message: document.getElementById('f-message').value.trim(),
     _subject: 'New Consultation Request – Parsi & Company (Insights: Fixed Asset Review)'
   };
+  if (typeof gtag === 'function') gtag('event', 'consultation_form_submit', { service: data.service });
   fetch('/api/contact', { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify(data) })
   .then(function(res) {
     if (res.ok) { document.getElementById('consultation-form').style.display = 'none'; document.getElementById('thank-you').style.display = 'block'; }
