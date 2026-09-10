@@ -17,6 +17,14 @@
     <priority>0.9</priority>
   </url>
 
+  <!-- Article: September 15, 2026 Tax Deadline -->
+  <url>
+    <loc>https://parsicocpa.com/insights/september-15-2026-tax-deadline</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Article: Rental Income Tax in California 2026 -->
   <url>
     <loc>https://parsicocpa.com/insights/rental-income-tax-california-2026</loc>
