@@ -37,7 +37,7 @@
     <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=IBM+Plex+Mono:wght@500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
     <style>
         *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-        :root{--navy:#0D1F44;--gold:#B88D3C;--warm:#F5F7FA;--silver:#D6D6D6;--charcoal:#2D2D2D;--white:#FFFFFF;--max-w:1240px;--side:58px;--side-sm:20px}
+        :root{--navy:#0D1F44;--gold:#B88D3C;--gold-text:#8a6526;--warm:#F5F7FA;--silver:#D6D6D6;--charcoal:#2D2D2D;--white:#FFFFFF;--max-w:1240px;--side:58px;--side-sm:20px}
         html{scroll-behavior:smooth}
         body{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);background:var(--white);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased}
         h1,h2{font-family:'Cormorant Garamond',serif;line-height:1.2;color:var(--navy)}
@@ -70,11 +70,11 @@
         .nav-links a{font-family:'Inter',sans-serif;font-weight:500;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--navy);text-decoration:none;transition:color .2s}
         .nav-links a:hover{color:var(--gold)}
         .nav-right{display:flex;align-items:center;gap:14px;flex-shrink:0}
-        .btn-nav-cta{background:var(--navy);color:var(--white);font-family:'Inter',sans-serif;font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.06em;border:none;cursor:pointer;padding:0 18px;height:44px;text-decoration:none;display:inline-flex;align-items:center;transition:color .2s;white-space:nowrap}
-        .btn-nav-cta:hover{color:var(--gold)}
+        .btn-nav-cta{background:var(--gold);color:var(--navy);font-family:'Inter',sans-serif;font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.06em;border:none;cursor:pointer;padding:0 18px;height:44px;min-height:44px;text-decoration:none;display:inline-flex;align-items:center;transition:opacity .2s;white-space:nowrap}
+        .btn-nav-cta:hover{opacity:.85}
         .nav-portal{display:flex;align-items:center;gap:6px;font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--charcoal);text-decoration:none;transition:color .2s;white-space:nowrap}
         .nav-portal:hover{color:var(--gold)}
-        .hamburger{display:none;background:none;border:none;cursor:pointer;padding:4px;flex-direction:column;gap:5px}
+        .hamburger{display:none;background:none;border:none;cursor:pointer;padding:4px;flex-direction:column;gap:5px;min-width:44px;min-height:44px;align-items:center;justify-content:center}
         .hamburger span{display:block;width:22px;height:1.5px;background:var(--navy)}
         .mobile-menu{display:none;background:var(--white);border-top:1px solid var(--silver);padding:20px var(--side-sm)}
         .mobile-menu.open{display:block}
@@ -118,7 +118,7 @@
         #problem{background:var(--white);padding:100px 0}
         .problem-inner{display:grid;grid-template-columns:1fr;gap:40px;max-width:800px;margin:0 auto}
         .problem-left h2{margin-bottom:24px}
-        .problem-left p{font-size:17px;line-height:1.7}
+        .problem-left p{font-size:17px;line-height:1.7;max-width:640px;margin-left:auto;margin-right:auto}
         .problem-left{text-align:center}
 
         /* SERVICES */
@@ -167,7 +167,7 @@
         .resources-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
         .resource-card{background:var(--white);border:1px solid var(--silver);padding:28px 28px 24px;display:flex;flex-direction:column;gap:12px;transition:border-color .2s;text-decoration:none;cursor:pointer}
         .resource-card:hover{border-color:var(--gold)}
-        .resource-tag{font-family:'IBM Plex Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--gold);font-weight:500}
+        .resource-tag{font-family:'IBM Plex Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--gold-text);font-weight:500}
         .resource-card h3{font-size:15px;font-weight:600;color:var(--navy);margin:0;line-height:1.4}
         .resource-card p{font-size:13px;line-height:1.6;flex:1}
         .resource-read{font-size:12px;font-weight:600;color:var(--navy);text-transform:uppercase;letter-spacing:.06em;display:flex;align-items:center;gap:6px;margin-top:4px}
@@ -182,11 +182,11 @@
         .insight-pillar-row{display:flex;align-items:center;gap:6px;margin-bottom:10px}
         .insight-dot{width:7px;height:7px;border-radius:50%;background:var(--gold);flex-shrink:0}
         .insight-pillar{font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:9px;text-transform:uppercase;letter-spacing:.1em;color:var(--charcoal)}
-        .insight-service{font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:9px;text-transform:uppercase;letter-spacing:.08em;color:var(--gold);margin-bottom:10px;display:block}
+        .insight-service{font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:9px;text-transform:uppercase;letter-spacing:.08em;color:var(--gold-text);margin-bottom:10px;display:block}
         .insight-title{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:19px;line-height:1.3;color:var(--navy);margin-bottom:10px}
         .insight-excerpt{font-size:13px;line-height:1.6;color:var(--charcoal)}
         .insight-card-bottom{padding:14px 24px 18px;display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--warm);margin-top:16px}
-        .insight-meta{font-family:'IBM Plex Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:.08em;color:#888}
+        .insight-meta{font-family:'IBM Plex Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:.08em;color:#5c5c5c}
         .insight-cta{font-family:'Inter',sans-serif;font-size:12px;font-weight:600;color:var(--navy);text-transform:uppercase;letter-spacing:.06em;transition:color .2s}
         .insight-card-home:hover .insight-cta{color:var(--gold)}
         .insights-view-all{text-align:center}
@@ -254,6 +254,7 @@
         .form-group textarea{min-height:100px;resize:vertical}
         .btn-submit{width:100%;height:52px;background:var(--navy);color:var(--white);border:none;cursor:pointer;font-family:'Inter',sans-serif;font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:.07em;transition:color .2s;margin-top:8px}
         .btn-submit:hover{color:var(--gold)}
+        .btn-submit:disabled{opacity:.6;cursor:not-allowed}
         .thank-you{display:none;text-align:center;padding:40px 0}
         .thank-you h3{font-size:24px;color:var(--navy);margin-bottom:12px}
         .thank-you p{font-size:15px}
@@ -399,31 +400,31 @@
         <div aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#B88D3C" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="0"/><path d="M9 9h6M9 12h6M9 15h4"/></svg></div>
         <h3>Business Tax Preparation</h3>
         <p>Expert preparation for partnerships (1065), S corporations (1120-S), and C corporations (1120) — with year-round planning and audit confidence.</p>
-        <a href="/small-business-cpa-los-angeles" aria-label="Small business CPA in Los Angeles" style="font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:#B88D3C;text-decoration:none;margin-top:auto">Small Business CPA in Los Angeles →</a>
+        <a href="/small-business-cpa-los-angeles" aria-label="Small business CPA in Los Angeles" style="font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:#8a6526;text-decoration:none;margin-top:auto">Small Business CPA in Los Angeles →</a>
       </article>
       <article class="service-card anim-hidden" data-delay="80">
         <div aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#B88D3C" stroke-width="1.5"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 4-6"/></svg></div>
         <h3>Tax Planning</h3>
         <p>Proactive, year-round tax planning for individuals and business owners — federal and California strategy built around your real situation.</p>
-        <a href="/tax-planning-los-angeles" aria-label="Tax planning in Los Angeles" style="font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:#B88D3C;text-decoration:none;margin-top:auto">Tax Planning in Los Angeles →</a>
+        <a href="/tax-planning-los-angeles" aria-label="Tax planning in Los Angeles" style="font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:#8a6526;text-decoration:none;margin-top:auto">Tax Planning in Los Angeles →</a>
       </article>
       <article class="service-card anim-hidden" data-delay="160">
         <div aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#B88D3C" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="0"/><path d="M7 8h10M7 12h10M7 16h6"/></svg></div>
         <h3>Bookkeeping</h3>
         <p>Monthly accounting support to keep business records organized, reconciled, and ready for smarter decisions and smoother tax seasons.</p>
-        <a href="/small-business-cpa-los-angeles" aria-label="Bookkeeping for Los Angeles businesses" style="font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:#B88D3C;text-decoration:none;margin-top:auto">Bookkeeping for LA Businesses →</a>
+        <a href="/small-business-cpa-los-angeles" aria-label="Bookkeeping for Los Angeles businesses" style="font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:#8a6526;text-decoration:none;margin-top:auto">Bookkeeping for LA Businesses →</a>
       </article>
       <article class="service-card anim-hidden" data-delay="240">
         <div aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#B88D3C" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
         <h3>Personal Tax Preparation</h3>
         <p>Individual and family tax preparation (1040, complex) designed to reduce stress, avoid costly mistakes, and file with confidence.</p>
-        <a href="/tax-accountant-los-angeles" aria-label="Tax accountant in Los Angeles" style="font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:#B88D3C;text-decoration:none;margin-top:auto">Tax Accountant in Los Angeles →</a>
+        <a href="/tax-accountant-los-angeles" aria-label="Tax accountant in Los Angeles" style="font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:#8a6526;text-decoration:none;margin-top:auto">Tax Accountant in Los Angeles →</a>
       </article>
       <article class="service-card anim-hidden" data-delay="320">
         <div aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#B88D3C" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
         <h3>Tax Dispute Resolution</h3>
         <p>Calm, experienced representation for IRS and FTB disputes, notices, and audits — so you respond with clarity and confidence.</p>
-        <a href="/tax-resolution-los-angeles" aria-label="Tax resolution in Los Angeles" style="font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:#B88D3C;text-decoration:none;margin-top:auto">Tax Resolution in Los Angeles →</a>
+        <a href="/tax-resolution-los-angeles" aria-label="Tax resolution in Los Angeles" style="font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:#8a6526;text-decoration:none;margin-top:auto">Tax Resolution in Los Angeles →</a>
       </article>
     </div>
   </div>
@@ -662,6 +663,9 @@
         <p class="footer-copy">© 2026 Parsi &amp; Company, CPA. All rights reserved.</p>
       </div>
       <div class="footer-links">
+        <a href="#services">Services</a>
+        <a href="/insights">Insights</a>
+        <a href="#cta">Contact</a>
         <a href="#" onclick="openLegal('privacy');return false;">Privacy Policy</a>
         <a href="#" onclick="openLegal('terms');return false;">Terms of Use</a>
         <a href="https://app.taxdome.com" target="_blank" rel="noopener">Client Portal</a>
