@@ -88,8 +88,8 @@
         .btn-primary:hover{color:var(--gold)}
         .btn-primary.gold-bg{background:var(--gold);color:var(--navy)}
         .btn-primary.gold-bg:hover{opacity:.9}
-        .btn-secondary{background:transparent;color:var(--white);font-family:'Inter',sans-serif;font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:.07em;border:1px solid var(--white);cursor:pointer;height:52px;padding:0 32px;display:inline-flex;align-items:center;text-decoration:none;transition:background .2s,color .2s}
-        .btn-secondary:hover{background:var(--white);color:var(--navy)}
+        .btn-secondary{background:transparent;color:var(--silver);font-family:'Inter',sans-serif;font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:.07em;border:none;cursor:pointer;height:52px;padding:0 8px;display:inline-flex;align-items:center;gap:6px;text-decoration:underline;text-underline-offset:3px;transition:color .2s}
+        .btn-secondary:hover{color:var(--gold)}
 
         /* SECTION UTILS */
         .section-label{margin-bottom:12px;display:block;color:var(--navy);font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:11px;text-transform:uppercase;letter-spacing:.1em}
@@ -112,7 +112,7 @@
         .hero-trust-label{font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:9px;text-transform:uppercase;letter-spacing:.1em;color:var(--silver);line-height:1.4}
         .star-small{font-size:.65em;display:inline-block;vertical-align:middle}
         @media(max-width:900px){.hero-inner{grid-template-columns:1fr}.hero-trust-panel{grid-template-columns:repeat(4,1fr);min-width:unset;width:100%}}
-        @media(max-width:768px){#hero{padding:72px 0}.hero-trust-panel{grid-template-columns:repeat(2,1fr)}}
+        @media(max-width:768px){#hero{padding:72px 0}.hero-trust-panel{grid-template-columns:repeat(2,1fr)}.hero-ctas .btn-primary{font-size:14px;width:100%;justify-content:center}}
 
         /* PROBLEM */
         #problem{background:var(--white);padding:100px 0}
@@ -210,9 +210,9 @@
         .footer-inner{display:flex;justify-content:space-between;align-items:flex-start;gap:40px;flex-wrap:wrap}
         .footer-left{display:flex;flex-direction:column;gap:16px}
         .footer-address{font-family:'IBM Plex Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--silver);line-height:1.8;font-style:normal}
-        .footer-copy{font-size:12px;color:rgba(214,214,214,.6)}
+        .footer-copy{font-size:12px;color:rgba(214,214,214,.85)}
         .footer-links{display:flex;gap:24px;align-items:center;flex-wrap:wrap}
-        .footer-links a{font-size:12px;color:var(--silver);text-decoration:none;font-family:'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.06em;transition:color .2s;cursor:pointer}
+        .footer-links a{font-size:12px;color:var(--silver);text-decoration:none;font-family:'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.06em;transition:color .2s;cursor:pointer;display:inline-flex;align-items:center;min-height:44px;padding:4px 2px}
         .footer-links a:hover{color:var(--gold)}
 
         /* LEGAL MODALS */
