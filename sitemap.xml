@@ -17,6 +17,14 @@
     <priority>0.9</priority>
   </url>
 
+  <!-- Article: Missed the September 15 Estimated Tax Deadline? -->
+  <url>
+    <loc>https://parsicocpa.com/insights/missed-september-15-estimated-tax-deadline-2026</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Article: September 15, 2026 Tax Deadline -->
   <url>
     <loc>https://parsicocpa.com/insights/september-15-2026-tax-deadline</loc>
