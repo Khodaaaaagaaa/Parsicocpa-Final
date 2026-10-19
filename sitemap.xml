@@ -17,6 +17,54 @@
     <priority>0.9</priority>
   </url>
 
+  <!-- Article: Missed October 15 Tax Deadline 2026 -->
+  <url>
+    <loc>https://parsicocpa.com/insights/missed-october-15-tax-deadline-2026</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Article: Missing 1095-A in 2026 -->
+  <url>
+    <loc>https://parsicocpa.com/insights/missing-1095-a-marketplace-reconciliation-2026</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Article: IRS Wage and Income Transcript 2026 -->
+  <url>
+    <loc>https://parsicocpa.com/insights/irs-wage-income-transcript-missing-documents-2026</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Article: Tax Extension Balance Due 2026 -->
+  <url>
+    <loc>https://parsicocpa.com/insights/tax-extension-balance-due-2026</loc>
+    <lastmod>2026-10-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Article: Missing Schedule K-1 in 2026 -->
+  <url>
+    <loc>https://parsicocpa.com/insights/missing-schedule-k1-partnership-reporting-2026</loc>
+    <lastmod>2026-10-07</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Article: Missing Cost Basis on Form 1099-B 2026 -->
+  <url>
+    <loc>https://parsicocpa.com/insights/missing-cost-basis-1099-b-2026</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Article: October 15, 2026 Tax Extension Deadline -->
   <url>
     <loc>https://parsicocpa.com/insights/october-15-2026-tax-extension-deadline-individual-filers</loc>
