@@ -118,7 +118,9 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
 .article-content strong{font-weight:600;color:var(--navy)}
 .article-content a{color:var(--navy);text-decoration:underline;text-underline-offset:3px;transition:color .2s}
 .article-content a:hover{color:var(--gold)}
-.deadline-table{width:100%;border-collapse:collapse;margin:24px 0 28px;font-size:14px}
+.deadline-table{width:100%;border-collapse:collapse;margin:0;font-size:14px}
+.table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:24px 0 28px}
+@media(max-width:600px){.deadline-table{font-size:12.5px}.deadline-table th,.deadline-table td{padding:9px 12px;white-space:nowrap}}
 .deadline-table th{background:var(--navy);color:var(--white);font-family:'IBM Plex Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:.1em;padding:12px 16px;text-align:left;font-weight:500}
 .deadline-table td{padding:11px 16px;border-bottom:1px solid var(--silver);color:var(--charcoal);line-height:1.5}
 .deadline-table tr:last-child td{border-bottom:none}
@@ -126,6 +128,8 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
 .deadline-table td strong{color:var(--navy)}
 .article-figure{margin:32px 0;border:1px solid var(--silver);background:var(--warm)}
 .article-figure svg{display:block;width:100%;height:auto}
+.article-figure img{display:block;width:100%;height:auto}
+.article-figure picture{display:block}
 .article-figure figcaption{font-family:'IBM Plex Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:#888;padding:12px 16px;border-top:1px solid var(--silver);text-align:center;line-height:1.5}
 .gold-rule{display:flex;align-items:center;gap:16px;margin:40px 0}
 .gold-rule::before,.gold-rule::after{content:'';flex:1;height:1px;background:var(--silver)}
@@ -328,7 +332,8 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
         <p>The IRS explains that partnership income may be taxable to a partner whether or not it was distributed. An investor's bank deposits therefore do not necessarily establish the amount of reportable partnership income.</p>
         <p>A partnership may allocate income while retaining cash for operations. Conversely, cash received can involve distribution rules that differ from the treatment of an income allocation. IRS Publication 541 discusses partnership distributions and their relationship to a partner's basis.</p>
         <p>A prior-year K-1 can identify the partnership and provide useful historical context. It does not establish the current-year allocation. Changes in operations, ownership, transactions or deductions may produce a different result.</p>
-        <table class="deadline-table" aria-label="What different K-1 information establishes">
+        <div class="table-scroll">
+<table class="deadline-table" aria-label="What different K-1 information establishes">
           <thead><tr><th>Available information</th><th>What it generally establishes</th><th>What it does not establish by itself</th></tr></thead>
           <tbody>
             <tr><td><strong>Prior-year K-1</strong></td><td>Historical reporting and entity identity</td><td>Current-year income or deductions</td></tr>
@@ -337,6 +342,7 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
             <tr><td><strong>Current-year K-1 and statements</strong></td><td>Allocated tax items and supporting details</td><td>Whether every partner-level limitation is satisfied</td></tr>
           </tbody>
         </table>
+        </div>
 <figure class="article-figure">
           <picture>
             <source srcset="/assets/insights/missing-k1-information-types-2026.webp" type="image/webp">

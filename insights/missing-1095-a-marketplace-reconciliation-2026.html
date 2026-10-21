@@ -118,7 +118,9 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
 .article-content strong{font-weight:600;color:var(--navy)}
 .article-content a{color:var(--navy);text-decoration:underline;text-underline-offset:3px;transition:color .2s}
 .article-content a:hover{color:var(--gold)}
-.deadline-table{width:100%;border-collapse:collapse;margin:24px 0 28px;font-size:14px}
+.deadline-table{width:100%;border-collapse:collapse;margin:0;font-size:14px}
+.table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:24px 0 28px}
+@media(max-width:600px){.deadline-table{font-size:12.5px}.deadline-table th,.deadline-table td{padding:9px 12px;white-space:nowrap}}
 .deadline-table th{background:var(--navy);color:var(--white);font-family:'IBM Plex Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:.1em;padding:12px 16px;text-align:left;font-weight:500}
 .deadline-table td{padding:11px 16px;border-bottom:1px solid var(--silver);color:var(--charcoal);line-height:1.5}
 .deadline-table tr:last-child td{border-bottom:none}
@@ -126,6 +128,8 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
 .deadline-table td strong{color:var(--navy)}
 .article-figure{margin:32px 0;border:1px solid var(--silver);background:var(--warm)}
 .article-figure svg{display:block;width:100%;height:auto}
+.article-figure img{display:block;width:100%;height:auto}
+.article-figure picture{display:block}
 .article-figure figcaption{font-family:'IBM Plex Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:#888;padding:12px 16px;border-top:1px solid var(--silver);text-align:center;line-height:1.5}
 .gold-rule{display:flex;align-items:center;gap:16px;margin:40px 0}
 .gold-rule::before,.gold-rule::after{content:'';flex:1;height:1px;background:var(--silver)}
@@ -326,7 +330,8 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
         <h2 id="sec-compared">1. Form 1095-A Compared with Other Health-Coverage Documents</h2>
         <p>Form 1095-A relates to Marketplace coverage. Form 1095-B reports health coverage, while Form 1095-C concerns employer-provided health insurance offers and coverage. These forms are not interchangeable. IRS guidance distinguishes waiting for an expected 1095-A from the general ability to file a federal return without waiting for Forms 1095-B or 1095-C.</p>
         <p>The distinction matters for a household that changed coverage during the year. An employer statement may document one period while a Marketplace statement documents another. Having one does not establish that the other is unnecessary.</p>
-        <table class="deadline-table" aria-label="Health coverage document comparison">
+        <div class="table-scroll">
+<table class="deadline-table" aria-label="Health coverage document comparison">
           <thead><tr><th>Document</th><th>Information it can provide</th><th>Unresolved question</th></tr></thead>
           <tbody>
             <tr><td><strong>Form 1095-A</strong></td><td>Marketplace coverage and financial assistance</td><td>How the information affects Form 8962</td></tr>
@@ -335,6 +340,7 @@ p{font-family:'Inter',sans-serif;font-weight:400;color:var(--charcoal);line-heig
             <tr><td><strong>Bank payment record</strong></td><td>An amount paid</td><td>Benchmark premium and advance-credit information</td></tr>
           </tbody>
         </table>
+        </div>
 <figure class="article-figure">
           <picture>
             <source srcset="/assets/insights/1095-a-health-document-comparison-2026.webp" type="image/webp">
